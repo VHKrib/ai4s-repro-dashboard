@@ -598,13 +598,41 @@
       if (data.trigger && data.trigger.state === "running") state.triggering = true;
       return data;
     } catch (err) {
+      var snap = await fetchSnapshot();
+      if (snap) {
+        state.staticMode = true;
+        state.snapshot = snap;
+        state.runs = snap.runs || [];
+        state.runId = (snap.status && snap.status.run_id) || (snap.runs[0] && snap.runs[0].run_id);
+        document.body.dataset.snapshot = "1";
+        var sel = $("#run-select"); if (sel) sel.style.display = "none";
+        var trig = $("#btn-trigger"); if (trig) trig.style.display = "none";
+        setHeader("idle", "公开快照 · 已完成运行的静态记录");
+        var pTitle = $("#progress-title");
+        if (pTitle) pTitle.textContent = "一次已完成的七步运行，逐步看";
+        var pDesc = $("#progress-desc");
+        if (pDesc) pDesc.textContent = "这里展示的是一次真实完成的运行记录，数据从结果文件导出后随页面一起发布；本地版会按 1.2 秒轮询实时状态。";
+        var cardState = $("#card-progress-state");
+        if (cardState) cardState.textContent = "快照";
+        setText($("#card-progress-time"), "静态记录 · 数字来自那次已完成的运行");
+        return snap;
+      }
       document.body.dataset.offline = "1";
       setHeader("idle", "离线打开，读不到运行记录");
-      var cardState = $("#card-progress-state");
-      if (cardState) cardState.textContent = "离线";
+      var cardState2 = $("#card-progress-state");
+      if (cardState2) cardState2.textContent = "离线";
       setText($("#card-progress-time"), "本地服务未运行 · 静态数字仍可读");
       return null;
     }
+  }
+
+  async function fetchSnapshot() {
+    if (state.snapshot) return state.snapshot;
+    try {
+      var d = await fetchJSON("data/snapshot.json");
+      if (d && d.ok) return d;
+    } catch (e) { /* 没有快照就退回离线提示 */ }
+    return null;
   }
 
   function setHeader(stateName, text) {
@@ -658,6 +686,15 @@
 
   async function poll() {
     if (!state.runId) return;
+    if (state.staticMode) {
+      var snap = state.snapshot;
+      if (!snap || !snap.status) return;
+      state.status = snap.status;
+      renderStatus(snap.status);
+      var srun = (snap.status.stages || []).filter(function (s) { return s.status === "running"; })[0];
+      renderLogSnapshot(srun ? srun.id : "export");
+      return;
+    }
     var t0 = performance.now();
     try {
       var results = await Promise.all([
@@ -851,6 +888,16 @@
       host.innerHTML = html;
       host.dataset.sig = String(items.length) + html.length;
     }
+  }
+
+  /* 公网/静态模式：直接从 data/snapshot.json 里读日志，不发请求 */
+  function renderLogSnapshot(stage) {
+    var snap = state.snapshot, pre = $("#log");
+    if (!snap || !snap.logs || !pre) return;
+    var entry = snap.logs[stage] || snap.logs["export"] || null;
+    var text = entry && entry.lines ? entry.lines.join("\n") : "（快照未包含该阶段日志）";
+    if (pre.textContent !== text) pre.textContent = text;
+    setText($("#log-source"), entry && entry.source_name ? entry.source_name + " · 静态快照" : "静态快照");
   }
 
   async function renderLog(stage) {

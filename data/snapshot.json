@@ -1,0 +1,957 @@
+{
+ "ok": true,
+ "generated_from": "hiv1_1t3r_darunavir-20261101-135146",
+ "runs": [
+  {
+   "run_id": "hiv1_1t3r_darunavir-20261101-164538",
+   "case_id": "hiv1_1t3r_darunavir",
+   "status": "completed",
+   "started_at": "2026-11-01T16:45:38+08:00",
+   "finished_at": "2026-11-01T16:46:12+08:00",
+   "duration_s": 34.0,
+   "stages_settled": 7,
+   "stages_total": 7,
+   "current_stage": null,
+   "summary": "advance=1"
+  },
+  {
+   "run_id": "hiv1_1t3r_darunavir-20261101-135146",
+   "case_id": "hiv1_1t3r_darunavir",
+   "status": "completed",
+   "started_at": "2026-11-01T13:51:46+08:00",
+   "finished_at": "2026-11-01T13:52:18+08:00",
+   "duration_s": 32.0,
+   "stages_settled": 7,
+   "stages_total": 7,
+   "current_stage": null,
+   "summary": "advance=1"
+  },
+  {
+   "run_id": "hiv1_1t3r_darunavir-20261101-123202",
+   "case_id": "hiv1_1t3r_darunavir",
+   "status": "completed",
+   "started_at": "2026-11-01T12:32:02+08:00",
+   "finished_at": "2026-11-01T12:32:37+08:00",
+   "duration_s": 35.0,
+   "stages_settled": 7,
+   "stages_total": 7,
+   "current_stage": null,
+   "summary": "advance=1"
+  },
+  {
+   "run_id": "hiv1_1t3r_darunavir-20261101-121834",
+   "case_id": "hiv1_1t3r_darunavir",
+   "status": "completed",
+   "started_at": "2026-11-01T12:18:34+08:00",
+   "finished_at": "2026-11-01T12:19:20+08:00",
+   "duration_s": 46.0,
+   "stages_settled": 7,
+   "stages_total": 7,
+   "current_stage": null,
+   "summary": "advance=1"
+  },
+  {
+   "run_id": "hiv1_1t3r_darunavir-20261101-121715",
+   "case_id": "hiv1_1t3r_darunavir",
+   "status": "completed",
+   "started_at": "2026-11-01T12:17:15+08:00",
+   "finished_at": "2026-11-01T12:18:01+08:00",
+   "duration_s": 46.0,
+   "stages_settled": 7,
+   "stages_total": 7,
+   "current_stage": null,
+   "summary": "advance=1"
+  },
+  {
+   "run_id": "tiny-20261031-002352",
+   "case_id": "tiny",
+   "status": "completed",
+   "started_at": "2026-10-31T00:23:52+08:00",
+   "finished_at": "2026-10-31T00:23:53+08:00",
+   "duration_s": 1.0,
+   "stages_settled": 7,
+   "stages_total": 7,
+   "current_stage": null,
+   "summary": "needs_review=2"
+  },
+  {
+   "run_id": "tiny-20261031-002132",
+   "case_id": "tiny",
+   "status": "completed",
+   "started_at": "2026-10-31T00:21:32+08:00",
+   "finished_at": "2026-10-31T00:21:32+08:00",
+   "duration_s": 0.0,
+   "stages_settled": 7,
+   "stages_total": 7,
+   "current_stage": null,
+   "summary": "needs_review=2"
+  },
+  {
+   "run_id": "hiv1_1t3r_darunavir-20261030-225324",
+   "case_id": "hiv1_1t3r_darunavir",
+   "status": "completed",
+   "started_at": "2026-10-30T22:53:24+08:00",
+   "finished_at": "2026-10-30T22:53:58+08:00",
+   "duration_s": 34.0,
+   "stages_settled": 7,
+   "stages_total": 7,
+   "current_stage": null,
+   "summary": "advance=1"
+  },
+  {
+   "run_id": "jak2_6vgl_rxt_dock_final-20261030-002014",
+   "case_id": "jak2_6vgl_rxt_dock_final",
+   "status": "completed",
+   "started_at": "2026-10-30T00:20:14+08:00",
+   "finished_at": "2026-10-30T00:20:18+08:00",
+   "duration_s": 4.0,
+   "stages_settled": 7,
+   "stages_total": 7,
+   "current_stage": null,
+   "summary": "advance=1"
+  },
+  {
+   "run_id": "jak2_6vgl_rxt_dock-20261030-002004",
+   "case_id": "jak2_6vgl_rxt_dock",
+   "status": "completed",
+   "started_at": "2026-10-30T00:20:04+08:00",
+   "finished_at": "2026-10-30T00:20:08+08:00",
+   "duration_s": 4.0,
+   "stages_settled": 7,
+   "stages_total": 7,
+   "current_stage": null,
+   "summary": "无候选"
+  },
+  {
+   "run_id": "jak2_6vgl_rxt_dock_final-20261030-001849",
+   "case_id": "jak2_6vgl_rxt_dock_final",
+   "status": "completed",
+   "started_at": "2026-10-30T00:18:49+08:00",
+   "finished_at": "2026-10-30T00:18:54+08:00",
+   "duration_s": 5.0,
+   "stages_settled": 7,
+   "stages_total": 7,
+   "current_stage": null,
+   "summary": "advance=1"
+  },
+  {
+   "run_id": "jak2_6vgl_rxt_dock-20261030-001837",
+   "case_id": "jak2_6vgl_rxt_dock",
+   "status": "completed",
+   "started_at": "2026-10-30T00:18:37+08:00",
+   "finished_at": "2026-10-30T00:18:43+08:00",
+   "duration_s": 6.0,
+   "stages_settled": 7,
+   "stages_total": 7,
+   "current_stage": null,
+   "summary": "无候选"
+  },
+  {
+   "run_id": "jak2_6vgl_rxt_dock_final-20261030-001711",
+   "case_id": "jak2_6vgl_rxt_dock_final",
+   "status": "completed",
+   "started_at": "2026-10-30T00:17:11+08:00",
+   "finished_at": "2026-10-30T00:17:16+08:00",
+   "duration_s": 5.0,
+   "stages_settled": 7,
+   "stages_total": 7,
+   "current_stage": null,
+   "summary": "advance=1"
+  },
+  {
+   "run_id": "jak2_6vgl_rxt_dock-20261030-001701",
+   "case_id": "jak2_6vgl_rxt_dock",
+   "status": "completed",
+   "started_at": "2026-10-30T00:17:01+08:00",
+   "finished_at": "2026-10-30T00:17:05+08:00",
+   "duration_s": 4.0,
+   "stages_settled": 7,
+   "stages_total": 7,
+   "current_stage": null,
+   "summary": "无候选"
+  },
+  {
+   "run_id": "jak2_6vgl_rxt_dock_final-20261030-001603",
+   "case_id": "jak2_6vgl_rxt_dock_final",
+   "status": "completed",
+   "started_at": "2026-10-30T00:16:03+08:00",
+   "finished_at": "2026-10-30T00:16:07+08:00",
+   "duration_s": 4.0,
+   "stages_settled": 7,
+   "stages_total": 7,
+   "current_stage": null,
+   "summary": "advance=1"
+  },
+  {
+   "run_id": "jak2_6vgl_rxt_dock-20261030-001552",
+   "case_id": "jak2_6vgl_rxt_dock",
+   "status": "completed",
+   "started_at": "2026-10-30T00:15:52+08:00",
+   "finished_at": "2026-10-30T00:15:57+08:00",
+   "duration_s": 5.0,
+   "stages_settled": 7,
+   "stages_total": 7,
+   "current_stage": null,
+   "summary": "无候选"
+  },
+  {
+   "run_id": "jak2_stage03_vina_001-20261030-001551",
+   "case_id": "jak2_stage03_vina_001",
+   "status": "failed",
+   "started_at": "2026-10-30T00:15:51+08:00",
+   "finished_at": "2026-10-30T00:15:51+08:00",
+   "duration_s": 0.0,
+   "stages_settled": 3,
+   "stages_total": 7,
+   "current_stage": null,
+   "summary": ""
+  },
+  {
+   "run_id": "jak2_stage03_vina_001-20261030-001515",
+   "case_id": "jak2_stage03_vina_001",
+   "status": "completed",
+   "started_at": "2026-10-30T00:15:15+08:00",
+   "finished_at": "2026-10-30T00:15:20+08:00",
+   "duration_s": 5.0,
+   "stages_settled": 7,
+   "stages_total": 7,
+   "current_stage": null,
+   "summary": "无候选"
+  },
+  {
+   "run_id": "jak2_6vgl_rxt_dock_final-20261030-001435",
+   "case_id": "jak2_6vgl_rxt_dock_final",
+   "status": "completed",
+   "started_at": "2026-10-30T00:14:35+08:00",
+   "finished_at": "2026-10-30T00:14:39+08:00",
+   "duration_s": 4.0,
+   "stages_settled": 7,
+   "stages_total": 7,
+   "current_stage": null,
+   "summary": "advance=1"
+  },
+  {
+   "run_id": "jak2_6vgl_rxt_dock-20261030-001424",
+   "case_id": "jak2_6vgl_rxt_dock",
+   "status": "completed",
+   "started_at": "2026-10-30T00:14:24+08:00",
+   "finished_at": "2026-10-30T00:14:29+08:00",
+   "duration_s": 5.0,
+   "stages_settled": 7,
+   "stages_total": 7,
+   "current_stage": null,
+   "summary": "无候选"
+  },
+  {
+   "run_id": "jak2_6vgl_rxt_dock_final-20261030-001306",
+   "case_id": "jak2_6vgl_rxt_dock_final",
+   "status": "completed",
+   "started_at": "2026-10-30T00:13:06+08:00",
+   "finished_at": "2026-10-30T00:13:11+08:00",
+   "duration_s": 5.0,
+   "stages_settled": 7,
+   "stages_total": 7,
+   "current_stage": null,
+   "summary": "advance=1"
+  },
+  {
+   "run_id": "jak2_stage03_vina_001-20261030-001304",
+   "case_id": "jak2_stage03_vina_001",
+   "status": "completed",
+   "started_at": "2026-10-30T00:13:04+08:00",
+   "finished_at": "2026-10-30T00:13:09+08:00",
+   "duration_s": 5.0,
+   "stages_settled": 7,
+   "stages_total": 7,
+   "current_stage": null,
+   "summary": "无候选"
+  },
+  {
+   "run_id": "jak2_6vgl_rxt_dock_candidate-20261030-001220",
+   "case_id": "jak2_6vgl_rxt_dock_candidate",
+   "status": "completed",
+   "started_at": "2026-10-30T00:12:20+08:00",
+   "finished_at": "2026-10-30T00:12:25+08:00",
+   "duration_s": 5.0,
+   "stages_settled": 7,
+   "stages_total": 7,
+   "current_stage": null,
+   "summary": "advance=1"
+  },
+  {
+   "run_id": "jak2_6vgl_rxt_dock-20261030-001201",
+   "case_id": "jak2_6vgl_rxt_dock",
+   "status": "completed",
+   "started_at": "2026-10-30T00:12:01+08:00",
+   "finished_at": "2026-10-30T00:12:06+08:00",
+   "duration_s": 5.0,
+   "stages_settled": 7,
+   "stages_total": 7,
+   "current_stage": null,
+   "summary": "无候选"
+  }
+ ],
+ "status": {
+  "ok": true,
+  "run_id": "hiv1_1t3r_darunavir-20261101-135146",
+  "case_id": "hiv1_1t3r_darunavir",
+  "status": "completed",
+  "started_at": "2026-11-01T13:51:46+08:00",
+  "finished_at": "2026-11-01T13:52:18+08:00",
+  "updated_at": "2026-11-01T13:52:18+08:00",
+  "pipeline_version": "stage3/0.1.0",
+  "config_sha256": "8a4dd5da0966e951851253f0374ee760652a0da26bc3d6a1305eb1b94dd846ed",
+  "summary": "advance=1",
+  "counters": {
+   "candidates": 1,
+   "controls": 0,
+   "receptors": 1,
+   "poses": 0,
+   "primary_receptor": "HIV1_1T3R",
+   "reference_status": "pass",
+   "pose_rows": 9,
+   "selected_poses": 1,
+   "matrix_rows": 1,
+   "ranked_candidates": 1,
+   "decision_advance": 1
+  },
+  "params": {
+   "engine": "vina",
+   "engine_options": {
+    "exhaustiveness": 8,
+    "n_poses": 9,
+    "seed": 42,
+    "cpu": 4,
+    "protocol_suffix": "rigid",
+    "reference_ligand": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\ligand\\cocrystal_pose.sdf",
+    "catalytic_selection": [
+     {
+      "resname": "ASP",
+      "resseq": 25,
+      "atoms": [
+       "OD1",
+       "OD2"
+      ]
+     }
+    ]
+   },
+   "criteria": {
+    "primary_receptor": "HIV1_1T3R",
+    "min_site_overlap": 0.7,
+    "min_catalytic_contacts": 0,
+    "max_clashes": 0,
+    "max_affinity_kcal_mol": -7.0,
+    "min_ligand_efficiency": 0.18,
+    "max_flex_delta": 1.0,
+    "max_consensus_std": 0.08,
+    "require_reference_pass": false,
+    "allow_af3_only_advance": false
+   },
+   "weights": {
+    "pose": 0.3,
+    "affinity": 0.2,
+    "consistency": 0.2,
+    "developability": 0.15,
+    "resistance": 0.15
+   },
+   "target": {
+    "name": "HIV-1 protease WT dimer (1T3R, 1.20 A)",
+    "uniprot": "P04585"
+   }
+  },
+  "errors": [],
+  "stages": [
+   {
+    "index": 1,
+    "id": "intake",
+    "label": "输入契约校验",
+    "status": "completed",
+    "progress": {
+     "done": 5,
+     "total": 5,
+     "unit": "tables"
+    },
+    "message": "1 候选 · 1 受体 · 0 姿势",
+    "started_at": "2026-11-01T13:51:46+08:00",
+    "finished_at": "2026-11-01T13:51:46+08:00",
+    "duration_s": 0.0,
+    "artifact": "artifacts\\01_intake.json",
+    "fingerprint": "1a22ed77ce16e9caf7fde3f2fb7cfceecff100c5a61db5ebcf1699420fe774d2",
+    "artifact_exists": true,
+    "duration_live_s": 0.0
+   },
+   {
+    "index": 2,
+    "id": "applicability",
+    "label": "方法适用性与参考对照",
+    "status": "completed",
+    "progress": {
+     "done": 1,
+     "total": 1,
+     "unit": "checks"
+    },
+    "message": "参考对照通过（pass=1）",
+    "started_at": "2026-11-01T13:51:46+08:00",
+    "finished_at": "2026-11-01T13:51:46+08:00",
+    "duration_s": 0.0,
+    "artifact": "artifacts\\02_applicability.json",
+    "fingerprint": "1cfd86a375478642a7e5d8c3491c43c7c0604b8f4a4d3b4c0561f49f9330564d",
+    "artifact_exists": true,
+    "duration_live_s": 0.0
+   },
+   {
+    "index": 3,
+    "id": "poses",
+    "label": "结合姿势 / 复合物数据",
+    "status": "completed",
+    "progress": {
+     "done": 1,
+     "total": 1,
+     "unit": "pairs"
+    },
+    "message": "9 姿势 · 0 条不确定性",
+    "started_at": "2026-11-01T13:51:46+08:00",
+    "finished_at": "2026-11-01T13:52:18+08:00",
+    "duration_s": 32.0,
+    "artifact": "artifacts\\03_poses.json",
+    "fingerprint": "f979f7cc8ed98bbe5710269320e1d938f18d122f538380945f0bb22029a2f8ff",
+    "artifact_exists": true,
+    "duration_live_s": 32.0
+   },
+   {
+    "index": 4,
+    "id": "qc",
+    "label": "姿势几何与一致性检查",
+    "status": "completed",
+    "progress": {
+     "done": 9,
+     "total": 9,
+     "unit": "poses"
+    },
+    "message": "1 个选中姿势 · 1 行突变矩阵",
+    "started_at": "2026-11-01T13:52:18+08:00",
+    "finished_at": "2026-11-01T13:52:18+08:00",
+    "duration_s": 0.0,
+    "artifact": "artifacts\\04_qc.json",
+    "fingerprint": "8ccc5959a7b6b88b4740abb5a126dd4190ac08c263280a05bb8375d6a54ae7e8",
+    "artifact_exists": true,
+    "duration_live_s": 0.0
+   },
+   {
+    "index": 5,
+    "id": "rank",
+    "label": "综合评估与候选排序",
+    "status": "completed",
+    "progress": {
+     "done": 1,
+     "total": 1,
+     "unit": "candidates"
+    },
+    "message": "1 个候选已排序",
+    "started_at": "2026-11-01T13:52:18+08:00",
+    "finished_at": "2026-11-01T13:52:18+08:00",
+    "duration_s": 0.0,
+    "artifact": "artifacts\\05_rank.json",
+    "fingerprint": "f04359a4d865f651ecf05bd98a57e83f1de14274f175d33856acceda495c7f16",
+    "artifact_exists": true,
+    "duration_live_s": 0.0
+   },
+   {
+    "index": 6,
+    "id": "decide",
+    "label": "判据与决策",
+    "status": "completed",
+    "progress": {
+     "done": 1,
+     "total": 1,
+     "unit": "candidates"
+    },
+    "message": "advance=1",
+    "started_at": "2026-11-01T13:52:18+08:00",
+    "finished_at": "2026-11-01T13:52:18+08:00",
+    "duration_s": 0.0,
+    "artifact": "artifacts\\06_decide.json",
+    "fingerprint": "6b5bcdaa340470fea55dedcb1a6fb2a3f20a1f7e2f6bbeb4cad40f93eb7f4d79",
+    "artifact_exists": true,
+    "duration_live_s": 0.0
+   },
+   {
+    "index": 7,
+    "id": "export",
+    "label": "输出与清单",
+    "status": "completed",
+    "progress": {
+     "done": 7,
+     "total": 7,
+     "unit": "files"
+    },
+    "message": "固定格式产物已写出并通过自检",
+    "started_at": "2026-11-01T13:52:18+08:00",
+    "finished_at": "2026-11-01T13:52:18+08:00",
+    "duration_s": 0.0,
+    "artifact": "artifacts\\07_export.json",
+    "fingerprint": "6b327232fe014edd5066d8c1a3668c5237e5ec9ced789b7290b8e4f3cf97383f",
+    "artifact_exists": true,
+    "duration_live_s": 0.0
+   }
+  ],
+  "stage_ids": [
+   "intake",
+   "applicability",
+   "poses",
+   "qc",
+   "rank",
+   "decide",
+   "export"
+  ],
+  "artifacts": [
+   {
+    "stage": "intake",
+    "index": 1,
+    "artifact": "artifacts\\01_intake.json",
+    "exists": true,
+    "bytes": 5498
+   },
+   {
+    "stage": "applicability",
+    "index": 2,
+    "artifact": "artifacts\\02_applicability.json",
+    "exists": true,
+    "bytes": 726
+   },
+   {
+    "stage": "poses",
+    "index": 3,
+    "artifact": "artifacts\\03_poses.json",
+    "exists": true,
+    "bytes": 6195
+   },
+   {
+    "stage": "qc",
+    "index": 4,
+    "artifact": "artifacts\\04_qc.json",
+    "exists": true,
+    "bytes": 7507
+   },
+   {
+    "stage": "rank",
+    "index": 5,
+    "artifact": "artifacts\\05_rank.json",
+    "exists": true,
+    "bytes": 1808
+   },
+   {
+    "stage": "decide",
+    "index": 6,
+    "artifact": "artifacts\\06_decide.json",
+    "exists": true,
+    "bytes": 3015
+   },
+   {
+    "stage": "export",
+    "index": 7,
+    "artifact": "artifacts\\07_export.json",
+    "exists": true,
+    "bytes": 2192
+   }
+  ],
+  "outputs": [
+   {
+    "name": "reference_check",
+    "path": "outputs\\reference_check.csv",
+    "exists": true,
+    "bytes": 272
+   },
+   {
+    "name": "pose_metrics",
+    "path": "outputs\\pose_metrics.csv",
+    "exists": true,
+    "bytes": 1265
+   },
+   {
+    "name": "receptor_matrix",
+    "path": "outputs\\receptor_matrix.csv",
+    "exists": true,
+    "bytes": 204
+   },
+   {
+    "name": "candidates_ranked",
+    "path": "outputs\\candidates_ranked.csv",
+    "exists": true,
+    "bytes": 378
+   },
+   {
+    "name": "decisions",
+    "path": "outputs\\decisions.csv",
+    "exists": true,
+    "bytes": 290
+   },
+   {
+    "name": "uncertainties",
+    "path": "outputs\\uncertainties.csv",
+    "exists": true,
+    "bytes": 907
+   },
+   {
+    "name": "report",
+    "path": "outputs\\stage3_report.md",
+    "exists": true,
+    "bytes": 5003
+   },
+   {
+    "name": "manifest",
+    "path": "manifest.json",
+    "exists": true,
+    "bytes": 7230
+   }
+  ],
+  "events": [
+   {
+    "ts": "2026-11-01T13:51:46+08:00",
+    "level": "info",
+    "stage": null,
+    "message": "run start: hiv1_1t3r_darunavir",
+    "data": {
+     "engine": "vina"
+    }
+   },
+   {
+    "ts": "2026-11-01T13:51:46+08:00",
+    "level": "info",
+    "stage": "intake",
+    "message": "stage start: 输入契约校验"
+   },
+   {
+    "ts": "2026-11-01T13:51:46+08:00",
+    "level": "warn",
+    "stage": "intake",
+    "message": "未提供突变 panel；一致性与耐药分量按中性值处理"
+   },
+   {
+    "ts": "2026-11-01T13:51:46+08:00",
+    "level": "warn",
+    "stage": "intake",
+    "message": "['DRV'] 的成药性四项未填全；按中性 0.5 处理并在不确定性表标记"
+   },
+   {
+    "ts": "2026-11-01T13:51:46+08:00",
+    "level": "info",
+    "stage": "intake",
+    "message": "stage done: 输入契约校验",
+    "data": {
+     "duration_s": 0.0,
+     "counters": {
+      "candidates": 1,
+      "controls": 0,
+      "receptors": 1,
+      "poses": 0,
+      "primary_receptor": "HIV1_1T3R"
+     }
+    }
+   },
+   {
+    "ts": "2026-11-01T13:51:46+08:00",
+    "level": "info",
+    "stage": "applicability",
+    "message": "stage start: 方法适用性与参考对照"
+   },
+   {
+    "ts": "2026-11-01T13:51:46+08:00",
+    "level": "info",
+    "stage": "applicability",
+    "message": "stage done: 方法适用性与参考对照",
+    "data": {
+     "duration_s": 0.0,
+     "counters": {
+      "reference_status": "pass"
+     }
+    }
+   },
+   {
+    "ts": "2026-11-01T13:51:46+08:00",
+    "level": "info",
+    "stage": "poses",
+    "message": "stage start: 结合姿势 / 复合物数据"
+   },
+   {
+    "ts": "2026-11-01T13:52:18+08:00",
+    "level": "info",
+    "stage": "poses",
+    "message": "Vina exhaustiveness=8, n_poses=9, seed=42"
+   },
+   {
+    "ts": "2026-11-01T13:52:18+08:00",
+    "level": "info",
+    "stage": "poses",
+    "message": "stage done: 结合姿势 / 复合物数据",
+    "data": {
+     "duration_s": 32.0,
+     "counters": {
+      "pose_rows": 9
+     }
+    }
+   },
+   {
+    "ts": "2026-11-01T13:52:18+08:00",
+    "level": "info",
+    "stage": "qc",
+    "message": "stage start: 姿势几何与一致性检查"
+   },
+   {
+    "ts": "2026-11-01T13:52:18+08:00",
+    "level": "info",
+    "stage": "qc",
+    "message": "stage done: 姿势几何与一致性检查",
+    "data": {
+     "duration_s": 0.0,
+     "counters": {
+      "selected_poses": 1,
+      "matrix_rows": 1
+     }
+    }
+   },
+   {
+    "ts": "2026-11-01T13:52:18+08:00",
+    "level": "info",
+    "stage": "rank",
+    "message": "stage start: 综合评估与候选排序"
+   },
+   {
+    "ts": "2026-11-01T13:52:18+08:00",
+    "level": "info",
+    "stage": "rank",
+    "message": "stage done: 综合评估与候选排序",
+    "data": {
+     "duration_s": 0.0,
+     "counters": {
+      "ranked_candidates": 1
+     }
+    }
+   },
+   {
+    "ts": "2026-11-01T13:52:18+08:00",
+    "level": "info",
+    "stage": "decide",
+    "message": "stage start: 判据与决策"
+   },
+   {
+    "ts": "2026-11-01T13:52:18+08:00",
+    "level": "info",
+    "stage": "decide",
+    "message": "stage done: 判据与决策",
+    "data": {
+     "duration_s": 0.0,
+     "counters": {
+      "decision_advance": 1
+     }
+    }
+   },
+   {
+    "ts": "2026-11-01T13:52:18+08:00",
+    "level": "info",
+    "stage": "export",
+    "message": "stage start: 输出与清单"
+   },
+   {
+    "ts": "2026-11-01T13:52:18+08:00",
+    "level": "info",
+    "stage": "export",
+    "message": "stage done: 输出与清单",
+    "data": {
+     "duration_s": 0.0,
+     "counters": {}
+    }
+   },
+   {
+    "ts": "2026-11-01T13:52:18+08:00",
+    "level": "info",
+    "stage": null,
+    "message": "run completed",
+    "data": {
+     "summary": "advance=1"
+    }
+   }
+  ],
+  "run_dir": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\stage3_runs\\hiv1_1t3r_darunavir-20261101-135146",
+  "state_file": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\stage3_runs\\hiv1_1t3r_darunavir-20261101-135146\\run_state.json",
+  "state_mtime_age_s": 10730.0,
+  "server_time": "2026-11-01T16:51:08+08:00"
+ },
+ "logs": {
+  "intake": {
+   "lines": [
+    "run hiv1_1t3r_darunavir-20261101-135146  |  case hiv1_1t3r_darunavir  |  stage3/0.1.0",
+    "------------------------------------------------------------------------------",
+    "[1/7] 输入契约校验            [............] 0/5  读取输入  0.0s",
+    "[1/7] 输入契约校验            x 5/5  1 候选 · 1 受体 · 0 姿势  0.0s",
+    "[2/7] 方法适用性与参考对照        [............] 0/1  0.0s",
+    "[2/7] 方法适用性与参考对照        x 1/1  参考对照通过（pass=1）  0.0s",
+    "[3/7] 结合姿势 / 复合物数据      [............] 0/1  vina  0.0s",
+    "[3/7] 结合姿势 / 复合物数据      x 1/1  9 姿势 · 0 条不确定性  32.0s",
+    "[4/7] 姿势几何与一致性检查        [............] 0/9  0.0s",
+    "[4/7] 姿势几何与一致性检查        x 9/9  1 个选中姿势 · 1 行突变矩阵  0.0s",
+    "[5/7] 综合评估与候选排序         [............] 0/1  0.0s",
+    "[5/7] 综合评估与候选排序         x 1/1  1 个候选已排序  0.0s",
+    "[6/7] 判据与决策             [............] 0/1  0.0s",
+    "[6/7] 判据与决策             x 1/1  advance=1  0.0s",
+    "[7/7] 输出与清单             [............] 0/7  写固定格式产物  0.0s",
+    "[7/7] 输出与清单             x 7/7  固定格式产物已写出并通过自检  0.0s",
+    "------------------------------------------------------------------------------",
+    "done  advance=1  32.0s",
+    "run dir: C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\stage3_runs\\hiv1_1t3r_darunavir-20261101-135146",
+    "status: completed"
+   ],
+   "source_name": "stage3_hiv1_1t3r_darunavir_20261101-135146.log"
+  },
+  "applicability": {
+   "lines": [
+    "run hiv1_1t3r_darunavir-20261101-135146  |  case hiv1_1t3r_darunavir  |  stage3/0.1.0",
+    "------------------------------------------------------------------------------",
+    "[1/7] 输入契约校验            [............] 0/5  读取输入  0.0s",
+    "[1/7] 输入契约校验            x 5/5  1 候选 · 1 受体 · 0 姿势  0.0s",
+    "[2/7] 方法适用性与参考对照        [............] 0/1  0.0s",
+    "[2/7] 方法适用性与参考对照        x 1/1  参考对照通过（pass=1）  0.0s",
+    "[3/7] 结合姿势 / 复合物数据      [............] 0/1  vina  0.0s",
+    "[3/7] 结合姿势 / 复合物数据      x 1/1  9 姿势 · 0 条不确定性  32.0s",
+    "[4/7] 姿势几何与一致性检查        [............] 0/9  0.0s",
+    "[4/7] 姿势几何与一致性检查        x 9/9  1 个选中姿势 · 1 行突变矩阵  0.0s",
+    "[5/7] 综合评估与候选排序         [............] 0/1  0.0s",
+    "[5/7] 综合评估与候选排序         x 1/1  1 个候选已排序  0.0s",
+    "[6/7] 判据与决策             [............] 0/1  0.0s",
+    "[6/7] 判据与决策             x 1/1  advance=1  0.0s",
+    "[7/7] 输出与清单             [............] 0/7  写固定格式产物  0.0s",
+    "[7/7] 输出与清单             x 7/7  固定格式产物已写出并通过自检  0.0s",
+    "------------------------------------------------------------------------------",
+    "done  advance=1  32.0s",
+    "run dir: C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\stage3_runs\\hiv1_1t3r_darunavir-20261101-135146",
+    "status: completed"
+   ],
+   "source_name": "stage3_hiv1_1t3r_darunavir_20261101-135146.log"
+  },
+  "poses": {
+   "lines": [
+    "run hiv1_1t3r_darunavir-20261101-135146  |  case hiv1_1t3r_darunavir  |  stage3/0.1.0",
+    "------------------------------------------------------------------------------",
+    "[1/7] 输入契约校验            [............] 0/5  读取输入  0.0s",
+    "[1/7] 输入契约校验            x 5/5  1 候选 · 1 受体 · 0 姿势  0.0s",
+    "[2/7] 方法适用性与参考对照        [............] 0/1  0.0s",
+    "[2/7] 方法适用性与参考对照        x 1/1  参考对照通过（pass=1）  0.0s",
+    "[3/7] 结合姿势 / 复合物数据      [............] 0/1  vina  0.0s",
+    "[3/7] 结合姿势 / 复合物数据      x 1/1  9 姿势 · 0 条不确定性  32.0s",
+    "[4/7] 姿势几何与一致性检查        [............] 0/9  0.0s",
+    "[4/7] 姿势几何与一致性检查        x 9/9  1 个选中姿势 · 1 行突变矩阵  0.0s",
+    "[5/7] 综合评估与候选排序         [............] 0/1  0.0s",
+    "[5/7] 综合评估与候选排序         x 1/1  1 个候选已排序  0.0s",
+    "[6/7] 判据与决策             [............] 0/1  0.0s",
+    "[6/7] 判据与决策             x 1/1  advance=1  0.0s",
+    "[7/7] 输出与清单             [............] 0/7  写固定格式产物  0.0s",
+    "[7/7] 输出与清单             x 7/7  固定格式产物已写出并通过自检  0.0s",
+    "------------------------------------------------------------------------------",
+    "done  advance=1  32.0s",
+    "run dir: C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\stage3_runs\\hiv1_1t3r_darunavir-20261101-135146",
+    "status: completed"
+   ],
+   "source_name": "stage3_hiv1_1t3r_darunavir_20261101-135146.log"
+  },
+  "qc": {
+   "lines": [
+    "run hiv1_1t3r_darunavir-20261101-135146  |  case hiv1_1t3r_darunavir  |  stage3/0.1.0",
+    "------------------------------------------------------------------------------",
+    "[1/7] 输入契约校验            [............] 0/5  读取输入  0.0s",
+    "[1/7] 输入契约校验            x 5/5  1 候选 · 1 受体 · 0 姿势  0.0s",
+    "[2/7] 方法适用性与参考对照        [............] 0/1  0.0s",
+    "[2/7] 方法适用性与参考对照        x 1/1  参考对照通过（pass=1）  0.0s",
+    "[3/7] 结合姿势 / 复合物数据      [............] 0/1  vina  0.0s",
+    "[3/7] 结合姿势 / 复合物数据      x 1/1  9 姿势 · 0 条不确定性  32.0s",
+    "[4/7] 姿势几何与一致性检查        [............] 0/9  0.0s",
+    "[4/7] 姿势几何与一致性检查        x 9/9  1 个选中姿势 · 1 行突变矩阵  0.0s",
+    "[5/7] 综合评估与候选排序         [............] 0/1  0.0s",
+    "[5/7] 综合评估与候选排序         x 1/1  1 个候选已排序  0.0s",
+    "[6/7] 判据与决策             [............] 0/1  0.0s",
+    "[6/7] 判据与决策             x 1/1  advance=1  0.0s",
+    "[7/7] 输出与清单             [............] 0/7  写固定格式产物  0.0s",
+    "[7/7] 输出与清单             x 7/7  固定格式产物已写出并通过自检  0.0s",
+    "------------------------------------------------------------------------------",
+    "done  advance=1  32.0s",
+    "run dir: C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\stage3_runs\\hiv1_1t3r_darunavir-20261101-135146",
+    "status: completed"
+   ],
+   "source_name": "stage3_hiv1_1t3r_darunavir_20261101-135146.log"
+  },
+  "rank": {
+   "lines": [
+    "run hiv1_1t3r_darunavir-20261101-135146  |  case hiv1_1t3r_darunavir  |  stage3/0.1.0",
+    "------------------------------------------------------------------------------",
+    "[1/7] 输入契约校验            [............] 0/5  读取输入  0.0s",
+    "[1/7] 输入契约校验            x 5/5  1 候选 · 1 受体 · 0 姿势  0.0s",
+    "[2/7] 方法适用性与参考对照        [............] 0/1  0.0s",
+    "[2/7] 方法适用性与参考对照        x 1/1  参考对照通过（pass=1）  0.0s",
+    "[3/7] 结合姿势 / 复合物数据      [............] 0/1  vina  0.0s",
+    "[3/7] 结合姿势 / 复合物数据      x 1/1  9 姿势 · 0 条不确定性  32.0s",
+    "[4/7] 姿势几何与一致性检查        [............] 0/9  0.0s",
+    "[4/7] 姿势几何与一致性检查        x 9/9  1 个选中姿势 · 1 行突变矩阵  0.0s",
+    "[5/7] 综合评估与候选排序         [............] 0/1  0.0s",
+    "[5/7] 综合评估与候选排序         x 1/1  1 个候选已排序  0.0s",
+    "[6/7] 判据与决策             [............] 0/1  0.0s",
+    "[6/7] 判据与决策             x 1/1  advance=1  0.0s",
+    "[7/7] 输出与清单             [............] 0/7  写固定格式产物  0.0s",
+    "[7/7] 输出与清单             x 7/7  固定格式产物已写出并通过自检  0.0s",
+    "------------------------------------------------------------------------------",
+    "done  advance=1  32.0s",
+    "run dir: C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\stage3_runs\\hiv1_1t3r_darunavir-20261101-135146",
+    "status: completed"
+   ],
+   "source_name": "stage3_hiv1_1t3r_darunavir_20261101-135146.log"
+  },
+  "decide": {
+   "lines": [
+    "run hiv1_1t3r_darunavir-20261101-135146  |  case hiv1_1t3r_darunavir  |  stage3/0.1.0",
+    "------------------------------------------------------------------------------",
+    "[1/7] 输入契约校验            [............] 0/5  读取输入  0.0s",
+    "[1/7] 输入契约校验            x 5/5  1 候选 · 1 受体 · 0 姿势  0.0s",
+    "[2/7] 方法适用性与参考对照        [............] 0/1  0.0s",
+    "[2/7] 方法适用性与参考对照        x 1/1  参考对照通过（pass=1）  0.0s",
+    "[3/7] 结合姿势 / 复合物数据      [............] 0/1  vina  0.0s",
+    "[3/7] 结合姿势 / 复合物数据      x 1/1  9 姿势 · 0 条不确定性  32.0s",
+    "[4/7] 姿势几何与一致性检查        [............] 0/9  0.0s",
+    "[4/7] 姿势几何与一致性检查        x 9/9  1 个选中姿势 · 1 行突变矩阵  0.0s",
+    "[5/7] 综合评估与候选排序         [............] 0/1  0.0s",
+    "[5/7] 综合评估与候选排序         x 1/1  1 个候选已排序  0.0s",
+    "[6/7] 判据与决策             [............] 0/1  0.0s",
+    "[6/7] 判据与决策             x 1/1  advance=1  0.0s",
+    "[7/7] 输出与清单             [............] 0/7  写固定格式产物  0.0s",
+    "[7/7] 输出与清单             x 7/7  固定格式产物已写出并通过自检  0.0s",
+    "------------------------------------------------------------------------------",
+    "done  advance=1  32.0s",
+    "run dir: C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\stage3_runs\\hiv1_1t3r_darunavir-20261101-135146",
+    "status: completed"
+   ],
+   "source_name": "stage3_hiv1_1t3r_darunavir_20261101-135146.log"
+  },
+  "export": {
+   "lines": [
+    "run hiv1_1t3r_darunavir-20261101-135146  |  case hiv1_1t3r_darunavir  |  stage3/0.1.0",
+    "------------------------------------------------------------------------------",
+    "[1/7] 输入契约校验            [............] 0/5  读取输入  0.0s",
+    "[1/7] 输入契约校验            x 5/5  1 候选 · 1 受体 · 0 姿势  0.0s",
+    "[2/7] 方法适用性与参考对照        [............] 0/1  0.0s",
+    "[2/7] 方法适用性与参考对照        x 1/1  参考对照通过（pass=1）  0.0s",
+    "[3/7] 结合姿势 / 复合物数据      [............] 0/1  vina  0.0s",
+    "[3/7] 结合姿势 / 复合物数据      x 1/1  9 姿势 · 0 条不确定性  32.0s",
+    "[4/7] 姿势几何与一致性检查        [............] 0/9  0.0s",
+    "[4/7] 姿势几何与一致性检查        x 9/9  1 个选中姿势 · 1 行突变矩阵  0.0s",
+    "[5/7] 综合评估与候选排序         [............] 0/1  0.0s",
+    "[5/7] 综合评估与候选排序         x 1/1  1 个候选已排序  0.0s",
+    "[6/7] 判据与决策             [............] 0/1  0.0s",
+    "[6/7] 判据与决策             x 1/1  advance=1  0.0s",
+    "[7/7] 输出与清单             [............] 0/7  写固定格式产物  0.0s",
+    "[7/7] 输出与清单             x 7/7  固定格式产物已写出并通过自检  0.0s",
+    "------------------------------------------------------------------------------",
+    "done  advance=1  32.0s",
+    "run dir: C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\stage3_runs\\hiv1_1t3r_darunavir-20261101-135146",
+    "status: completed"
+   ],
+   "source_name": "stage3_hiv1_1t3r_darunavir_20261101-135146.log"
+  }
+ }
+}
