@@ -1,0 +1,68 @@
+{
+  "generated_at": "2026-11-01T11:56:00+08:00",
+  "mode": "read-only from runs/, converted artifacts written to research-dashboard/data/",
+  "sources": {
+    "receptor": {
+      "path": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\receptor\\1T3R_protein_AB.pdb",
+      "sha256": "ad74223786037b56b9dca8abd6aa7ee3ef1bc3b94cc7b60fd4da153f91aa44f6",
+      "bytes": 122682
+    },
+    "ligand_sdf": {
+      "path": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\ligand\\darunavir_H.sdf",
+      "sha256": "5c0bc06fa591b5d1b29a23b32e58d1ca8b76387becd80aa4cfd65dd2e61066d6",
+      "bytes": 6500
+    },
+    "cocrystal_sdf": {
+      "path": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\ligand\\cocrystal_pose.sdf",
+      "sha256": "944858dac2dcf363a32e7b429822d6fdcb9f5ef9d7f07afbe07ea7b6fed18639",
+      "bytes": 3355
+    },
+    "poses_pdbqt": {
+      "path": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\docking\\poses.pdbqt",
+      "sha256": "1d013629b08bb45c26fce4ae5a44ea4307642e8399bb76638e1db770e7638f8e",
+      "bytes": 41886
+    },
+    "redock_json": {
+      "path": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\docking\\redock_rmsd.json",
+      "sha256": "cecd40d9eac2352d2d252b862e1ba3f8593743450e52d1a063d47bdd63d745c6",
+      "bytes": 1352
+    },
+    "run_state": {
+      "path": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\stage3_runs\\hiv1_1t3r_darunavir-20261030-225324\\run_state.json",
+      "sha256": "bbb687c8386be3b61a40075077e1f967714560d55ae5b98ab32e8f45d42f01f2",
+      "bytes": 6149
+    }
+  },
+  "outputs": {
+    "cocrystal_pose.sdf": {
+      "path": "C:\\Users\\23285\\a4s_workflow\\research-dashboard\\data\\structure\\cocrystal_pose.sdf",
+      "sha256": "944858dac2dcf363a32e7b429822d6fdcb9f5ef9d7f07afbe07ea7b6fed18639",
+      "bytes": 3355
+    },
+    "darunavir_H.sdf": {
+      "path": "C:\\Users\\23285\\a4s_workflow\\research-dashboard\\data\\structure\\darunavir_H.sdf",
+      "sha256": "5c0bc06fa591b5d1b29a23b32e58d1ca8b76387becd80aa4cfd65dd2e61066d6",
+      "bytes": 6500
+    },
+    "poses.pdb": {
+      "path": "C:\\Users\\23285\\a4s_workflow\\research-dashboard\\data\\structure\\poses.pdb",
+      "sha256": "2054cd0742551e28aed15188d2dfc1eb9fa0d8ec9c344994921dbaae2f690f7f",
+      "bytes": 40313
+    },
+    "receptor.pdb": {
+      "path": "C:\\Users\\23285\\a4s_workflow\\research-dashboard\\data\\structure\\receptor.pdb",
+      "sha256": "ad74223786037b56b9dca8abd6aa7ee3ef1bc3b94cc7b60fd4da153f91aa44f6",
+      "bytes": 122682
+    },
+    "structure_meta.json": {
+      "path": "C:\\Users\\23285\\a4s_workflow\\research-dashboard\\data\\structure_meta.json",
+      "sha256": "0ebba960f7d1c4440d84ece6da86709a6e5fd430e1959c5d662147f93556ad59",
+      "bytes": 7503
+    },
+    "poses_meta.json": {
+      "path": "C:\\Users\\23285\\a4s_workflow\\research-dashboard\\data\\poses_meta.json",
+      "sha256": "db1f4a37d2d94a49c37a0df24cf946364ad02c42e441046d149173fb2472a29c",
+      "bytes": 1143
+    }
+  }
+}

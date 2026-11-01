@@ -1,0 +1,867 @@
+{
+  "schema_version": "a4s.pipeline_result.v1",
+  "case_id": "hiv1_1t3r_darunavir",
+  "card_id": "t_664138d8",
+  "pipeline_run_id": "t_664138d8_hiv1_darunavir_20261030-224808",
+  "generated_at": "2026-10-30T22:56:52+08:00",
+  "host": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.9"
+  },
+  "verdict": "OK",
+  "pdb": {
+    "pdb_id": "1T3R",
+    "title": "HIV protease wild-type in complex with TMC114 inhibitor",
+    "resolution_A": 1.2,
+    "source_url": "RCSB https://files.rcsb.org/download/1T3R.pdb",
+    "file": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\inputs\\1T3R.pdb",
+    "sha256": "a53e29c777486fc4d7b8c070d424ac35554ba1ca2ca04f81f64f8dcb4b3a1aad",
+    "ligand_het_code": "017",
+    "downloaded_at": "2026-10-30T22:48:08+08:00"
+  },
+  "inputs": {
+    "receptor": {
+      "chains": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\receptor\\1T3R_receptor_input.pdb",
+      "protein_pdb": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\receptor\\1T3R_receptor_input.pdb",
+      "protein_pdb_sha256": "6a7babd8ce13969aab4e88ab0cab37369a2d6e0d661432f92b8ba6516448fe31",
+      "receptor_pdbqt": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\receptor\\1T3R.pdbqt",
+      "receptor_pdbqt_sha256": "9559702843d75d2d8d7ef2de9edab740f8abfa1ffb32eae521eaa0eb986458a1",
+      "atoms_pdbqt": 1811,
+      "polar_hydrogens": 315,
+      "ad_type_counts": {
+        "A": 74,
+        "C": 889,
+        "HD": 315,
+        "N": 255,
+        "NA": 2,
+        "OA": 268,
+        "SA": 8
+      },
+      "prep_method": "meeko 0.8.0 mk_prepare_receptor --read_pdb --default_altloc A --compute_charges -p",
+      "ca_truncated_residues_mapped_to_ala": [
+        "A:7",
+        "A:41",
+        "A:43",
+        "B:41",
+        "B:43"
+      ],
+      "waters_ions_removed": "HOH (261), PO4 (25), ligand 017 removed by ATOM-only filter"
+    },
+    "ligand": {
+      "name": "darunavir (TMC114)",
+      "pubchem_cid": 213039,
+      "formula": "C27H37N3O7S",
+      "inchi_key": "CJBJHOAVZSMMDJ-HEXNFIEUSA-N",
+      "smiles": "CC(C)CN(C[C@@H](O)[C@H](Cc1ccccc1)NC(=O)O[C@H]1CO[C@H]2OCC[C@H]21)S(=O)(=O)c1ccc(N)cc1",
+      "cocrystal_pose_sdf": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\ligand\\cocrystal_pose.sdf",
+      "cocrystal_pose_sdf_sha256": "944858dac2dcf363a32e7b429822d6fdcb9f5ef9d7f07afbe07ea7b6fed18639",
+      "withH_sdf": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\ligand\\darunavir_H.sdf",
+      "withH_sdf_sha256": "5c0bc06fa591b5d1b29a23b32e58d1ca8b76387becd80aa4cfd65dd2e61066d6",
+      "ligand_pdbqt": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\ligand\\darunavir.pdbqt",
+      "ligand_pdbqt_sha256": "5f238babc18bcdd13be13f15289d9bca38036a29dc9e1f3b952658f488206983",
+      "heavy_atoms": 38,
+      "pdbqt_atoms": 42,
+      "rotatable_torsions": [
+        "TORSDOF 14"
+      ],
+      "prep_method": "1T3R HETATM 017 coordinates + PubChem CID 213039 bond template (graph-matched), RDKit AddHs, meeko mk_prepare_ligand"
+    },
+    "box": {
+      "method": "co-crystal ligand heavy-atom AABB + 5.0 A padding per axis (JAK2 case method)",
+      "padding_A": 5.0,
+      "ligand_aabb_min": [
+        14.279,
+        24.363,
+        10.098
+      ],
+      "ligand_aabb_max": [
+        24.64,
+        35.169,
+        18.22
+      ],
+      "center": [
+        19.459,
+        29.766,
+        14.159
+      ],
+      "size": [
+        20.361,
+        20.806,
+        18.122
+      ],
+      "sha256": "3b373433466f94b5b71d11cf28488146740f76207b355e38ae492b9a7a4011d1",
+      "box_definition_file": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\inputs\\box_definition.json"
+    }
+  },
+  "engine": {
+    "name": "AutoDock Vina",
+    "version": "AutoDock Vina v1.2.5",
+    "binary": "C:\\Users\\23285\\a4s_workflow\\tools\\vina_1.2.5_win.exe",
+    "binary_sha256": "b5a23b226ee5dc1b028df04082d13a7b0e5b9b12b988bbcf9498cb351e20b38f",
+    "python_binding": "shim/vina.py (python API -> official vina.exe CLI)",
+    "scoring_function": "vina",
+    "parameters": {
+      "scoring_function": "vina",
+      "exhaustiveness": 8,
+      "n_poses": 9,
+      "seed": 42,
+      "cpu": 4,
+      "box_center": [
+        19.459,
+        29.766,
+        14.159
+      ],
+      "box_size": [
+        20.361,
+        20.806,
+        18.122
+      ]
+    }
+  },
+  "docking": {
+    "command": [
+      "C:\\Users\\23285\\a4s_workflow\\tools\\vina_1.2.5_win.exe",
+      "--receptor",
+      "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\receptor\\1T3R.pdbqt",
+      "--ligand",
+      "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\ligand\\darunavir.pdbqt",
+      "--scoring",
+      "vina",
+      "--center_x",
+      "19.4590",
+      "--center_y",
+      "29.7660",
+      "--center_z",
+      "14.1590",
+      "--size_x",
+      "20.3610",
+      "--size_y",
+      "20.8060",
+      "--size_z",
+      "18.1220",
+      "--exhaustiveness",
+      "8",
+      "--num_modes",
+      "9",
+      "--seed",
+      "42",
+      "--cpu",
+      "4",
+      "--out",
+      "C:\\Users\\23285\\AppData\\Local\\Temp\\vina_shim_tgzmzu2l\\poses.pdbqt"
+    ],
+    "command_file": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\docking\\vina_command.txt",
+    "elapsed_s": 33.93,
+    "log": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\docking\\vina.log",
+    "log_bytes": 2284,
+    "poses_pdbqt": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\docking\\poses.pdbqt",
+    "poses_pdbqt_sha256": "1d013629b08bb45c26fce4ae5a44ea4307642e8399bb76638e1db770e7638f8e",
+    "n_pose_models": 9,
+    "pose_files": [
+      "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\docking\\poses\\pose_1.pdbqt",
+      "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\docking\\poses\\pose_2.pdbqt",
+      "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\docking\\poses\\pose_3.pdbqt",
+      "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\docking\\poses\\pose_4.pdbqt",
+      "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\docking\\poses\\pose_5.pdbqt",
+      "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\docking\\poses\\pose_6.pdbqt",
+      "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\docking\\poses\\pose_7.pdbqt",
+      "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\docking\\poses\\pose_8.pdbqt",
+      "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\docking\\poses\\pose_9.pdbqt"
+    ],
+    "scores": [
+      {
+        "pose_index": 1,
+        "affinity_kcal_mol": -9.958,
+        "rmsd_lb": 0.0,
+        "rmsd_ub": 0.0
+      },
+      {
+        "pose_index": 2,
+        "affinity_kcal_mol": -9.148,
+        "rmsd_lb": 1.783,
+        "rmsd_ub": 3.102
+      },
+      {
+        "pose_index": 3,
+        "affinity_kcal_mol": -8.877,
+        "rmsd_lb": 2.792,
+        "rmsd_ub": 9.443
+      },
+      {
+        "pose_index": 4,
+        "affinity_kcal_mol": -8.782,
+        "rmsd_lb": 2.082,
+        "rmsd_ub": 4.671
+      },
+      {
+        "pose_index": 5,
+        "affinity_kcal_mol": -8.366,
+        "rmsd_lb": 2.472,
+        "rmsd_ub": 9.477
+      },
+      {
+        "pose_index": 6,
+        "affinity_kcal_mol": -8.233,
+        "rmsd_lb": 2.62,
+        "rmsd_ub": 5.354
+      },
+      {
+        "pose_index": 7,
+        "affinity_kcal_mol": -7.946,
+        "rmsd_lb": 3.106,
+        "rmsd_ub": 9.47
+      },
+      {
+        "pose_index": 8,
+        "affinity_kcal_mol": -7.88,
+        "rmsd_lb": 3.867,
+        "rmsd_ub": 9.956
+      },
+      {
+        "pose_index": 9,
+        "affinity_kcal_mol": -7.81,
+        "rmsd_lb": 2.712,
+        "rmsd_ub": 8.749
+      }
+    ],
+    "best": {
+      "pose_index": 1,
+      "affinity_kcal_mol": -9.958,
+      "ligand_efficiency": "0.262"
+    }
+  },
+  "redock": {
+    "method": "meeko mk_export (pdbqt->sdf) + RDKit rdMolAlign.GetBestRMS (symmetry aware)",
+    "reference_conformer": "1T3R HETATM 017 co-crystal pose (ligand/cocrystal_pose.sdf)",
+    "threshold_A": 2.0,
+    "best_pose_index": 1,
+    "best_rmsd_A": 0.211,
+    "pass": true,
+    "per_pose_rmsd_A": {
+      "1": 0.211,
+      "2": 2.733,
+      "3": 2.707,
+      "4": 3.005,
+      "5": 3.028,
+      "6": 2.945,
+      "7": 2.924,
+      "8": 1.87,
+      "9": 1.923
+    },
+    "evidence_json": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\docking\\redock_rmsd.json",
+    "independent_checks": {
+      "GetBestRMS_symmetry_aware": 0.211,
+      "AlignMol_single_mapping": 0.211,
+      "in_place_no_alignment_graph_mapped": 0.29,
+      "atom_map_size": 38,
+      "heavy_atoms": 38,
+      "threshold_A": 2.0,
+      "pipeline_best_rmsd": 0.211,
+      "best_affinity_kcal_mol": -9.958,
+      "best_pose_index": 1
+    }
+  },
+  "stage3": {
+    "pipeline": "src/stage3_agent/stage3-agent (stage3/0.1.0), engine adapter vina via shim",
+    "run_dir": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\stage3_runs\\hiv1_1t3r_darunavir-20261030-225324",
+    "run_id": "hiv1_1t3r_darunavir-20261030-225324",
+    "status": "completed",
+    "config": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\stage3_case\\stage3_config_hiv1_1t3r_darunavir.json",
+    "config_sha256": "8a4dd5da0966e951851253f0374ee760652a0da26bc3d6a1305eb1b94dd846ed",
+    "validate": {
+      "exit_code": 0,
+      "result": "OK  10 outputs validated: reference_check, pose_metrics, receptor_matrix, candidates_ranked, decisions, uncertainties, candidates_ranked_jsonl, decisions_jsonl, pose_metrics_jsonl, report"
+    },
+    "reference_check": [
+      {
+        "check_id": "redock_drv",
+        "check_type": "redock_rmsd",
+        "scope": "DRV@HIV1_1T3R",
+        "metric_name": "best_rmsd_A",
+        "metric_value": "0.211",
+        "threshold": "2.000",
+        "comparator": "le",
+        "status": "pass",
+        "source": "reference_poses",
+        "note": "最高分姿势 RMSD=0.21 A (通过); 红对接只验证姿势复现，不验证打分排序"
+      }
+    ],
+    "pose_metrics": [
+      {
+        "candidate_id": "DRV",
+        "receptor_id": "HIV1_1T3R",
+        "protocol": "vina_rigid",
+        "protocol_role": "primary",
+        "engine": "vina",
+        "pose_index": "1",
+        "affinity_kcal_mol": "-9.958",
+        "heavy_atoms": "38",
+        "ligand_efficiency": "0.262",
+        "centroid_distance_to_crystal_A": "0.120",
+        "site_overlap_fraction": "1.000",
+        "min_distance_to_Asp25_oxygens": "2.641",
+        "asp25_contacts_under_3.5A": "1",
+        "clash_pairs": "0",
+        "polar_contacts": "5",
+        "pose_score": "0.800",
+        "selected": "true",
+        "selection_reason": "geometry_gate_passed;lowest_affinity",
+        "geometry_source": "sdf",
+        "confidence_score": "",
+        "confidence_type": ""
+      },
+      {
+        "candidate_id": "DRV",
+        "receptor_id": "HIV1_1T3R",
+        "protocol": "vina_rigid",
+        "protocol_role": "primary",
+        "engine": "vina",
+        "pose_index": "2",
+        "affinity_kcal_mol": "-9.148",
+        "heavy_atoms": "38",
+        "ligand_efficiency": "0.241",
+        "centroid_distance_to_crystal_A": "0.800",
+        "site_overlap_fraction": "0.868",
+        "min_distance_to_Asp25_oxygens": "2.729",
+        "asp25_contacts_under_3.5A": "2",
+        "clash_pairs": "0",
+        "polar_contacts": "5",
+        "pose_score": "0.921",
+        "selected": "false",
+        "selection_reason": "",
+        "geometry_source": "sdf",
+        "confidence_score": "",
+        "confidence_type": ""
+      },
+      {
+        "candidate_id": "DRV",
+        "receptor_id": "HIV1_1T3R",
+        "protocol": "vina_rigid",
+        "protocol_role": "primary",
+        "engine": "vina",
+        "pose_index": "3",
+        "affinity_kcal_mol": "-8.877",
+        "heavy_atoms": "38",
+        "ligand_efficiency": "0.234",
+        "centroid_distance_to_crystal_A": "1.820",
+        "site_overlap_fraction": "0.842",
+        "min_distance_to_Asp25_oxygens": "2.914",
+        "asp25_contacts_under_3.5A": "1",
+        "clash_pairs": "0",
+        "polar_contacts": "6",
+        "pose_score": "0.705",
+        "selected": "false",
+        "selection_reason": "",
+        "geometry_source": "sdf",
+        "confidence_score": "",
+        "confidence_type": ""
+      },
+      {
+        "candidate_id": "DRV",
+        "receptor_id": "HIV1_1T3R",
+        "protocol": "vina_rigid",
+        "protocol_role": "primary",
+        "engine": "vina",
+        "pose_index": "4",
+        "affinity_kcal_mol": "-8.782",
+        "heavy_atoms": "38",
+        "ligand_efficiency": "0.231",
+        "centroid_distance_to_crystal_A": "2.610",
+        "site_overlap_fraction": "0.816",
+        "min_distance_to_Asp25_oxygens": "3.392",
+        "asp25_contacts_under_3.5A": "1",
+        "clash_pairs": "0",
+        "polar_contacts": "5",
+        "pose_score": "0.689",
+        "selected": "false",
+        "selection_reason": "",
+        "geometry_source": "sdf",
+        "confidence_score": "",
+        "confidence_type": ""
+      },
+      {
+        "candidate_id": "DRV",
+        "receptor_id": "HIV1_1T3R",
+        "protocol": "vina_rigid",
+        "protocol_role": "primary",
+        "engine": "vina",
+        "pose_index": "5",
+        "affinity_kcal_mol": "-8.366",
+        "heavy_atoms": "38",
+        "ligand_efficiency": "0.220",
+        "centroid_distance_to_crystal_A": "2.180",
+        "site_overlap_fraction": "0.789",
+        "min_distance_to_Asp25_oxygens": "2.816",
+        "asp25_contacts_under_3.5A": "2",
+        "clash_pairs": "0",
+        "polar_contacts": "6",
+        "pose_score": "0.874",
+        "selected": "false",
+        "selection_reason": "",
+        "geometry_source": "sdf",
+        "confidence_score": "",
+        "confidence_type": ""
+      },
+      {
+        "candidate_id": "DRV",
+        "receptor_id": "HIV1_1T3R",
+        "protocol": "vina_rigid",
+        "protocol_role": "primary",
+        "engine": "vina",
+        "pose_index": "6",
+        "affinity_kcal_mol": "-8.233",
+        "heavy_atoms": "38",
+        "ligand_efficiency": "0.217",
+        "centroid_distance_to_crystal_A": "3.240",
+        "site_overlap_fraction": "0.816",
+        "min_distance_to_Asp25_oxygens": "3.524",
+        "asp25_contacts_under_3.5A": "0",
+        "clash_pairs": "0",
+        "polar_contacts": "5",
+        "pose_score": "0.489",
+        "selected": "false",
+        "selection_reason": "",
+        "geometry_source": "sdf",
+        "confidence_score": "",
+        "confidence_type": ""
+      },
+      {
+        "candidate_id": "DRV",
+        "receptor_id": "HIV1_1T3R",
+        "protocol": "vina_rigid",
+        "protocol_role": "primary",
+        "engine": "vina",
+        "pose_index": "7",
+        "affinity_kcal_mol": "-7.946",
+        "heavy_atoms": "38",
+        "ligand_efficiency": "0.209",
+        "centroid_distance_to_crystal_A": "4.200",
+        "site_overlap_fraction": "0.579",
+        "min_distance_to_Asp25_oxygens": "5.152",
+        "asp25_contacts_under_3.5A": "0",
+        "clash_pairs": "0",
+        "polar_contacts": "6",
+        "pose_score": "0.347",
+        "selected": "false",
+        "selection_reason": "",
+        "geometry_source": "sdf",
+        "confidence_score": "",
+        "confidence_type": ""
+      },
+      {
+        "candidate_id": "DRV",
+        "receptor_id": "HIV1_1T3R",
+        "protocol": "vina_rigid",
+        "protocol_role": "primary",
+        "engine": "vina",
+        "pose_index": "8",
+        "affinity_kcal_mol": "-7.880",
+        "heavy_atoms": "38",
+        "ligand_efficiency": "0.207",
+        "centroid_distance_to_crystal_A": "4.860",
+        "site_overlap_fraction": "0.632",
+        "min_distance_to_Asp25_oxygens": "3.122",
+        "asp25_contacts_under_3.5A": "1",
+        "clash_pairs": "0",
+        "polar_contacts": "5",
+        "pose_score": "0.579",
+        "selected": "false",
+        "selection_reason": "",
+        "geometry_source": "sdf",
+        "confidence_score": "",
+        "confidence_type": ""
+      },
+      {
+        "candidate_id": "DRV",
+        "receptor_id": "HIV1_1T3R",
+        "protocol": "vina_rigid",
+        "protocol_role": "primary",
+        "engine": "vina",
+        "pose_index": "9",
+        "affinity_kcal_mol": "-7.810",
+        "heavy_atoms": "38",
+        "ligand_efficiency": "0.206",
+        "centroid_distance_to_crystal_A": "1.870",
+        "site_overlap_fraction": "0.763",
+        "min_distance_to_Asp25_oxygens": "2.931",
+        "asp25_contacts_under_3.5A": "2",
+        "clash_pairs": "0",
+        "polar_contacts": "5",
+        "pose_score": "0.858",
+        "selected": "false",
+        "selection_reason": "",
+        "geometry_source": "sdf",
+        "confidence_score": "",
+        "confidence_type": ""
+      }
+    ],
+    "candidates_ranked": [
+      {
+        "rank": "1",
+        "candidate_id": "DRV",
+        "name": "Darunavir (1T3R co-crystal ligand 017, TMC114)",
+        "role": "candidate",
+        "tier": "B",
+        "decision": "advance",
+        "composite_score": "0.588",
+        "pose_score": "0.800",
+        "affinity_score": "0.990",
+        "consistency_score": "0.000",
+        "developability_score": "0.500",
+        "resistance_score": "0.500",
+        "affinity_kcal_mol": "-9.958",
+        "ligand_efficiency": "0.262",
+        "primary_receptor": "HIV1_1T3R",
+        "engine": "vina",
+        "uncertainty_count": "4",
+        "decision_codes": ""
+      }
+    ],
+    "decisions": [
+      {
+        "candidate_id": "DRV",
+        "name": "Darunavir (1T3R co-crystal ligand 017, TMC114)",
+        "role": "candidate",
+        "tier": "B",
+        "composite_score": "0.588",
+        "decision": "advance",
+        "decision_codes": "",
+        "decision_reason": "达到预设计算筛选标准，优先进入实验验证",
+        "next_stage": "04",
+        "reviewer_required": "false",
+        "hard_failures": "",
+        "soft_flags": ""
+      }
+    ],
+    "uncertainties": [
+      {
+        "uncertainty_id": "U-INPUT-001",
+        "scope": "case",
+        "kind": "input_warning",
+        "statement": "未提供突变 panel；一致性与耐药分量按中性值处理",
+        "impact": "note",
+        "resolves_with": "补全输入字段后重跑",
+        "status": "open"
+      },
+      {
+        "uncertainty_id": "U-INPUT-002",
+        "scope": "case",
+        "kind": "input_warning",
+        "statement": "['DRV'] 的成药性四项未填全；按中性 0.5 处理并在不确定性表标记",
+        "impact": "note",
+        "resolves_with": "补全输入字段后重跑",
+        "status": "open"
+      },
+      {
+        "uncertainty_id": "U-METHOD-DRV",
+        "scope": "DRV",
+        "kind": "no_method_comparison",
+        "statement": "缺少刚性/柔性协议对照，方法一致性按中性 0.5 处理",
+        "impact": "limits_ranking",
+        "resolves_with": "补同参数的刚性 panel 或统一协议",
+        "status": "open"
+      },
+      {
+        "uncertainty_id": "U-DEV-DRV",
+        "scope": "DRV",
+        "kind": "developability_unassessed",
+        "statement": "可获得性/可合成性/溶解度/选择性四项都未评估，按中性 0.5 处理",
+        "impact": "limits_ranking",
+        "resolves_with": "补供应商目录、逆合成可行性、logS/PSA 与选择性数据",
+        "status": "open"
+      },
+      {
+        "uncertainty_id": "U-PANEL-DRV",
+        "scope": "DRV",
+        "kind": "no_mutation_panel",
+        "statement": "没有突变 panel，耐药负担按中性 0.5 处理",
+        "impact": "limits_ranking",
+        "resolves_with": "至少覆盖已知耐药位点的柔性侧链对接",
+        "status": "open"
+      }
+    ],
+    "report": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\stage3_runs\\hiv1_1t3r_darunavir-20261030-225324\\outputs\\stage3_report.md"
+  },
+  "interactions": {
+    "cutoff_A": 3.5,
+    "n_contacts": 11,
+    "residues_in_contact": [
+      {
+        "residue": "ASP25A",
+        "n_contacts": 2,
+        "min_distance_A": 2.64
+      },
+      {
+        "residue": "ASP25B",
+        "n_contacts": 2,
+        "min_distance_A": 2.71
+      },
+      {
+        "residue": "ASP29A",
+        "n_contacts": 2,
+        "min_distance_A": 2.83
+      },
+      {
+        "residue": "ASP30A",
+        "n_contacts": 2,
+        "min_distance_A": 2.98
+      },
+      {
+        "residue": "ASP30B",
+        "n_contacts": 2,
+        "min_distance_A": 3.12
+      },
+      {
+        "residue": "GLY27A",
+        "n_contacts": 1,
+        "min_distance_A": 3.19
+      }
+    ],
+    "evidence_json": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\evidence\\pose1_contacts.json",
+    "evidence_csv": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\evidence\\pose1_contacts.csv"
+  },
+  "reuse": {
+    "a1_struct_case_receptor": {
+      "a1_receptor": "C:\\Users\\23285\\a4s_workflow\\src\\stage3_agent\\stage3-agent\\struct_case\\receptor\\1HXB_receptor.pdb",
+      "a1_chains": {
+        "A": 99,
+        "B": 99
+      },
+      "new_chains": {
+        "A": 99,
+        "B": 99
+      },
+      "chain_A_identity_vs_1T3R": "91/99",
+      "chain_A_len_1HXB": 99,
+      "chain_A_len_1T3R": 99,
+      "ca_superposition_rmsd_A": 0.461,
+      "decision": "NOT_REUSED: the A1 struct_case receptor is PDB 1HXB in its own crystal frame. Reusing it would put the 1T3R co-crystal pose and box in a different coordinate system, so the receptor was prepared freshly from 1T3R."
+    },
+    "envs": {
+      "science": "envs/py3119-science (rdkit 2026.9.1, meeko 0.8.0, gemmi 0.7.5)",
+      "stage3": "envs/py3119-stage3 (python 3.11.9 + jsonschema, PYTHONPATH=shim)"
+    },
+    "vina_binary_reused": "C:\\Users\\23285\\a4s_workflow\\tools\\vina_1.2.5_win.exe",
+    "redock_script_reused": "a4s_redock.py"
+  },
+  "reproducibility": {
+    "direct_shim_run": [
+      -9.958,
+      -9.148,
+      -8.877,
+      -8.782,
+      -8.366,
+      -8.233,
+      -7.946,
+      -7.88,
+      -7.81
+    ],
+    "stage3_run": [
+      -9.958,
+      -9.148,
+      -8.877,
+      -8.782,
+      -8.366,
+      -8.233,
+      -7.946,
+      -7.88,
+      -7.81
+    ],
+    "identical": true
+  },
+  "hash_check": {
+    "pdb": {
+      "path": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\inputs\\1T3R.pdb",
+      "sha256": "a53e29c777486fc4d7b8c070d424ac35554ba1ca2ca04f81f64f8dcb4b3a1aad",
+      "expected": null,
+      "status": "COMPUTED"
+    },
+    "protein_pdb": {
+      "path": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\receptor\\1T3R_protein_AB.pdb",
+      "sha256": "ad74223786037b56b9dca8abd6aa7ee3ef1bc3b94cc7b60fd4da153f91aa44f6",
+      "expected": "ad74223786037b56b9dca8abd6aa7ee3ef1bc3b94cc7b60fd4da153f91aa44f6",
+      "status": "MATCH"
+    },
+    "receptor_pdbqt": {
+      "path": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\receptor\\1T3R.pdbqt",
+      "sha256": "9559702843d75d2d8d7ef2de9edab740f8abfa1ffb32eae521eaa0eb986458a1",
+      "expected": "9559702843d75d2d8d7ef2de9edab740f8abfa1ffb32eae521eaa0eb986458a1",
+      "status": "MATCH"
+    },
+    "receptor_input_pdb": {
+      "path": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\receptor\\1T3R_receptor_input.pdb",
+      "sha256": "6a7babd8ce13969aab4e88ab0cab37369a2d6e0d661432f92b8ba6516448fe31",
+      "expected": "6a7babd8ce13969aab4e88ab0cab37369a2d6e0d661432f92b8ba6516448fe31",
+      "status": "MATCH"
+    },
+    "ligand_pdbqt": {
+      "path": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\ligand\\darunavir.pdbqt",
+      "sha256": "5f238babc18bcdd13be13f15289d9bca38036a29dc9e1f3b952658f488206983",
+      "expected": "5f238babc18bcdd13be13f15289d9bca38036a29dc9e1f3b952658f488206983",
+      "status": "MATCH"
+    },
+    "ligand_cocrystal_pose_sdf": {
+      "path": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\ligand\\cocrystal_pose.sdf",
+      "sha256": "944858dac2dcf363a32e7b429822d6fdcb9f5ef9d7f07afbe07ea7b6fed18639",
+      "expected": "944858dac2dcf363a32e7b429822d6fdcb9f5ef9d7f07afbe07ea7b6fed18639",
+      "status": "MATCH"
+    },
+    "ligand_withH_sdf": {
+      "path": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\ligand\\darunavir_H.sdf",
+      "sha256": "5c0bc06fa591b5d1b29a23b32e58d1ca8b76387becd80aa4cfd65dd2e61066d6",
+      "expected": "5c0bc06fa591b5d1b29a23b32e58d1ca8b76387becd80aa4cfd65dd2e61066d6",
+      "status": "MATCH"
+    },
+    "pubchem_template_sdf": {
+      "path": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\ligand\\pubchem_cid213039_3d.sdf",
+      "sha256": "23409e8417228054c9e3811add480e2c96b4ff5d9af0b67adb2e7c3875f840d0",
+      "expected": "23409e8417228054c9e3811add480e2c96b4ff5d9af0b67adb2e7c3875f840d0",
+      "status": "MATCH"
+    },
+    "vina_binary": {
+      "path": "C:\\Users\\23285\\a4s_workflow\\tools\\vina_1.2.5_win.exe",
+      "sha256": "b5a23b226ee5dc1b028df04082d13a7b0e5b9b12b988bbcf9498cb351e20b38f",
+      "expected": "b5a23b226ee5dc1b028df04082d13a7b0e5b9b12b988bbcf9498cb351e20b38f",
+      "status": "MATCH"
+    },
+    "vina_poses_pdbqt": {
+      "path": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\docking\\poses.pdbqt",
+      "sha256": "1d013629b08bb45c26fce4ae5a44ea4307642e8399bb76638e1db770e7638f8e",
+      "expected": "1d013629b08bb45c26fce4ae5a44ea4307642e8399bb76638e1db770e7638f8e",
+      "status": "MATCH"
+    },
+    "cocrystal_sdf_preliminary_superseded": {
+      "path": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\ligand\\017_1T3R_cocrystal.sdf",
+      "exists_now": false,
+      "sha256_recorded_by_prep_inputs": "3befcd5a6fad07131c2c2532b985072e1827ba24e9064707ead2cf10855481d7",
+      "status": "SUPERSEDED_AND_REMOVED",
+      "note": "prep_inputs.py wrote a proximity-bonded preliminary mol (formula C27H53N3O7S). The intermediate bond-order fix (ligand_identity.py, log 02_ligand_identity.log) was itself wrong (C27H5N3O7S) and its output file was deleted. The authoritative ligand pose is ligand/cocrystal_pose.sdf, produced by prep_ligand.py with graph-mapped template bond orders (C27H37N3O7S, InChIKey CJBJHOAVZSMMDJ-HEXNFIEUSA-N)."
+    }
+  },
+  "steps": [
+    {
+      "step": "01 PDB download",
+      "command": "curl -sS -L -o inputs/1T3R.pdb https://files.rcsb.org/download/1T3R.pdb",
+      "exit_code": 0,
+      "log": null
+    },
+    {
+      "step": "02 structural extraction + box",
+      "command": "python scripts/prep_inputs.py",
+      "exit_code": 0,
+      "log": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\logs\\01_prep_inputs.log"
+    },
+    {
+      "step": "03 ligand bond-order attempt #1 (rdDetermineBonds + AssignBondOrdersFromTemplate)",
+      "command": "python scripts/ligand_identity.py",
+      "exit_code": 3,
+      "log": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\logs\\02_ligand_identity.log",
+      "status": "FAILED_SUPERSEDED",
+      "note": "produced formula C27H5N3O7S (wrong implicit-H counts); replaced by prep_ligand.py"
+    },
+    {
+      "step": "04 receptor prep (meeko mk_prepare_receptor)",
+      "command": "C:\\Users\\23285\\a4s_workflow\\envs\\py3119-science\\Scripts\\mk_prepare_receptor.exe --read_pdb C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\receptor\\1T3R_receptor_input.pdb -o C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\receptor\\1T3R --default_altloc A --compute_charges -p",
+      "exit_code": 0,
+      "log": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\logs\\03_receptor_prep.log"
+    },
+    {
+      "step": "05 ligand prep (crystal coords + PubChem template + mk_prepare_ligand)",
+      "command": "C:\\Users\\23285\\a4s_workflow\\envs\\py3119-science\\Scripts\\mk_prepare_ligand.exe -i C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\ligand\\darunavir_H.sdf -o C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\ligand\\darunavir.pdbqt --rigid_macrocycles",
+      "exit_code": 0,
+      "log": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\logs\\04_ligand_prep.log"
+    },
+    {
+      "step": "06 Vina docking (exhaustiveness 8, n_poses 9, seed 42, cpu 4)",
+      "command": "C:\\Users\\23285\\a4s_workflow\\tools\\vina_1.2.5_win.exe --receptor C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\receptor\\1T3R.pdbqt --ligand C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\ligand\\darunavir.pdbqt --scoring vina --center_x 19.4590 --center_y 29.7660 --center_z 14.1590 --size_x 20.3610 --size_y 20.8060 --size_z 18.1220 --exhaustiveness 8 --num_modes 9 --seed 42 --cpu 4 --out C:\\Users\\23285\\AppData\\Local\\Temp\\vina_shim_tgzmzu2l\\poses.pdbqt",
+      "exit_code": 0,
+      "log": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\logs\\05_vina_dock.log",
+      "elapsed_s": 33.93
+    },
+    {
+      "step": "07 redock RMSD (meeko mk_export + RDKit GetBestRMS)",
+      "command": "python a4s_redock.py --poses docking/poses.pdbqt --reference-sdf ligand/cocrystal_pose.sdf",
+      "exit_code": 0,
+      "log": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\logs\\06_redock_rmsd.log"
+    },
+    {
+      "step": "08 stage3 pipeline run (vina engine via shim)",
+      "command": "C:\\Users\\23285\\a4s_workflow\\envs\\py3119-stage3\\Scripts\\python.exe stage3.py run --config C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\stage3_case\\stage3_config_hiv1_1t3r_darunavir.json",
+      "exit_code": 0,
+      "elapsed_s": 34.35,
+      "log": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\logs\\07_stage3_run.stdout.log"
+    },
+    {
+      "step": "09 stage3 validate",
+      "command": "C:\\Users\\23285\\a4s_workflow\\envs\\py3119-stage3\\Scripts\\python.exe stage3.py validate --run-id hiv1_1t3r_darunavir-20261030-225324 --config C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\stage3_case\\stage3_config_hiv1_1t3r_darunavir.json",
+      "exit_code": 0,
+      "elapsed_s": 0.14,
+      "log": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\logs\\08_stage3_validate.stdout.log"
+    },
+    {
+      "step": "10 independent verification (3 RMSD methods, hashes, A1 reuse check)",
+      "command": "python scripts/verify.py",
+      "exit_code": 0,
+      "log": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\logs\\09_verify.log"
+    },
+    {
+      "step": "11 pose-1 contact fingerprint",
+      "command": "python scripts/contacts.py",
+      "exit_code": 0,
+      "log": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\logs\\10_contacts.log"
+    },
+    {
+      "step": "12 pose-1 complex PDB (receptor + docked ligand)",
+      "command": "python scripts/make_complex.py",
+      "exit_code": 0,
+      "log": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\logs\\12_complex.log"
+    },
+    {
+      "step": "13 result.json / report.md / README fragment",
+      "command": "python scripts/build_result.py",
+      "exit_code": 0,
+      "log": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\logs\\11_build_result.log"
+    }
+  ],
+  "not_run": {
+    "molecular_dynamics": "NOT_RUN",
+    "af3_complex": "NOT_RUN",
+    "mutant_panel_flexible_sidechains": "NOT_RUN",
+    "free_energy_mm_gbsa": "NOT_RUN",
+    "experimental_affinity_measurement": "NOT_RUN",
+    "sciencepal_orchestration": "NOT_RUN",
+    "stage02_module": "NOT_RUN"
+  },
+  "limits": [
+    "对接分（Vina affinity）不是实测亲和力，也不能换算成 Kd/IC50；本例 darunavir 的 ITC Kd=4.5 pM 只是背景事实，与本轮分数没有定量关系。",
+    "单一刚性受体 + 单一 Vina 协议（无柔性侧链、无 MD、无 MM-GBSA、无 AF3 复合物）；分数对随机种子与盒子大小敏感。",
+    "重对接 RMSD 只说明“引擎能在该晶体结构里复现共晶姿势”，不代表打分排序能力。",
+    "1T3R 的 5 个 Lys 侧链（A7/A41/A43、B41/B43）在晶体中仅建模到 CB，制备时按 ALA 处理（保留 N/CA/C/O/CB），因此这 5 个侧链不参与打分。",
+    "配体 PDBQT 由共晶坐标构建，Vina 输出的 rmsd l.b./u.b. 是相对“起始构象（=共晶姿势）”的量，不能当作重对接 RMSD；重对接 RMSD 见 redock 段落（RDKit GetBestRMS）。",
+    "重对接使用的是同一晶体结构、同一共晶配体的自对接（redocking），属于方法自检，不构成新抑制剂发现。"
+  ],
+  "artifacts": {
+    "report": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\report.md",
+    "result_json": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\result.json",
+    "readme_fragment": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\README_fragment.md",
+    "pose1_complex_pdb": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\docking\\pose1_complex.pdb",
+    "scripts_dir": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\scripts",
+    "script_files": [
+      "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\scripts\\build_result.py",
+      "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\scripts\\contacts.py",
+      "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\scripts\\dbg_contacts.py",
+      "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\scripts\\dbg_lig.py",
+      "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\scripts\\dbg_map.py",
+      "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\scripts\\dock_vina.py",
+      "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\scripts\\hiv_stage3.py",
+      "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\scripts\\inspect_1t3r.py",
+      "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\scripts\\ligand_identity.py",
+      "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\scripts\\make_complex.py",
+      "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\scripts\\prep_inputs.py",
+      "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\scripts\\prep_ligand.py",
+      "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\scripts\\prep_receptor.py",
+      "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\scripts\\probe_gemmi.py",
+      "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\scripts\\verify.py"
+    ]
+  }
+}

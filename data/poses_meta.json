@@ -1,0 +1,62 @@
+{
+  "source": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\docking\\poses.pdbqt",
+  "count": 9,
+  "best_pose": 1,
+  "rmsd_threshold_A": 2.0,
+  "poses": [
+    {
+      "pose": 1,
+      "affinity": -9.958,
+      "rmsd_A": 0.211,
+      "best": true
+    },
+    {
+      "pose": 2,
+      "affinity": -9.148,
+      "rmsd_A": 2.733,
+      "best": false
+    },
+    {
+      "pose": 3,
+      "affinity": -8.877,
+      "rmsd_A": 2.707,
+      "best": false
+    },
+    {
+      "pose": 4,
+      "affinity": -8.782,
+      "rmsd_A": 3.005,
+      "best": false
+    },
+    {
+      "pose": 5,
+      "affinity": -8.366,
+      "rmsd_A": 3.028,
+      "best": false
+    },
+    {
+      "pose": 6,
+      "affinity": -8.233,
+      "rmsd_A": 2.945,
+      "best": false
+    },
+    {
+      "pose": 7,
+      "affinity": -7.946,
+      "rmsd_A": 2.924,
+      "best": false
+    },
+    {
+      "pose": 8,
+      "affinity": -7.88,
+      "rmsd_A": 1.87,
+      "best": false
+    },
+    {
+      "pose": 9,
+      "affinity": -7.81,
+      "rmsd_A": 1.923,
+      "best": false
+    }
+  ]
+}

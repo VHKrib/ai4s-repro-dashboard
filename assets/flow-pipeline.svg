@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 860" width="1240" height="860"
+     role="img" aria-label="A4S 设计管线图" font-family="-apple-system, 'Microsoft YaHei', 'PingFang SC', sans-serif">
+<title>完整设计管线（PIPELINE.mermaid 重绘）</title>
+<desc>输入 → 结构选择 → 文献层 → 评测层 → 设计 brief → 结构验证 → 候选对接 → 耐药 panel → 能量精算（已跳过）→ 实验校准（待做）</desc>
+<defs>
+  <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="rgba(17,17,17,0.42)"/>
+  </marker>
+  <marker id="ah-soft" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="rgba(17,17,17,0.22)"/>
+  </marker>
+</defs>
+<rect x="0" y="0" width="1240" height="860" fill="#f5f3ef"/>
+
+<text x="16" y="26" font-size="13" fill="#111111" font-weight="700" text-anchor="start" >完整设计管线 · 环节 1–7</text>
+<text x="232" y="26" font-size="10" fill="#b3b0aa" font-weight="400" text-anchor="start" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" >重绘自 PIPELINE.mermaid · 状态用色条区分：绿=已完成 / 黄=部分 / 灰虚线=已跳过 / 红虚线=待做</text>
+<text x="16" y="56" font-size="9.5" fill="#ff5a1f" font-weight="400" text-anchor="start" letter-spacing="1" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" >01</text>
+<text x="38" y="56" font-size="10.5" fill="#6d6b66" font-weight="400" text-anchor="start" letter-spacing="0.6" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" >输入与结构选择</text>
+<text x="105.39999999999999" y="56" font-size="9.5" fill="#b3b0aa" font-weight="400" text-anchor="start" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" >环节 0</text>
+<rect x="16" y="68" width="196" height="78" rx="9" fill="#fffefa" stroke="#a8792b" stroke-opacity="0.55" stroke-width="1"/>
+<path d="M 16.5 77 a 8.5 8.5 0 0 1 8.5 -8.5 h 1 v 78 h -1 a 8.5 8.5 0 0 1 -8.5 -8.5 z" fill="#a8792b" fill-opacity="0.85"/>
+<text x="30" y="88" font-size="12.5" fill="#111111" font-weight="600" text-anchor="start" >输入</text>
+<text x="30" y="103.0" font-size="10.5" fill="#6d6b66" font-weight="400" text-anchor="start" >靶点名 / 序列 / UniProt ID</text>
+<rect x="242" y="68" width="150" height="78" rx="9" fill="#fffefa" stroke="#a8792b" stroke-opacity="0.55" stroke-width="1"/>
+<path d="M 242.5 77 a 8.5 8.5 0 0 1 8.5 -8.5 h 1 v 78 h -1 a 8.5 8.5 0 0 1 -8.5 -8.5 z" fill="#a8792b" fill-opacity="0.85"/>
+<text x="256" y="88" font-size="12.5" fill="#111111" font-weight="600" text-anchor="start" >有实验结构？</text>
+<text x="256" y="103.0" font-size="10.5" fill="#6d6b66" font-weight="400" text-anchor="start" >共晶 / apo / 仅序列</text>
+<rect x="430" y="60" width="250" height="42" rx="9" fill="#fffefa" stroke="#4d6b52" stroke-opacity="0.55" stroke-width="1"/>
+<path d="M 430.5 69 a 8.5 8.5 0 0 1 8.5 -8.5 h 1 v 42 h -1 a 8.5 8.5 0 0 1 -8.5 -8.5 z" fill="#4d6b52" fill-opacity="0.85"/>
+<text x="444" y="80" font-size="12.5" fill="#111111" font-weight="600" text-anchor="start" >RCSB PDB</text>
+<text x="444" y="95.0" font-size="10.5" fill="#6d6b66" font-weight="400" text-anchor="start" >共晶结构 + 分辨率 + 配体（1T3R · 1.20 Å）</text>
+<rect x="430" y="110" width="250" height="42" rx="9" fill="#fffefa" stroke="#4d6b52" stroke-opacity="0.55" stroke-width="1"/>
+<path d="M 430.5 119 a 8.5 8.5 0 0 1 8.5 -8.5 h 1 v 42 h -1 a 8.5 8.5 0 0 1 -8.5 -8.5 z" fill="#4d6b52" fill-opacity="0.85"/>
+<text x="444" y="130" font-size="12.5" fill="#111111" font-weight="600" text-anchor="start" >AlphaFold DB</text>
+<text x="444" y="145.0" font-size="10.5" fill="#6d6b66" font-weight="400" text-anchor="start" >预测模型 + pLDDT（无实验结构时）</text>
+<rect x="430" y="160" width="250" height="40" rx="9" fill="#fbf1ef" stroke="#b03a2b" stroke-opacity="0.55" stroke-width="1" stroke-dasharray="4 3"/>
+<path d="M 430.5 169 a 8.5 8.5 0 0 1 8.5 -8.5 h 1 v 40 h -1 a 8.5 8.5 0 0 1 -8.5 -8.5 z" fill="#b03a2b" fill-opacity="0.85"/>
+<text x="444" y="180" font-size="12.5" fill="#111111" font-weight="600" text-anchor="start" >BLAST / UniProt 映射</text>
+<text x="444" y="195.0" font-size="10.5" fill="#6d6b66" font-weight="400" text-anchor="start" >未实现：仅有序列时的兜底路径</text>
+<path d="M 212 100 L 238 100" fill="none" stroke="rgba(17,17,17,0.34)" stroke-width="1" marker-end="url(#ah)"/>
+<path d="M 392 92 L 408 92 L 408 81 L 424 81" fill="none" stroke="rgba(17,17,17,0.34)" stroke-width="1" marker-end="url(#ah)"/>
+<text x="408" y="74" font-size="9.5" fill="#b3b0aa" font-weight="400" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" >有共晶</text>
+<path d="M 392 106 L 408 106 L 408 131 L 424 131" fill="none" stroke="rgba(17,17,17,0.34)" stroke-width="1" marker-end="url(#ah)"/>
+<text x="408" y="145" font-size="9.5" fill="#b3b0aa" font-weight="400" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" >apo</text>
+<path d="M 392 120 L 408 120 L 408 180 L 424 180" fill="none" stroke="rgba(17,17,17,0.34)" stroke-width="1" marker-end="url(#ah)"/>
+<text x="408" y="194" font-size="9.5" fill="#b3b0aa" font-weight="400" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" >仅序列</text>
+<path d="M 430 180 L 416 180 L 416 131 L 424 131" fill="none" stroke="rgba(17,17,17,0.22)" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#ah-soft)"/>
+<text x="16" y="232" font-size="9.5" fill="#ff5a1f" font-weight="400" text-anchor="start" letter-spacing="1" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" >02</text>
+<text x="38" y="232" font-size="10.5" fill="#6d6b66" font-weight="400" text-anchor="start" letter-spacing="0.6" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" >文献层</text>
+<text x="72.6" y="232" font-size="9.5" fill="#b3b0aa" font-weight="400" text-anchor="start" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" >环节 1–3 · 已完成</text>
+<rect x="16" y="244" width="186" height="92" rx="9" fill="#fffefa" stroke="#4d6b52" stroke-opacity="0.55" stroke-width="1"/>
+<path d="M 16.5 253 a 8.5 8.5 0 0 1 8.5 -8.5 h 1 v 92 h -1 a 8.5 8.5 0 0 1 -8.5 -8.5 z" fill="#4d6b52" fill-opacity="0.85"/>
+<text x="30" y="264" font-size="12.5" fill="#111111" font-weight="600" text-anchor="start" >PubMed E-utilities</text>
+<text x="30" y="279.0" font-size="10.5" fill="#6d6b66" font-weight="400" text-anchor="start" >6 组查询族：靶点 / 药名</text>
+<text x="30" y="292.5" font-size="10.5" fill="#6d6b66" font-weight="400" text-anchor="start" >结构 / 耐药 / 机制 / 综述</text>
+<rect x="220" y="244" width="186" height="92" rx="9" fill="#fffefa" stroke="#4d6b52" stroke-opacity="0.55" stroke-width="1"/>
+<path d="M 220.5 253 a 8.5 8.5 0 0 1 8.5 -8.5 h 1 v 92 h -1 a 8.5 8.5 0 0 1 -8.5 -8.5 z" fill="#4d6b52" fill-opacity="0.85"/>
+<text x="234" y="264" font-size="12.5" fill="#111111" font-weight="600" text-anchor="start" >相关性筛选</text>
+<text x="234" y="279.0" font-size="10.5" fill="#6d6b66" font-weight="400" text-anchor="start" >按摘要与全文相关性</text>
+<text x="234" y="292.5" font-size="10.5" fill="#6d6b66" font-weight="400" text-anchor="start" >过滤无关命中</text>
+<rect x="424" y="244" width="186" height="92" rx="9" fill="#fffefa" stroke="#4d6b52" stroke-opacity="0.55" stroke-width="1"/>
+<path d="M 424.5 253 a 8.5 8.5 0 0 1 8.5 -8.5 h 1 v 92 h -1 a 8.5 8.5 0 0 1 -8.5 -8.5 z" fill="#4d6b52" fill-opacity="0.85"/>
+<text x="438" y="264" font-size="12.5" fill="#111111" font-weight="600" text-anchor="start" >证据抽取</text>
+<text x="438" y="279.0" font-size="10.5" fill="#6d6b66" font-weight="400" text-anchor="start" >抑制剂 · 活性 · PDB</text>
+<text x="438" y="292.5" font-size="10.5" fill="#6d6b66" font-weight="400" text-anchor="start" >突变 · 位点 · 化学型</text>
+<rect x="628" y="244" width="186" height="92" rx="9" fill="#fffefa" stroke="#4d6b52" stroke-opacity="0.55" stroke-width="1"/>
+<path d="M 628.5 253 a 8.5 8.5 0 0 1 8.5 -8.5 h 1 v 92 h -1 a 8.5 8.5 0 0 1 -8.5 -8.5 z" fill="#4d6b52" fill-opacity="0.85"/>
+<text x="642" y="264" font-size="12.5" fill="#111111" font-weight="600" text-anchor="start" >证据表 691 条</text>
+<text x="642" y="279.0" font-size="10.5" fill="#6d6b66" font-weight="400" text-anchor="start" >每条带 PMID + 原文句</text>
+<text x="642" y="292.5" font-size="10.5" fill="#6d6b66" font-weight="400" text-anchor="start" >可回溯到句子级</text>
+<rect x="832" y="244" width="186" height="92" rx="9" fill="#fffefa" stroke="#4d6b52" stroke-opacity="0.55" stroke-width="1"/>
+<path d="M 832.5 253 a 8.5 8.5 0 0 1 8.5 -8.5 h 1 v 92 h -1 a 8.5 8.5 0 0 1 -8.5 -8.5 z" fill="#4d6b52" fill-opacity="0.85"/>
+<text x="846" y="264" font-size="12.5" fill="#111111" font-weight="600" text-anchor="start" >方向分层</text>
+<text x="846" y="279.0" font-size="10.5" fill="#6d6b66" font-weight="400" text-anchor="start" >11 个方向 / Tier A–D</text>
+<text x="846" y="292.5" font-size="10.5" fill="#6d6b66" font-weight="400" text-anchor="start" >按证据强度分档</text>
+<rect x="1036" y="244" width="186" height="92" rx="9" fill="#fffefa" stroke="#4d6b52" stroke-opacity="0.55" stroke-width="1"/>
+<path d="M 1036.5 253 a 8.5 8.5 0 0 1 8.5 -8.5 h 1 v 92 h -1 a 8.5 8.5 0 0 1 -8.5 -8.5 z" fill="#4d6b52" fill-opacity="0.85"/>
+<text x="1050" y="264" font-size="12.5" fill="#111111" font-weight="600" text-anchor="start" >A1 dossier</text>
+<text x="1050" y="279.0" font-size="10.5" fill="#6d6b66" font-weight="400" text-anchor="start" >squaramide / pyrrolidine</text>
+<text x="1050" y="292.5" font-size="10.5" fill="#6d6b66" font-weight="400" text-anchor="start" >/ 异丙醇 三个方向</text>
+<path d="M 202 290 L 216 290" fill="none" stroke="rgba(17,17,17,0.34)" stroke-width="1" marker-end="url(#ah)"/>
+<path d="M 406 290 L 420 290" fill="none" stroke="rgba(17,17,17,0.34)" stroke-width="1" marker-end="url(#ah)"/>
+<path d="M 610 290 L 624 290" fill="none" stroke="rgba(17,17,17,0.34)" stroke-width="1" marker-end="url(#ah)"/>
+<path d="M 814 290 L 828 290" fill="none" stroke="rgba(17,17,17,0.34)" stroke-width="1" marker-end="url(#ah)"/>
+<path d="M 1018 290 L 1032 290" fill="none" stroke="rgba(17,17,17,0.34)" stroke-width="1" marker-end="url(#ah)"/>
+<text x="16" y="372" font-size="9.5" fill="#ff5a1f" font-weight="400" text-anchor="start" letter-spacing="1" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" >03</text>
+<text x="38" y="372" font-size="10.5" fill="#6d6b66" font-weight="400" text-anchor="start" letter-spacing="0.6" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" >评测 + 设计参考 brief</text>
+<text x="171.0" y="372" font-size="9.5" fill="#b3b0aa" font-weight="400" text-anchor="start" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" >评测层已做 · 结论：检索是瓶颈</text>
+<rect x="16" y="384" width="552" height="140" rx="14" fill="#fffefa" fill-opacity="0.45" stroke="rgba(17,17,17,0.08)" stroke-width="1"/>
+<text x="30" y="395" font-size="9.5" fill="#b3b0aa" font-weight="400" text-anchor="start" letter-spacing="1.1" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" >评测层</text>
+<rect x="28" y="400" width="160" height="62" rx="9" fill="#fffefa" stroke="#4d6b52" stroke-opacity="0.55" stroke-width="1"/>
+<path d="M 28.5 409 a 8.5 8.5 0 0 1 8.5 -8.5 h 1 v 62 h -1 a 8.5 8.5 0 0 1 -8.5 -8.5 z" fill="#4d6b52" fill-opacity="0.85"/>
+<text x="42" y="420" font-size="12.5" fill="#111111" font-weight="600" text-anchor="start" >25 篇金标准</text>
+<text x="42" y="435.0" font-size="10" fill="#6d6b66" font-weight="400" text-anchor="start" >人工挑选的答案集</text>
+<rect x="200" y="400" width="168" height="62" rx="9" fill="#fffefa" stroke="#4d6b52" stroke-opacity="0.55" stroke-width="1"/>
+<path d="M 200.5 409 a 8.5 8.5 0 0 1 8.5 -8.5 h 1 v 62 h -1 a 8.5 8.5 0 0 1 -8.5 -8.5 z" fill="#4d6b52" fill-opacity="0.85"/>
+<text x="214" y="420" font-size="12.5" fill="#111111" font-weight="600" text-anchor="start" >召回</text>
+<text x="214" y="435.0" font-size="10" fill="#6d6b66" font-weight="400" text-anchor="start" >depth 100：20%</text>
+<text x="214" y="448.5" font-size="10" fill="#6d6b66" font-weight="400" text-anchor="start" >depth 500：60%</text>
+<rect x="380" y="400" width="176" height="62" rx="9" fill="#fffefa" stroke="#4d6b52" stroke-opacity="0.55" stroke-width="1"/>
+<path d="M 380.5 409 a 8.5 8.5 0 0 1 8.5 -8.5 h 1 v 62 h -1 a 8.5 8.5 0 0 1 -8.5 -8.5 z" fill="#4d6b52" fill-opacity="0.85"/>
+<text x="394" y="420" font-size="12.5" fill="#111111" font-weight="600" text-anchor="start" >引用锚定 / 精确率</text>
+<text x="394" y="435.0" font-size="10" fill="#6d6b66" font-weight="400" text-anchor="start" >引用锚定 100%</text>
+<text x="394" y="448.5" font-size="10" fill="#6d6b66" font-weight="400" text-anchor="start" >抽取严格精确率 84%</text>
+<path d="M 188 431 L 196 431" fill="none" stroke="rgba(17,17,17,0.34)" stroke-width="1" marker-end="url(#ah)"/>
+<path d="M 368 431 L 376 431" fill="none" stroke="rgba(17,17,17,0.34)" stroke-width="1" marker-end="url(#ah)"/>
+<text x="28" y="500" font-size="9.5" fill="#6d6b66" font-weight="400" text-anchor="start" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" >检索深度是主要瓶颈，不是抽取：深度翻 5 倍召回从 20% → 60%</text>
+<rect x="584" y="384" width="640" height="140" rx="14" fill="#fffefa" fill-opacity="0.45" stroke="rgba(17,17,17,0.08)" stroke-width="1"/>
+<text x="598" y="395" font-size="9.5" fill="#b3b0aa" font-weight="400" text-anchor="start" letter-spacing="1.1" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" >设计参考 brief（跨靶点 · 已完成）</text>
+<rect x="596" y="400" width="148" height="62" rx="9" fill="#fffefa" stroke="#4d6b52" stroke-opacity="0.55" stroke-width="1"/>
+<path d="M 596.5 409 a 8.5 8.5 0 0 1 8.5 -8.5 h 1 v 62 h -1 a 8.5 8.5 0 0 1 -8.5 -8.5 z" fill="#4d6b52" fill-opacity="0.85"/>
+<text x="610" y="420" font-size="12.5" fill="#111111" font-weight="600" text-anchor="start" >结构起点</text>
+<text x="610" y="435.0" font-size="10" fill="#6d6b66" font-weight="400" text-anchor="start" >野生型 / 带配体</text>
+<text x="610" y="448.5" font-size="10" fill="#6d6b66" font-weight="400" text-anchor="start" >高分辨率：RCSB · AF</text>
+<rect x="756" y="400" width="156" height="62" rx="9" fill="#fffefa" stroke="#4d6b52" stroke-opacity="0.55" stroke-width="1"/>
+<path d="M 756.5 409 a 8.5 8.5 0 0 1 8.5 -8.5 h 1 v 62 h -1 a 8.5 8.5 0 0 1 -8.5 -8.5 z" fill="#4d6b52" fill-opacity="0.85"/>
+<text x="770" y="420" font-size="12.5" fill="#111111" font-weight="600" text-anchor="start" >已知配体与活性</text>
+<text x="770" y="435.0" font-size="10" fill="#6d6b66" font-weight="400" text-anchor="start" >ChEMBL API：activity /</text>
+<text x="770" y="448.5" font-size="10" fill="#6d6b66" font-weight="400" text-anchor="start" >mechanism</text>
+<rect x="924" y="400" width="148" height="62" rx="9" fill="#fffefa" stroke="#4d6b52" stroke-opacity="0.55" stroke-width="1"/>
+<path d="M 924.5 409 a 8.5 8.5 0 0 1 8.5 -8.5 h 1 v 62 h -1 a 8.5 8.5 0 0 1 -8.5 -8.5 z" fill="#4d6b52" fill-opacity="0.85"/>
+<text x="938" y="420" font-size="12.5" fill="#111111" font-weight="600" text-anchor="start" >口袋残基</text>
+<text x="938" y="435.0" font-size="10" fill="#6d6b66" font-weight="400" text-anchor="start" >文献证据 + PMID</text>
+<text x="938" y="448.5" font-size="10" fill="#6d6b66" font-weight="400" text-anchor="start" >结构接触 ≤ 5 Å</text>
+<rect x="1084" y="400" width="128" height="62" rx="9" fill="#fffefa" stroke="#4d6b52" stroke-opacity="0.55" stroke-width="1"/>
+<path d="M 1084.5 409 a 8.5 8.5 0 0 1 8.5 -8.5 h 1 v 62 h -1 a 8.5 8.5 0 0 1 -8.5 -8.5 z" fill="#4d6b52" fill-opacity="0.85"/>
+<text x="1098" y="420" font-size="12.5" fill="#111111" font-weight="600" text-anchor="start" >耐药位点</text>
+<text x="1098" y="435.0" font-size="10" fill="#6d6b66" font-weight="400" text-anchor="start" >频率排序</text>
+<text x="1098" y="448.5" font-size="10" fill="#6d6b66" font-weight="400" text-anchor="start" >G48V / I50V / I84V</text>
+<rect x="596" y="470" width="616" height="34" rx="9" fill="#fffefa" stroke="#4d6b52" stroke-opacity="0.55" stroke-width="1"/>
+<path d="M 596.5 479 a 8.5 8.5 0 0 1 8.5 -8.5 h 1 v 34 h -1 a 8.5 8.5 0 0 1 -8.5 -8.5 z" fill="#4d6b52" fill-opacity="0.85"/>
+<text x="610" y="490" font-size="11.5" fill="#111111" font-weight="600" text-anchor="start" >设计入口 3 条 → 结构验证</text>
+<text x="610" y="505.0" font-size="9.5" fill="#6d6b66" font-weight="400" text-anchor="start" >（brief 的输出交给结构层与候选对接）</text>
+<text x="16" y="544" font-size="9.5" fill="#ff5a1f" font-weight="400" text-anchor="start" letter-spacing="1" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" >04</text>
+<text x="38" y="544" font-size="10.5" fill="#6d6b66" font-weight="400" text-anchor="start" letter-spacing="0.6" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" >结构验证 → 候选对接 → 耐药 panel</text>
+<text x="228.39999999999998" y="544" font-size="9.5" fill="#b3b0aa" font-weight="400" text-anchor="start" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" >环节 4–5 · 已完成</text>
+<rect x="16" y="556" width="220" height="78" rx="9" fill="#fffefa" stroke="#4d6b52" stroke-opacity="0.55" stroke-width="1"/>
+<path d="M 16.5 565 a 8.5 8.5 0 0 1 8.5 -8.5 h 1 v 78 h -1 a 8.5 8.5 0 0 1 -8.5 -8.5 z" fill="#4d6b52" fill-opacity="0.85"/>
+<text x="30" y="576" font-size="12.5" fill="#111111" font-weight="600" text-anchor="start" >结构验证 · 红对接 RMSD</text>
+<text x="30" y="591.0" font-size="10.5" fill="#6d6b66" font-weight="400" text-anchor="start" >已知配体重新对接后与共晶比对</text>
+<text x="30" y="604.5" font-size="10.5" fill="#6d6b66" font-weight="400" text-anchor="start" >0.88 Å / 1.30 Å（阈值 &lt; 2 Å）</text>
+<rect x="258" y="556" width="200" height="78" rx="9" fill="#fffefa" stroke="#4d6b52" stroke-opacity="0.55" stroke-width="1"/>
+<path d="M 258.5 565 a 8.5 8.5 0 0 1 8.5 -8.5 h 1 v 78 h -1 a 8.5 8.5 0 0 1 -8.5 -8.5 z" fill="#4d6b52" fill-opacity="0.85"/>
+<text x="272" y="576" font-size="12.5" fill="#111111" font-weight="600" text-anchor="start" >A1 候选对接</text>
+<text x="272" y="591.0" font-size="10.5" fill="#6d6b66" font-weight="400" text-anchor="start" >3h / 34b 进入活性位点</text>
+<text x="272" y="604.5" font-size="10.5" fill="#6d6b66" font-weight="400" text-anchor="start" >位点占据 + 相互作用检查</text>
+<rect x="480" y="552" width="470" height="136" rx="14" fill="#fffefa" fill-opacity="0.45" stroke="rgba(17,17,17,0.08)" stroke-width="1"/>
+<text x="494" y="563" font-size="9.5" fill="#b3b0aa" font-weight="400" text-anchor="start" letter-spacing="1.1" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" >耐药 panel（环节 5）</text>
+<rect x="492" y="570" width="200" height="46" rx="9" fill="#fffefa" stroke="#4d6b52" stroke-opacity="0.55" stroke-width="1"/>
+<path d="M 492.5 579 a 8.5 8.5 0 0 1 8.5 -8.5 h 1 v 46 h -1 a 8.5 8.5 0 0 1 -8.5 -8.5 z" fill="#4d6b52" fill-opacity="0.85"/>
+<text x="506" y="590" font-size="12.5" fill="#111111" font-weight="600" text-anchor="start" >刚性受体 panel</text>
+<text x="506" y="605.0" font-size="9.5" fill="#6d6b66" font-weight="400" text-anchor="start" >失败：Δ 全在 ±0.33</text>
+<rect x="492" y="626" width="200" height="46" rx="9" fill="#fffefa" stroke="#4d6b52" stroke-opacity="0.55" stroke-width="1"/>
+<path d="M 492.5 635 a 8.5 8.5 0 0 1 8.5 -8.5 h 1 v 46 h -1 a 8.5 8.5 0 0 1 -8.5 -8.5 z" fill="#4d6b52" fill-opacity="0.85"/>
+<text x="506" y="646" font-size="11.5" fill="#111111" font-weight="600" text-anchor="start" >柔性侧链 panel</text>
+<text x="506" y="661.0" font-size="9.5" fill="#6d6b66" font-weight="400" text-anchor="start" >saquinavir 方向恢复</text>
+<text x="506" y="674.5" font-size="9.5" fill="#6d6b66" font-weight="400" text-anchor="start" >已知位点分离度 +0.63</text>
+<rect x="704" y="570" width="236" height="102" rx="9" fill="#fffefa" stroke="#4d6b52" stroke-opacity="0.55" stroke-width="1"/>
+<path d="M 704.5 579 a 8.5 8.5 0 0 1 8.5 -8.5 h 1 v 102 h -1 a 8.5 8.5 0 0 1 -8.5 -8.5 z" fill="#4d6b52" fill-opacity="0.85"/>
+<text x="718" y="590" font-size="11.5" fill="#111111" font-weight="600" text-anchor="start" >定性风险 flag</text>
+<text x="718" y="605.0" font-size="9.5" fill="#6d6b66" font-weight="400" text-anchor="start" >3h：G48V / I84V pose 崩塌</text>
+<text x="718" y="618.5" font-size="9.5" fill="#6d6b66" font-weight="400" text-anchor="start" >34b：I50V +0.79 / I84V +0.50</text>
+<text x="718" y="632.0" font-size="9.5" fill="#6d6b66" font-weight="400" text-anchor="start" >只作风险提示，不作活性预测</text>
+<path d="M 238 595 L 254 595" fill="none" stroke="rgba(17,17,17,0.34)" stroke-width="1" marker-end="url(#ah)"/>
+<path d="M 460 595 L 474 595 L 474 593 L 488 592" fill="none" stroke="rgba(17,17,17,0.34)" stroke-width="1" marker-end="url(#ah)"/>
+<path d="M 694 649 L 702 649" fill="none" stroke="rgba(17,17,17,0.34)" stroke-width="1" marker-end="url(#ah)"/>
+<text x="16" y="726" font-size="9.5" fill="#ff5a1f" font-weight="400" text-anchor="start" letter-spacing="1" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" >05</text>
+<text x="38" y="726" font-size="10.5" fill="#6d6b66" font-weight="400" text-anchor="start" letter-spacing="0.6" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" >能量精算与实验校准</text>
+<text x="121.8" y="726" font-size="9.5" fill="#b3b0aa" font-weight="400" text-anchor="start" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" >环节 6–7</text>
+<rect x="16" y="738" width="560" height="88" rx="9" fill="#f4f2ee" stroke="#b3b0aa" stroke-opacity="0.55" stroke-width="1" stroke-dasharray="4 3"/>
+<path d="M 16.5 747 a 8.5 8.5 0 0 1 8.5 -8.5 h 1 v 88 h -1 a 8.5 8.5 0 0 1 -8.5 -8.5 z" fill="#b3b0aa" fill-opacity="0.85"/>
+<text x="30" y="758" font-size="12.5" fill="#555555" font-weight="600" text-anchor="start" >MD / MM-GBSA / FEP</text>
+<text x="30" y="773.0" font-size="10.5" fill="#777777" font-weight="400" text-anchor="start" >本机环境不具备（无 GPU 队列 / 无溶剂化长轨迹预算）</text>
+<text x="30" y="786.5" font-size="10.5" fill="#777777" font-weight="400" text-anchor="start" >→ 已跳过，结果里明确标 NOT_RUN</text>
+<rect x="600" y="738" width="624" height="88" rx="9" fill="#fbf1ef" stroke="#b03a2b" stroke-opacity="0.55" stroke-width="1" stroke-dasharray="4 3"/>
+<path d="M 600.5 747 a 8.5 8.5 0 0 1 8.5 -8.5 h 1 v 88 h -1 a 8.5 8.5 0 0 1 -8.5 -8.5 z" fill="#b03a2b" fill-opacity="0.85"/>
+<text x="614" y="758" font-size="12.5" fill="#111111" font-weight="600" text-anchor="start" >突变株 IC50 / 细胞 EC50</text>
+<text x="614" y="773.0" font-size="10.5" fill="#6d6b66" font-weight="400" text-anchor="start" >3h / 34b × G48V / I50V / I84V / L90M</text>
+<text x="614" y="786.5" font-size="10.5" fill="#6d6b66" font-weight="400" text-anchor="start" >→ 待做（需要湿实验）</text>
+<path d="M 968 698 L 968 736" fill="none" stroke="rgba(17,17,17,0.22)" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#ah-soft)"/>
+</svg>

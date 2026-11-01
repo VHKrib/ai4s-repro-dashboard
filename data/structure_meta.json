@@ -1,0 +1,354 @@
+{
+  "generated_at": "2026-11-01T11:56:00+08:00",
+  "source_run": "C:\\Users\\23285\\a4s_workflow\\runs\\t_664138d8_hiv1_darunavir_20261030-224808",
+  "receptor": {
+    "file": "structure/receptor.pdb",
+    "title": "HIV-1 protease WT dimer, chain A/B (1T3R, 1.20 A)",
+    "atoms": 1496,
+    "chains": {
+      "A": 746,
+      "B": 750
+    },
+    "residue_range": {
+      "A": [
+        1,
+        99
+      ],
+      "B": [
+        1,
+        99
+      ]
+    },
+    "sequences_note": "1T3R_protein_AB.pdb: A/B 两条链，各 99 残基"
+  },
+  "ligand": {
+    "file": "structure/darunavir_H.sdf",
+    "cid": "213039",
+    "name": "Darunavir",
+    "formula": "C27H37N3O7S",
+    "heavy_atoms": 38,
+    "atoms_with_h": null
+  },
+  "cocrystal": {
+    "file": "structure/cocrystal_pose.sdf",
+    "title": "213039",
+    "heavy_atoms": 38,
+    "center": [
+      19.59,
+      29.65,
+      13.87
+    ]
+  },
+  "catalytic_dyad": {
+    "label": "Asp25(A)/Asp25(B)",
+    "selection": {
+      "resn": "ASP",
+      "resi": 25
+    },
+    "chains": [
+      "A",
+      "B"
+    ],
+    "ca_coords": {
+      "A": [
+        23.34,
+        26.81,
+        20.39
+      ],
+      "B": [
+        16.91,
+        25.96,
+        20.53
+      ]
+    },
+    "carboxyl_oxygen_min_distance_A": 2.92,
+    "note": "HIV-1 蛋白酶催化二联体：A/B 两条链各一个 Asp25；羧基氧最近距离见 carboxyl_oxygen_min_distance_A（由 1T3R_protein_AB.pdb 坐标实算）"
+  },
+  "pocket": {
+    "cutoff_angstrom": 5.0,
+    "ligand_heavy_atoms": 38,
+    "protein_heavy_atoms": 1496,
+    "residues": [
+      {
+        "chain": "A",
+        "resseq": 23,
+        "resn": "LEU",
+        "min_dist": 4.75,
+        "contact_atoms": 1
+      },
+      {
+        "chain": "A",
+        "resseq": 25,
+        "resn": "ASP",
+        "min_dist": 2.58,
+        "contact_atoms": 4
+      },
+      {
+        "chain": "A",
+        "resseq": 27,
+        "resn": "GLY",
+        "min_dist": 3.41,
+        "contact_atoms": 4
+      },
+      {
+        "chain": "A",
+        "resseq": 28,
+        "resn": "ALA",
+        "min_dist": 3.69,
+        "contact_atoms": 5
+      },
+      {
+        "chain": "A",
+        "resseq": 29,
+        "resn": "ASP",
+        "min_dist": 3.12,
+        "contact_atoms": 7
+      },
+      {
+        "chain": "A",
+        "resseq": 30,
+        "resn": "ASP",
+        "min_dist": 3.06,
+        "contact_atoms": 8
+      },
+      {
+        "chain": "A",
+        "resseq": 32,
+        "resn": "VAL",
+        "min_dist": 4.99,
+        "contact_atoms": 1
+      },
+      {
+        "chain": "A",
+        "resseq": 47,
+        "resn": "ILE",
+        "min_dist": 3.96,
+        "contact_atoms": 2
+      },
+      {
+        "chain": "A",
+        "resseq": 48,
+        "resn": "GLY",
+        "min_dist": 4.31,
+        "contact_atoms": 2
+      },
+      {
+        "chain": "A",
+        "resseq": 49,
+        "resn": "GLY",
+        "min_dist": 3.89,
+        "contact_atoms": 4
+      },
+      {
+        "chain": "A",
+        "resseq": 50,
+        "resn": "ILE",
+        "min_dist": 4.1,
+        "contact_atoms": 6
+      },
+      {
+        "chain": "A",
+        "resseq": 81,
+        "resn": "PRO",
+        "min_dist": 4.36,
+        "contact_atoms": 2
+      },
+      {
+        "chain": "A",
+        "resseq": 82,
+        "resn": "VAL",
+        "min_dist": 4.82,
+        "contact_atoms": 1
+      },
+      {
+        "chain": "A",
+        "resseq": 84,
+        "resn": "ILE",
+        "min_dist": 4.41,
+        "contact_atoms": 2
+      },
+      {
+        "chain": "B",
+        "resseq": 8,
+        "resn": "ARG",
+        "min_dist": 4.14,
+        "contact_atoms": 3
+      },
+      {
+        "chain": "B",
+        "resseq": 23,
+        "resn": "LEU",
+        "min_dist": 4.68,
+        "contact_atoms": 1
+      },
+      {
+        "chain": "B",
+        "resseq": 25,
+        "resn": "ASP",
+        "min_dist": 2.54,
+        "contact_atoms": 4
+      },
+      {
+        "chain": "B",
+        "resseq": 27,
+        "resn": "GLY",
+        "min_dist": 4.46,
+        "contact_atoms": 4
+      },
+      {
+        "chain": "B",
+        "resseq": 28,
+        "resn": "ALA",
+        "min_dist": 4.72,
+        "contact_atoms": 4
+      },
+      {
+        "chain": "B",
+        "resseq": 29,
+        "resn": "ASP",
+        "min_dist": 4.07,
+        "contact_atoms": 4
+      },
+      {
+        "chain": "B",
+        "resseq": 30,
+        "resn": "ASP",
+        "min_dist": 3.06,
+        "contact_atoms": 7
+      },
+      {
+        "chain": "B",
+        "resseq": 32,
+        "resn": "VAL",
+        "min_dist": 3.85,
+        "contact_atoms": 2
+      },
+      {
+        "chain": "B",
+        "resseq": 47,
+        "resn": "ILE",
+        "min_dist": 4.2,
+        "contact_atoms": 4
+      },
+      {
+        "chain": "B",
+        "resseq": 48,
+        "resn": "GLY",
+        "min_dist": 4.11,
+        "contact_atoms": 3
+      },
+      {
+        "chain": "B",
+        "resseq": 49,
+        "resn": "GLY",
+        "min_dist": 3.88,
+        "contact_atoms": 3
+      },
+      {
+        "chain": "B",
+        "resseq": 50,
+        "resn": "ILE",
+        "min_dist": 4.29,
+        "contact_atoms": 4
+      },
+      {
+        "chain": "B",
+        "resseq": 76,
+        "resn": "LEU",
+        "min_dist": 4.25,
+        "contact_atoms": 1
+      },
+      {
+        "chain": "B",
+        "resseq": 81,
+        "resn": "PRO",
+        "min_dist": 3.84,
+        "contact_atoms": 3
+      },
+      {
+        "chain": "B",
+        "resseq": 82,
+        "resn": "VAL",
+        "min_dist": 4.16,
+        "contact_atoms": 3
+      },
+      {
+        "chain": "B",
+        "resseq": 84,
+        "resn": "ILE",
+        "min_dist": 4.44,
+        "contact_atoms": 3
+      }
+    ],
+    "count": 30,
+    "center": [
+      19.54,
+      29.84,
+      14.94
+    ]
+  },
+  "poses": {
+    "file": "structure/poses.pdb",
+    "count": 9,
+    "affinity_by_pose": {
+      "1": {
+        "pose": 1,
+        "affinity": -9.958,
+        "rmsd_A": 0.211,
+        "best": true
+      },
+      "2": {
+        "pose": 2,
+        "affinity": -9.148,
+        "rmsd_A": 2.733,
+        "best": false
+      },
+      "3": {
+        "pose": 3,
+        "affinity": -8.877,
+        "rmsd_A": 2.707,
+        "best": false
+      },
+      "4": {
+        "pose": 4,
+        "affinity": -8.782,
+        "rmsd_A": 3.005,
+        "best": false
+      },
+      "5": {
+        "pose": 5,
+        "affinity": -8.366,
+        "rmsd_A": 3.028,
+        "best": false
+      },
+      "6": {
+        "pose": 6,
+        "affinity": -8.233,
+        "rmsd_A": 2.945,
+        "best": false
+      },
+      "7": {
+        "pose": 7,
+        "affinity": -7.946,
+        "rmsd_A": 2.924,
+        "best": false
+      },
+      "8": {
+        "pose": 8,
+        "affinity": -7.88,
+        "rmsd_A": 1.87,
+        "best": false
+      },
+      "9": {
+        "pose": 9,
+        "affinity": -7.81,
+        "rmsd_A": 1.923,
+        "best": false
+      }
+    },
+    "best_pose": 1,
+    "rmsd_threshold_A": 2.0,
+    "rmsd_method": "meeko mk_export (pdbqt->sdf) + RDKit rdMolAlign.GetBestRMS (symmetry aware)",
+    "note": "RMSD is pose-recovery evidence for the co-crystal control only; not affinity or activity."
+  }
+}

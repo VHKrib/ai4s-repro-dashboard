@@ -1,0 +1,246 @@
+/* ============================================================================
+   A4S 科研工作台 · v5.css
+   ----------------------------------------------------------------------------
+   只做两件事，对应 docs/STRUCTURE-REVIEW-V5.md 的 P0-4 / P0-5：
+     1) 首页 hero 改两栏：左文案 + 右结构视觉 + 底部滚动提示（aixren.top 结构）
+     2) 六张卡片统一 anatomy：16:9 图区 → 编号 → 标题 → 一句说明 → 数字行 → 进入
+   全部为覆盖规则，不改 site.css / v4.css 的任何既有 token。
+   加载顺序：site.css → v4.css → v5.css
+   ========================================================================== */
+
+/* ------------------------------------------------------- 1. hero 两栏 */
+.home-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.04fr) minmax(0, 0.96fr);
+  align-items: center;
+  column-gap: clamp(32px, 5vw, 76px);
+  row-gap: clamp(24px, 4vh, 40px);
+  min-height: calc(100vh - 76px);
+  padding-block: clamp(28px, 4vh, 56px) clamp(16px, 2.5vh, 32px);
+}
+.home-hero .hero-copy {
+  padding-top: 0;
+  min-width: 0;
+}
+.home-hero .hero-copy .ask-lede { max-width: 30em; }
+
+/* 标题尺度向 aixren 的 84.96px / 820 靠：中文长句取 82 上限 */
+#hero-title.ask-title {
+  margin-bottom: var(--s4);
+  max-width: 11em;
+  font-size: clamp(46px, 5.4vw, 82px);
+  font-weight: 700;
+  line-height: 1.03;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+/* 橙色签字笔：aixren 的 h1 span::after 原参数（bottom 6% / .105em / -1.2deg） */
+.hero-copy .accent {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+.hero-copy .accent::after {
+  content: "";
+  position: absolute;
+  left: -0.04em;
+  right: -0.04em;
+  bottom: 0.03em;
+  height: 0.085em;
+  border-radius: 999px;
+  background: var(--orange);
+  opacity: 0.9;
+  transform: rotate(-1.2deg);
+  z-index: -1;
+}
+
+/* 右栏：倾斜的渲染框 */
+.hero-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+.hero-frame {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 16 / 10;
+  border: var(--hair) solid var(--line);
+  border-radius: 20px;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 90% at 50% 0%, #ffffff 0%, rgba(255, 254, 250, 0) 62%),
+    var(--wash);
+  transform: rotate(-1.6deg);
+  box-shadow:
+    0 1px 2px rgba(17, 17, 17, 0.04),
+    0 18px 40px rgba(17, 17, 17, 0.08);
+}
+.hero-frame .viewer-canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.hero-frame-tag {
+  position: absolute;
+  left: 14px;
+  bottom: 12px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(255, 254, 250, 0.86);
+  border: var(--hair) solid var(--line);
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: var(--ink-3);
+}
+.hero-caption {
+  margin: 0;
+  padding-left: 2px;
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: var(--ink-3);
+}
+
+/* 断行点：交给浏览器 balance 会把「蛋白」拆开，这里钉死成 6 / 7 字两行 */
+.hero-break { display: block; }
+@media (max-width: 640px) { .hero-break { display: block; } }
+
+/* 底部滚动提示：site.css 里已有 .scroll-cue，v4 一直没引用 */
+.home-hero .scroll-cue {
+  grid-column: 1 / -1;
+  justify-self: start;
+  color: var(--ink-2);
+}
+
+/* ------------------------------------------------------- 2. 卡片统一 */
+#cards { scroll-margin-top: 96px; }
+
+.card-grid {
+  max-width: 1000px;
+  gap: 28px;
+}
+.card {
+  padding: 0 0 24px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 420ms var(--ease);
+  will-change: transform;
+}
+.card:hover,
+.card:focus-visible { transform: translateY(-8px); }
+.card-glow {
+  transition: opacity 260ms var(--ease);
+  box-shadow:
+    0 1px 2px rgba(17, 17, 17, 0.04),
+    0 26px 58px rgba(17, 17, 17, 0.12);
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: 0 26px;
+  min-width: 0;
+}
+
+/* 图区：六张统一 16:9，不再有「大数字当图」 */
+.card-visual {
+  height: auto;
+  margin: 0 0 20px;
+  aspect-ratio: 16 / 9;
+  background: var(--wash);
+  overflow: hidden;
+}
+.card-visual::after { content: none; }
+.card-poster,
+.card-graphic {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.card-poster { object-fit: cover; }
+.card-visual-tag {
+  left: 12px;
+  bottom: 12px;
+  background: rgba(255, 254, 250, 0.9);
+}
+.card-visual-tag-live { padding: 4px 10px 4px 8px; }
+.card-visual-tag-live .status-pill {
+  border: 0;
+  background: none;
+  padding: 0;
+  font-size: 11px;
+}
+
+/* 数字下沉成卡片底部一行，不再抢标题位置 */
+.card-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  margin-top: 16px;
+  padding-top: 13px;
+  border-top: var(--hair) solid var(--line-soft);
+}
+.card-metrics > span {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.card-metrics b {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+.card-metrics i {
+  font-style: normal;
+  font-size: 11px;
+  letter-spacing: 0.01em;
+  color: var(--ink-3);
+}
+.card-note {
+  display: block;
+  margin-top: 9px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--ink-3);
+}
+.card-go { padding-top: 16px; }
+.card-kicker { margin-bottom: 8px; }
+
+/* ------------------------------------------------------- 3. 响应式 */
+@media (max-width: 1080px) {
+  .home-hero {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
+    align-items: start;
+  }
+  .hero-visual { max-width: 640px; }
+  .home-hero .scroll-cue { display: none; }
+  #hero-title.ask-title { max-width: 14em; font-size: clamp(42px, 7vw, 64px); }
+}
+
+@media (max-width: 640px) {
+  #hero-title.ask-title {
+    font-size: clamp(32px, 8.6vw, 42px);
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+  }
+  .hero-frame { transform: none; border-radius: 16px; }
+  .hero-caption { font-size: 11px; }
+  .card { padding-bottom: 20px; border-radius: 16px; }
+  .card-body { padding: 0 20px; }
+  .card-visual { margin-bottom: 16px; }
+  .card-metrics { gap: 8px 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card:hover, .card:focus-visible { transform: none; }
+  .hero-frame { transform: none; }
+}

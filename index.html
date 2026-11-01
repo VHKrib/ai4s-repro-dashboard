@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>A4S 科研工作台 · 蛋白抑制剂设计案例</title>
+<meta name="description" content="先选一个靶点：已经跑完的案例直接给 3D 结构与数字；没跑过的，写清还缺什么。所有数字来自本机产物。">
+<link rel="stylesheet" href="assets/site.css?v=6">
+<link rel="stylesheet" href="assets/v4.css?v=6">
+<link rel="stylesheet" href="assets/v5.css?v=6">
+<link rel="stylesheet" href="assets/v6.css?v=6">
+</head>
+<body data-route="home">
+<button class="skip" type="button" id="skip-link">跳到主要内容</button>
+
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a class="brand" href="#/" data-nav="home">
+      <span class="brand-mark">A4S</span>
+      <span class="brand-text">科研工作台</span>
+    </a>
+    <nav class="primary-nav" aria-label="案例导航">
+      <a href="#/hiv1" data-nav="hiv1">HIV-1</a>
+      <a href="#/jak2" data-nav="jak2">JAK2</a>
+      <a href="#/egfr" data-nav="egfr">EGFR</a>
+    </nav>
+    <div class="header-status" id="header-status">
+      <span class="light" data-state="idle" aria-hidden="true"></span>
+      <span class="header-status-text">正在读取运行记录…</span>
+    </div>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <!-- ==================================================================
+       首页 · 提问 + 卡片网格
+       ================================================================== -->
+  <section class="view" id="view-home" data-view="home" aria-labelledby="hero-title">
+    <div class="shell home-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">A4S · 科研工作台</p>
+        <h1 id="hero-title" class="ask-title">你想开发哪种<br class="hero-break">蛋白的<span class="accent">抑制剂</span>？</h1>
+        <p class="ask-lede">
+          先报一个靶点。已经跑完的，直接给 3D 结构和数字；没跑过的，把缺口写清楚。
+        </p>
+
+        <form class="ask-form" id="ask-form" role="search" autocomplete="off" novalidate>
+          <label class="sr-only" for="ask-input">输入蛋白或靶点名称</label>
+          <input id="ask-input" name="target" type="text" class="ask-input"
+                 placeholder="例如 HIV-1、JAK2、EGFR" aria-describedby="ask-hint">
+          <button type="submit" class="ask-submit">看结果</button>
+        </form>
+
+        <p class="ask-hint" id="ask-hint">也可以直接点一个例子：</p>
+        <div class="ask-chips" role="group" aria-label="示例靶点">
+          <button type="button" class="chip" data-ask="HIV-1 蛋白酶 · 达芦那韦">HIV-1 蛋白酶 · 达芦那韦</button>
+          <button type="button" class="chip" data-ask="JAK2 · RXT">JAK2 · RXT</button>
+          <button type="button" class="chip" data-ask="EGFR">EGFR</button>
+        </div>
+
+        <div class="ask-result" id="ask-result" role="status" aria-live="polite" hidden></div>
+      </div>
+
+      <div class="hero-visual">
+        <figure class="hero-frame">
+          <span id="hero-viewer" class="viewer-canvas" role="img"
+                aria-label="1T3R 二聚体与达芦那韦的三维结构"></span>
+          <figcaption class="hero-frame-tag">1T3R · A/B 链 · 本地渲染</figcaption>
+        </figure>
+        <p class="hero-caption">HIV-1 蛋白酶野生型二聚体，口袋里是达芦那韦的共晶姿势。</p>
+      </div>
+
+      <a class="scroll-cue" href="#targets">往下看看
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v13m0 0 5-5m-5 5-5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+
+    <div class="shell" id="targets">
+      <div class="section-head">
+        <p class="eyebrow">三个靶点 · 三套章节</p>
+        <h2 class="section-title">每个靶点都有它自己的六章</h2>
+        <p class="section-lede">跑完的把数字摆出来，只做过对照的标清楚，没跑的写缺什么。选一个进它自己的六张子卡。</p>
+      </div>
+
+      <div class="target-grid">
+      <a class="card target-card" href="#/hiv1" data-card="hiv1">
+        <span class="card-glow" aria-hidden="true"></span>
+        <span class="card-visual">
+            <svg class="card-graphic" viewBox="0 0 320 180" role="presentation" aria-hidden="true">
+              <rect x="30" y="52" width="30" height="76" rx="7" fill="rgba(17,17,17,.60)"/>
+              <rect x="74" y="52" width="30" height="76" rx="7" fill="rgba(17,17,17,.60)"/>
+              <rect x="118" y="52" width="30" height="76" rx="7" fill="rgba(17,17,17,.60)"/>
+              <rect x="162" y="52" width="30" height="76" rx="7" fill="rgba(17,17,17,.60)"/>
+              <rect x="206" y="52" width="30" height="76" rx="7" fill="rgba(17,17,17,.60)"/>
+              <rect x="250" y="52" width="30" height="76" rx="7" fill="rgba(17,17,17,.60)"/>
+            </svg>
+          <span class="card-visual-tag">1T3R · 已完成</span>
+        </span>
+        <span class="card-body">
+          <span class="card-kicker">案例 A · 已完成</span>
+          <span class="card-title">HIV-1 蛋白酶 × 达芦那韦</span>
+          <span class="card-desc">六章全部跑通：把上市药放回共晶，再看九个姿势哪一个站得住。</span>
+          <span class="card-metrics"><span><b>0.211 Å</b><i>重对接偏差</i></span><span><b>9 个</b><i>姿势</i></span><span><b>6 / 6</b><i>章节</i></span></span>
+          <span class="card-go">进入六章
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </span>
+      </a>      <a class="card target-card" href="#/jak2" data-card="jak2">
+        <span class="card-glow" aria-hidden="true"></span>
+        <span class="card-visual">
+            <svg class="card-graphic" viewBox="0 0 320 180" role="presentation" aria-hidden="true">
+              <rect x="30" y="52" width="30" height="76" rx="7" fill="rgba(17,17,17,.60)"/>
+              <rect x="74" y="52" width="30" height="76" rx="7" fill="rgba(17,17,17,.60)"/>
+              <rect x="118" y="52" width="30" height="76" rx="7" fill="rgba(17,17,17,.60)"/>
+              <rect x="162" y="52" width="30" height="76" rx="7" fill="rgba(17,17,17,.60)"/>
+              <rect x="206" y="52" width="30" height="76" rx="7" fill="rgba(17,17,17,.60)"/>
+              <rect x="250" y="52" width="30" height="76" rx="7" fill="none" stroke="rgba(17,17,17,.26)" stroke-width="1.2" stroke-dasharray="4 4"/>
+            </svg>
+          <span class="card-visual-tag">6VGL · 仅对照</span>
+        </span>
+        <span class="card-body">
+          <span class="card-kicker">案例 B · 仅对照</span>
+          <span class="card-title">JAK2 × RXT</span>
+          <span class="card-desc">刚性红对接对照已经跑完，设计候选那一层还没开始。</span>
+          <span class="card-metrics"><span><b>−8.833</b><i>最佳分 kcal/mol</i></span><span><b>1.00</b><i>位点重叠</i></span><span><b>5 / 6</b><i>章节</i></span></span>
+          <span class="card-go">进入六章
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </span>
+      </a>      <a class="card target-card" href="#/egfr" data-card="egfr">
+        <span class="card-glow" aria-hidden="true"></span>
+        <span class="card-visual">
+            <svg class="card-graphic" viewBox="0 0 320 180" role="presentation" aria-hidden="true">
+              <rect x="30" y="52" width="30" height="76" rx="7" fill="none" stroke="rgba(17,17,17,.26)" stroke-width="1.2" stroke-dasharray="4 4"/>
+              <rect x="74" y="52" width="30" height="76" rx="7" fill="none" stroke="rgba(17,17,17,.26)" stroke-width="1.2" stroke-dasharray="4 4"/>
+              <rect x="118" y="52" width="30" height="76" rx="7" fill="none" stroke="rgba(17,17,17,.26)" stroke-width="1.2" stroke-dasharray="4 4"/>
+              <rect x="162" y="52" width="30" height="76" rx="7" fill="none" stroke="rgba(17,17,17,.26)" stroke-width="1.2" stroke-dasharray="4 4"/>
+              <rect x="206" y="52" width="30" height="76" rx="7" fill="none" stroke="rgba(17,17,17,.26)" stroke-width="1.2" stroke-dasharray="4 4"/>
+              <rect x="250" y="52" width="30" height="76" rx="7" fill="none" stroke="rgba(17,17,17,.26)" stroke-width="1.2" stroke-dasharray="4 4"/>
+            </svg>
+          <span class="card-visual-tag">未开始</span>
+        </span>
+        <span class="card-body">
+          <span class="card-kicker">案例 C · 未跑</span>
+          <span class="card-title">EGFR</span>
+          <span class="card-desc">结构、配体、配方三样都还没定，六张卡全是空的。</span>
+          <span class="card-metrics"><span><b>0 / 6</b><i>章节</i></span><span><b>3 项</b><i>缺口</i></span></span>
+          <span class="card-go">看缺什么
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </span>
+      </a>
+      </div>
+
+      <p class="card-footnote">六章的形态一致：靶点 → 方法 → 结果 → 证据 → 进度 → 边界。数字能追到本机产物，没跑的标未执行。</p>
+    </div>
+  </section>
+
+  <!-- ==================================================================
+       案例 A · HIV-1 蛋白酶 × 达芦那韦：它自己的六章
+       ================================================================== -->
+  <section class="view" id="view-hiv1" data-view="hiv1" aria-labelledby="hiv1-title" hidden>
+    <div class="shell">
+      <div class="page-head">
+        <a class="back-link" href="#/">← 返回靶点列表</a>
+        <p class="eyebrow"><span class="num">A</span> <span class="sep">/</span> HIV-1 蛋白酶 × 达芦那韦</p>
+        <h1 id="hiv1-title">六章都跑完了，<br class="br-mobile">从靶点到边界</h1>
+        <p class="page-lede">
+          这是唯一一条从头跑到尾的链：结构准备、文献层、评测、红对接、证据、边界。
+          每章底部都有一段可复查的折叠区，数字能追到本机产物。
+        </p>
+        <p class="case-state">
+          <span class="status-pill" data-state="ok"><span class="light" aria-hidden="true"></span>已完成</span>
+          <span>0.211 Å 重对接 · 9 个姿势 · 33 / 33 自检</span>
+        </p>
+        <nav class="chapter-nav" aria-label="HIV-1 六章">
+          <a href="#/target" data-nav="target">01 靶点</a>
+          <a href="#/method" data-nav="method">02 方法</a>
+          <a href="#/results" data-nav="results">03 结果</a>
+          <a href="#/evidence" data-nav="evidence">04 证据</a>
+          <a href="#/progress" data-nav="progress">05 进度</a>
+          <a href="#/limits" data-nav="limits">06 边界</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="shell" id="cards">
+      <div class="card-grid">
+
+        <a class="card" id="card-target" href="#/target" data-card="target">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-visual">
+            <img class="card-poster" src="assets/card-target.png" alt="1T3R 二聚体与达芦那韦的本地渲染" width="932" height="526" loading="lazy" decoding="async">
+            <span class="card-visual-tag">1T3R · 本地渲染</span>
+          </span>
+          <span class="card-body">
+            <span class="card-kicker">01 / 靶点与分子</span>
+            <span class="card-title">HIV-1 蛋白酶 × 达芦那韦</span>
+            <span class="card-desc">1.20 Å 的野生型共晶里，把已上市的抑制剂放回它该在的位置。</span>
+            <span class="card-metrics"><span><b>1.20 Å</b><i>共晶分辨率</i></span><span><b>4.5 pM</b><i>实测 Kd</i></span></span>
+            <span class="card-go">进入
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </span>
+        </a>
+
+        <a class="card" id="card-method" href="#/method" data-card="method">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-visual">
+            <svg class="card-graphic" viewBox="0 0 320 180" role="presentation" aria-hidden="true">
+              <line x1="40" y1="96" x2="280" y2="96" stroke="rgba(17,17,17,.12)"/>
+              <g font-family="A4S Mono, Consolas, monospace" font-size="9" fill="rgba(17,17,17,.34)" text-anchor="middle">
+                <text x="40" y="70">01</text><text x="100" y="70">02</text><text x="160" y="70">03</text><text x="220" y="70">04</text><text x="280" y="70">05</text>
+              </g>
+              <g fill="none" stroke="rgba(17,17,17,.30)" stroke-width="1.4">
+                <circle cx="40" cy="96" r="6"/><circle cx="100" cy="96" r="6"/><circle cx="160" cy="96" r="6"/>
+                <circle cx="280" cy="96" r="6" stroke-dasharray="2 2.6"/>
+              </g>
+              <circle cx="220" cy="96" r="11" fill="rgba(232,85,28,.13)"/>
+              <circle cx="220" cy="96" r="6" fill="#e8551c"/>
+              <text x="220" y="130" font-family="A4S Sans, sans-serif" font-size="10" fill="rgba(17,17,17,.52)" text-anchor="middle">本页覆盖</text>
+            </svg>
+          </span>
+          <span class="card-body">
+            <span class="card-kicker">02 / 方法</span>
+            <span class="card-title">从结构准备到对接判据</span>
+            <span class="card-desc">五段链路，哪一段真跑了、哪一段跳过，逐段写明。</span>
+            <span class="card-metrics"><span><b>691 条</b><i>文献证据</i></span><span><b>25 篇</b><i>金标准</i></span></span>
+            <span class="card-go">进入
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </span>
+        </a>
+
+        <a class="card" id="card-results" href="#/results" data-card="results">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-visual">
+            <svg class="card-graphic" viewBox="0 0 320 180" role="presentation" aria-hidden="true">
+<rect x="28.0" y="143.8" width="20" height="8.2" rx="3" fill="#e8551c"/>
+              <rect x="59.5" y="46.1" width="20" height="105.9" rx="3" fill="#c9c1b6"/>
+              <rect x="91.0" y="47.1" width="20" height="104.9" rx="3" fill="#c9c1b6"/>
+              <rect x="122.5" y="35.6" width="20" height="116.4" rx="3" fill="#c9c1b6"/>
+              <rect x="154.0" y="34.7" width="20" height="117.3" rx="3" fill="#c9c1b6"/>
+              <rect x="185.5" y="37.9" width="20" height="114.1" rx="3" fill="#c9c1b6"/>
+              <rect x="217.0" y="38.7" width="20" height="113.3" rx="3" fill="#c9c1b6"/>
+              <rect x="248.5" y="79.5" width="20" height="72.5" rx="3" fill="#3f7d5a"/>
+              <rect x="280.0" y="77.5" width="20" height="74.5" rx="3" fill="#3f7d5a"/>
+              <line x1="22" y1="74.5" x2="304" y2="74.5" stroke="#e8551c" stroke-width="1" stroke-dasharray="4 4" opacity=".7"/>
+              <line x1="22" y1="152" x2="304" y2="152" stroke="rgba(17,17,17,.14)"/>
+              <text x="304" y="66.5" font-family="A4S Sans, sans-serif" font-size="9" fill="rgba(232,85,28,.9)" text-anchor="end">判据 2.0 Å</text>
+            </svg>
+          </span>
+          <span class="card-body">
+            <span class="card-kicker">03 / 结果</span>
+            <span class="card-title">九个姿势，只有一个回到晶体位置</span>
+            <span class="card-desc">分数、偏差与几何检查放在一起看，才谈得上能不能用。</span>
+            <span class="card-metrics"><span><b>−9.958</b><i>最佳分 kcal/mol</i></span><span><b>0.211 Å</b><i>重对接偏差</i></span></span>
+            <span class="card-go">进入
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </span>
+        </a>
+
+        <a class="card" id="card-evidence" href="#/evidence" data-card="evidence">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-visual">
+            <svg class="card-graphic" viewBox="0 0 320 180" role="presentation" aria-hidden="true">
+              <circle cx="160" cy="90" r="62.0" fill="none" stroke="rgba(17,17,17,.30)" stroke-width="13"
+                      stroke-dasharray="7.32 4.49"/>
+              <circle cx="160" cy="90" r="62.0" fill="none" stroke="#e8551c" stroke-width="13" stroke-linecap="round"
+                      stroke-dasharray="7.32 389.56" transform="rotate(-90 160 90)"/>
+            </svg>
+          </span>
+          <span class="card-body">
+            <span class="card-kicker">04 / 证据与可复现</span>
+            <span class="card-title">重跑一遍，结论应该一样</span>
+            <span class="card-desc">输入钉死、参数写进配置、产物逐列校验；没跑的标未执行。</span>
+            <span class="card-metrics"><span><b>33 / 33</b><i>自检通过</i></span><span><b>10 个</b><i>产物校验</i></span></span>
+            <span class="card-go">进入
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </span>
+        </a>
+
+        <a class="card" id="card-progress" href="#/progress" data-card="progress">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-visual">
+            <svg class="card-graphic" viewBox="0 0 320 180" role="presentation" aria-hidden="true">
+              <rect x="28" y="84" width="264" height="12" rx="6" fill="rgba(17,17,17,.07)"/>
+              <rect x="32.0" y="84" width="30" height="12" rx="6" fill="rgba(17,17,17,.55)"/>
+              <rect x="69.6" y="84" width="30" height="12" rx="6" fill="rgba(17,17,17,.55)"/>
+              <rect x="107.2" y="84" width="30" height="12" rx="6" fill="#e8551c"/>
+              <rect x="144.8" y="84" width="30" height="12" rx="6" fill="rgba(17,17,17,.55)"/>
+              <rect x="182.4" y="84" width="30" height="12" rx="6" fill="rgba(17,17,17,.55)"/>
+              <rect x="220.0" y="84" width="30" height="12" rx="6" fill="rgba(17,17,17,.55)"/>
+              <rect x="257.6" y="84" width="30" height="12" rx="6" fill="rgba(17,17,17,.55)"/>
+            </svg>
+            <span class="card-visual-tag card-visual-tag-live">
+              <span class="status-pill" data-state="idle" id="card-progress-pill">
+                <span class="light" aria-hidden="true"></span><span id="card-progress-state">正在读取</span>
+              </span>
+            </span>
+          </span>
+          <span class="card-body">
+            <span class="card-kicker">05 / 实时进度</span>
+            <span class="card-title">这台机器现在跑到哪一步</span>
+            <span class="card-desc">每一步的状态、耗时与说明都从磁盘读，页面不存第二份。</span>
+            <span class="card-metrics"><span><b id="card-progress-steps">7 / 7</b><i>七步管线</i></span><span><b>32.0 s</b><i>本轮耗时</i></span></span>
+            <span class="card-note" id="card-progress-time">本机七步管线 · 可回放历史运行</span>
+            <span class="card-go">进入
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </span>
+        </a>
+
+        <a class="card" id="card-limits" href="#/limits" data-card="limits">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-visual">
+            <svg class="card-graphic" viewBox="0 0 320 180" role="presentation" aria-hidden="true">
+              <line x1="160" y1="34" x2="160" y2="146" stroke="rgba(17,17,17,.13)"/>
+              <g font-family="A4S Sans, sans-serif" font-size="10" fill="rgba(17,17,17,.38)">
+                <text x="132" y="30" text-anchor="end">能说明</text>
+                <text x="188" y="30">不能说明</text>
+              </g>
+              <g fill="rgba(17,17,17,.58)">
+                <circle cx="56" cy="76" r="5"/><circle cx="56" cy="112" r="5"/>
+              </g>
+              <g fill="none" stroke="rgba(17,17,17,.32)" stroke-width="1.3" stroke-dasharray="2.4 3">
+                <circle cx="200" cy="62" r="5"/><circle cx="200" cy="94" r="5"/><circle cx="200" cy="126" r="5"/>
+              </g>
+            </svg>
+          </span>
+          <span class="card-body">
+            <span class="card-kicker">06 / 边界与下一步</span>
+            <span class="card-title">能说明姿势和流程，不能说明亲和力</span>
+            <span class="card-desc">这一轮证明到哪、下一步还缺什么，都写在这一页。</span>
+            <span class="card-metrics"><span><b>7 项</b><i>未执行</i></span><span><b>2 件</b><i>能说明</i></span></span>
+            <span class="card-go">进入
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </span>
+        </a>
+
+      </div>
+
+      <p class="card-footnote">六个分节对应六个子页。任何数字都能追到本机产物；技术标识收在每页底部的折叠区。</p>
+    </div>
+    </div>
+  </section>
+
+  <!-- ==================================================================
+       01 · 靶点与分子
+       ================================================================== -->
+  <section class="view" id="view-target" data-view="target" aria-labelledby="target-title" hidden>
+    <div class="shell">
+      <div class="page-head">
+        <a class="back-link" href="#/hiv1">← 案例：HIV-1 蛋白酶 × 达芦那韦</a>
+        <nav class="chapter-nav" aria-label="HIV-1 六章">
+          <a href="#/target" data-nav="target">01 靶点</a>
+          <a href="#/method" data-nav="method">02 方法</a>
+          <a href="#/results" data-nav="results">03 结果</a>
+          <a href="#/evidence" data-nav="evidence">04 证据</a>
+          <a href="#/progress" data-nav="progress">05 进度</a>
+          <a href="#/limits" data-nav="limits">06 边界</a>
+        </nav>
+        <p class="eyebrow"><span class="num">01</span> <span class="sep">/</span> 靶点与分子</p>
+        <h1 id="target-title">选这一对，是因为能对回已知答案</h1>
+        <p class="page-lede">
+          检验对接口最直接的办法，是让它把一份已知的复合物重新对一遍。
+          HIV-1 蛋白酶野生型二聚体给了清楚的结构，达芦那韦给了一个直接测过的亲和力。
+        </p>
+      </div>
+    </div>
+
+    <div class="shell">
+      <div class="split">
+        <div class="prose">
+          <p>这需要两样东西：分辨率够高的野生型共晶，和一个亲和力被直接测过的配体。</p>
+          <p>1T3R 是前者。它是 HIV-1 蛋白酶野生型的共晶，分辨率 1.20 Å，A/B 两条链都在，口袋里留着达芦那韦的共晶坐标。有了这个结构，姿势对不对可以按原子距离算，不用凭眼判断。</p>
+          <p>达芦那韦补上第二样。它有等温滴定量热直接测过的绝对亲和力，Kd 4.5 pM。这个值不是打分函数算出来的，所以它只说明这个配体确实结合得紧，不参与后面的打分。</p>
+          <p>蛋白酶本身也省事。二聚体对称，口袋边界清楚，两边各有一个 Asp25，重原子羧基氧之间的距离可以拿来当几何检查点。</p>
+        </div>
+
+        <aside class="stat-row" aria-label="选择依据的关键数字">
+          <div class="stat">
+            <span class="stat-num">1.20 Å</span>
+            <span class="stat-label">共晶分辨率。原子位置的不确定度比要比较的姿势差异小一个量级，拿它做对照才有意义。</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">4.5 pM</span>
+            <span class="stat-label">直接测得的 Kd。它说明达芦那韦是个真结合者，同时提醒后面那个 −9.958 不是同一把尺子。</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">38</span>
+            <span class="stat-label">配体的重原子数，C27H37N3O7S。刚性对接的自由度全压在 14 个可扭转键上。</span>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <div class="shell">
+      <div class="case-block" id="case-hiv1" data-case="hiv1_1t3r_darunavir"
+           data-case-title="HIV-1 蛋白酶 × 达芦那韦"
+           data-case-keywords="hiv-1|hiv1|hiv|1t3r|darunavir|达芦那韦|蛋白酶|tmc114"
+           data-case-route="hiv1"
+           data-case-summary="重对接偏差 0.211 Å（判据 2.0 Å）· 9 个姿势 · 最佳 −9.958 kcal/mol">
+        <div class="case-head">
+          <p class="eyebrow">案例 A · HIV-1 蛋白酶 × 达芦那韦</p>
+          <h2 id="case-hiv1-title">把达芦那韦放回去，看它落在哪</h2>
+          <dl class="case-facts">
+            <div><dt>重对接偏差</dt><dd data-fact="rmsd-head">0.211 Å</dd></div>
+            <div><dt>判据</dt><dd>2.0 Å</dd></div>
+            <div><dt>生成的姿势</dt><dd>9 个</dd></div>
+            <div><dt>最佳打分</dt><dd>−9.958 <small>kcal/mol</small></dd></div>
+          </dl>
+          <p class="case-note">复合物、蛋白、配体、九个对接姿势四层都能切换；点残基会给出链、序号与 B-factor。</p>
+        </div>
+
+        <div class="viewer-shell">
+          <div class="viewer-frame" id="hiv1-frame">
+            <div class="viewer-toolbar">
+              <div class="seg" role="group" aria-label="视图模式">
+                <button type="button" class="seg-btn is-active" data-view="complex">复合物</button>
+                <button type="button" class="seg-btn" data-view="protein">蛋白</button>
+                <button type="button" class="seg-btn" data-view="ligand">配体</button>
+                <button type="button" class="seg-btn" data-view="poses">对接姿势</button>
+              </div>
+              <div class="toolbar-actions">
+                <button type="button" class="ghost-btn" id="btn-spin" aria-pressed="false">自转</button>
+                <button type="button" class="ghost-btn" id="btn-labels" aria-pressed="true">标签</button>
+                <button type="button" class="ghost-btn" id="btn-reset">重置视角</button>
+              </div>
+            </div>
+
+            <div class="viewer-stage">
+              <div id="viewer" class="viewer-canvas" aria-label="3D 分子结构视图" role="application" tabindex="0"></div>
+              <div class="viewer-badge" id="viewer-badge">加载结构…</div>
+              <div class="viewer-hint">拖拽旋转 · 滚轮缩放 · 点残基看信息</div>
+            </div>
+
+            <div class="viewer-footer">
+              <div class="pose-strip" id="pose-strip" hidden>
+                <span class="pose-strip-label">姿势</span>
+                <div class="pose-chips" id="pose-chips"></div>
+              </div>
+              <div class="viewer-caption" id="viewer-caption">
+                <span class="caption-key">1T3R · A/B 链 · 1,496 个原子</span>
+                <span id="viewer-caption-text"></span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="viewer-aside">
+            <div class="aside-block">
+              <p class="aside-title">现在看到的</p>
+              <p class="aside-body" id="aside-view-desc"></p>
+            </div>
+
+            <div class="aside-block">
+              <p class="aside-title">活性口袋</p>
+              <dl class="kv" id="aside-pocket">
+                <div><dt>定义</dt><dd>≤ 5.0 Å（距共晶配体）</dd></div>
+                <div><dt>残基数</dt><dd data-pocket="count">—</dd></div>
+                <div><dt>催化二联体</dt><dd>Asp25(A) / Asp25(B)</dd></div>
+                <div><dt>羧基氧最近距离</dt><dd data-pocket="dyad">—</dd></div>
+              </dl>
+            </div>
+
+            <div class="aside-block" id="residue-block">
+              <p class="aside-title">点到的残基</p>
+              <p class="aside-body muted" id="residue-info">
+                在 3D 里点一个残基，这里给出链、序号、残基名和该原子的 B-factor。
+              </p>
+            </div>
+
+            <div class="aside-block" id="pose-block">
+              <p class="aside-title">这个姿势</p>
+              <dl class="kv" id="pose-kv">
+                <div><dt>姿势</dt><dd data-pose="index">—</dd></div>
+                <div><dt>对接打分</dt><dd data-pose="affinity">—</dd></div>
+                <div><dt>重对接偏差</dt><dd data-pose="rmsd">—</dd></div>
+                <div><dt>判定</dt><dd data-pose="verdict">—</dd></div>
+              </dl>
+              <p class="aside-foot" id="pose-foot">偏差是与共晶对照算的姿势回收证据，不代表亲和力，也不代表活性。</p>
+            </div>
+          </aside>
+        </div>
+
+        <div class="legend-row">
+          <span class="legend-item"><i class="swatch swatch-cartoon"></i>蛋白骨架</span>
+          <span class="legend-item"><i class="swatch swatch-pocket"></i>口袋残基</span>
+          <span class="legend-item"><i class="swatch swatch-dyad"></i>Asp25 催化二联体</span>
+          <span class="legend-item"><i class="swatch swatch-ligand"></i>配体球棍（杂原子降饱和）</span>
+          <span class="legend-item"><i class="swatch swatch-pose"></i>对接姿势</span>
+        </div>
+
+        <details class="evidence">
+          <summary>可复查的证据 · 结构记录、配体身份与文件哈希</summary>
+          <div class="evidence-body">
+            <p>1T3R：RCSB PDB 记录，HIV-1 protease 野生型 + TMC114（达芦那韦），分辨率 1.20 Å，A/B 各 99 残基。共晶配体按 HETATM 017 导出，得到 <code>ligand/017_1T3R_cocrystal_raw.pdb</code>。</p>
+            <p>配体身份：PubChem CID 213039，C27H37N3O7S，重原子 38，InChIKey <code>CJBJHOAVZSMMDJ-HEXNFIEUSA-N</code>。共晶坐标只提供原子位置，键级靠 PubChem 3D 模板做图匹配补全，16 个对称等价匹配取第一个，产出 <code>ligand/cocrystal_pose.sdf</code>。此前用距离推断法算出的 C27H5N3O7S 判定失败并被替换。</p>
+            <p>Kd 4.5 pM 来自达芦那韦的等温滴定量热测定，本轮没有复测。它可以当背景事实，与本轮的任何分数都没有定量关系。</p>
+            <p>结构取自 RCSB 1T3R（HIV-1 protease WT + TMC114，分辨率 1.20 Å）。只取 A/B 链的 ATOM 记录、altloc A；共晶配体按 HETATM 017 单独导出。页面用的结构副本从源目录逐字节复制，渲染前不再改动。</p>
+            <table class="hash-table">
+              <thead><tr><th>文件</th><th>sha256</th></tr></thead>
+              <tbody>
+                <tr><td>inputs/1T3R.pdb</td><td>a53e29c777486fc4d7b8c070d424ac35554ba1ca2ca04f81f64f8dcb4b3a1aad</td></tr>
+                <tr><td>receptor/1T3R.pdbqt</td><td>9559702843d75d2d8d7ef2de9edab740f8abfa1ffb32eae521eaa0eb986458a1</td></tr>
+                <tr><td>ligand/cocrystal_pose.sdf</td><td>944858dac2dcf363a32e7b429822d6fdcb9f5ef9d7f07afbe07ea7b6fed18639</td></tr>
+                <tr><td>ligand/darunavir.pdbqt</td><td>5f238babc18bcdd13be13f15289d9bca38036a29dc9e1f3b952658f488206983</td></tr>
+              </tbody>
+            </table>
+            <p>源目录：<code>runs\t_664138d8_hiv1_darunavir_20261030-224808\</code>。页面副本：<code>data/structure/receptor.pdb</code>、<code>data/structure/darunavir_H.sdf</code>、<code>data/structure/cocrystal_pose.sdf</code>、<code>data/structure/poses.pdb</code>，由 <code>tools/prepare_data.py</code> 复制。</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================================
+       02 · 方法
+       ================================================================== -->
+  <section class="view" id="view-method" data-view="method" aria-labelledby="method-title" hidden>
+    <div class="shell">
+      <div class="page-head">
+        <a class="back-link" href="#/hiv1">← 案例：HIV-1 蛋白酶 × 达芦那韦</a>
+        <nav class="chapter-nav" aria-label="HIV-1 六章">
+          <a href="#/target" data-nav="target">01 靶点</a>
+          <a href="#/method" data-nav="method">02 方法</a>
+          <a href="#/results" data-nav="results">03 结果</a>
+          <a href="#/evidence" data-nav="evidence">04 证据</a>
+          <a href="#/progress" data-nav="progress">05 进度</a>
+          <a href="#/limits" data-nav="limits">06 边界</a>
+        </nav>
+        <p class="eyebrow"><span class="num">02</span> <span class="sep">/</span> 方法</p>
+        <h1 id="method-title">分数来得快，能不能信是另一回事</h1>
+        <p class="page-lede">
+          跑一次对接，机器几十秒就吐出九个分数。真正花时间的是后面那一步：这些数字里哪些可以进报告，哪些只能当线索。
+        </p>
+      </div>
+    </div>
+
+    <div class="shell">
+      <div class="prose">
+        <p>我们的做法是给每一环留一个可查的把柄。输入文件的哈希先钉死，之后谁改了哪个字节都查得出来。方法要先对回实验结构，没复现过晶体姿势的引擎不给结论。模型吐出的置信度只当置信度用。跑不通的环节标未执行，不写通过。</p>
+        <p>这几条写下来朴素，落到管线上是四道门，过不去就走不到下一段。</p>
+      </div>
+
+      <div class="pipeline-block" id="pipeline">
+        <div class="pipeline-head">
+          <p class="figure-eyebrow"><span class="fig-no">图 1</span> · 完整设计管线 · 五个阶段</p>
+          <h3>从靶点输入到实验校准，真正跑通的只有第四段</h3>
+        </div>
+
+        <ol class="pipeline">
+          <li class="pipeline-stage">
+            <span class="pipeline-num" aria-hidden="true">01</span>
+            <div>
+              <h4 class="pipeline-title">输入与结构选择</h4>
+              <p class="pipeline-sum">靶点进来，先找可用的实验结构</p>
+              <details class="pipeline-detail">
+                <summary>展开细节</summary>
+                <div class="pipeline-detail-body">
+                  <p>输入是靶点名 / 序列 / UniProt ID。有共晶就走 RCSB PDB，拿共晶结构、分辨率和配体；只有 apo 或没有实验结构，就走 AlphaFold DB，拿预测模型和 pLDDT。</p>
+                  <p>仅有序列时的 BLAST / UniProt 映射是兜底路径，<b>未实现</b>。</p>
+                  <p>本案例走的是 1T3R：1.20 Å，A/B 两条链，共晶配体 017 单独导出。</p>
+                </div>
+              </details>
+            </div>
+          </li>
+
+          <li class="pipeline-stage">
+            <span class="pipeline-num" aria-hidden="true">02</span>
+            <div>
+              <h4 class="pipeline-title">文献层</h4>
+              <p class="pipeline-sum">六组检索，抽出可回溯的证据</p>
+              <details class="pipeline-detail">
+                <summary>展开细节</summary>
+                <div class="pipeline-detail-body">
+                  <p>PubMed E-utilities 六组查询族：靶点 / 药名 / 结构 / 耐药 / 机制 / 综述。先按摘要与全文相关性过滤无关命中，再抽抑制剂、活性、PDB、突变、位点、化学型。</p>
+                  <p><b>证据表 691 条</b>，每条带 PMID + 原文句，可回溯到句子级。之后做方向分层：11 个方向，Tier A–D。A1 dossier 落到 squaramide / pyrrolidine / 异丙醇三个方向。</p>
+                </div>
+              </details>
+            </div>
+          </li>
+
+          <li class="pipeline-stage">
+            <span class="pipeline-num" aria-hidden="true">03</span>
+            <div>
+              <h4 class="pipeline-title">评测与设计参考</h4>
+              <p class="pipeline-sum">先量检索，再交出一份设计参考</p>
+              <details class="pipeline-detail">
+                <summary>展开细节</summary>
+                <div class="pipeline-detail-body">
+                  <p>评测层用 25 篇人工挑选的金标准：depth 100 召回 20%，depth 500 召回 60%；引用锚定 100%，抽取严格精确率 84%。结论是 <b>检索深度是主要瓶颈，不是抽取</b>：深度翻 5 倍，召回从 20% 到 60%。</p>
+                  <p>设计参考 brief 跨靶点已完成，输出结构起点（野生型 / 带配体 / 高分辨率）、已知配体与活性（ChEMBL API）、口袋残基（文献证据 + PMID，结构接触 ≤ 5 Å）、耐药位点（频率排序 G48V / I50V / I84V），最后给 3 条设计入口。</p>
+                </div>
+              </details>
+            </div>
+          </li>
+
+          <li class="pipeline-stage is-current">
+            <span class="pipeline-num" aria-hidden="true">04</span>
+            <div>
+              <h4 class="pipeline-title">结构验证 → 候选对接 → 耐药 panel<span class="pipeline-flag">本页覆盖</span></h4>
+              <p class="pipeline-sum">把已知配体放回去，再对接候选</p>
+              <details class="pipeline-detail">
+                <summary>展开细节</summary>
+                <div class="pipeline-detail-body">
+                  <p>结构验证用红对接：已知配体重新对接后与共晶比对，<b>0.88 Å / 1.30 Å</b>（阈值 &lt; 2 Å）。A1 候选 3h / 34b 进入活性位点，做位点占据和相互作用检查。</p>
+                  <p>耐药 panel（环节 5）：刚性受体 panel 失败，Δ 全在 ±0.33；柔性侧链 panel 让 saquinavir 方向恢复，已知位点分离度 +0.63。定性风险 flag：3h 的 G48V / I84V pose 崩塌；34b 的 I50V +0.79、I84V +0.50。</p>
+                  <p>本页这个案例（HIV-1 1T3R × 达芦那韦）真跑的是这一段：重对接 0.211 Å，九个姿势。</p>
+                </div>
+              </details>
+            </div>
+          </li>
+
+          <li class="pipeline-stage">
+            <span class="pipeline-num" aria-hidden="true">05</span>
+            <div>
+              <h4 class="pipeline-title">能量精算与实验校准</h4>
+              <p class="pipeline-sum">能量精算跳过，实验校准待做</p>
+              <details class="pipeline-detail">
+                <summary>展开细节</summary>
+                <div class="pipeline-detail-body">
+                  <p>环节 6 的 MD / MM-GBSA / FEP：环境不具备，<b>已跳过</b>。</p>
+                  <p>环节 7 的 3h / 34b 在 G48V / I50V / I84V / L90M 突变株上的 IC50 + 细胞 EC50：<b>待做</b>。</p>
+                  <p>这两段在页面上不给数字，也不写「通过」。</p>
+                </div>
+              </details>
+            </div>
+          </li>
+        </ol>
+
+        <aside class="pipeline-notes" aria-label="管线关键数字">
+          <div class="pipeline-note">
+            <b>691</b>
+            <span>条证据，逐条带 PMID 与原文句</span>
+          </div>
+          <div class="pipeline-note">
+            <b>20% → 60%</b>
+            <span>检索深度从 100 加到 500 的召回</span>
+          </div>
+          <div class="pipeline-note">
+            <b>0.211 Å</b>
+            <span>本案例重对接偏差，判据 2.0 Å</span>
+          </div>
+        </aside>
+      </div>
+
+      <div class="prose prose-after">
+        <p>管线从文献检索一直排到耐药 panel。这次在本机真正跑通的只有中间「结构验证 → 候选对接」那一段，所以结果、证据、边界三页只讲这一段。</p>
+      </div>
+
+      <details class="evidence">
+        <summary>可复查的证据 · 两张图的原始来源</summary>
+        <div class="evidence-body">
+          <p>图 1 重绘自 <code>D:\AI4S\pubmed-inhibitor-agent\PIPELINE.mermaid</code>，图 2 重绘自同目录的 <code>AGENT_FLOW.mermaid</code>，转换脚本 <code>tools/build_flow_svg.py</code>，产出 <code>assets/flow-pipeline.svg</code> 与 <code>assets/flow-agents.svg</code>。状态色：绿=已完成，黄=部分，灰虚线=已跳过，红虚线=待做。</p>
+          <p>主视图的纵向五段是上面这张图的重排，事实一条没删。下面是原始的管线全图与 Agent 编排图，保留全部卡片、工具名与状态，供逐条对照。</p>
+          <figure class="evidence-figure">
+            <figcaption>原始管线全图（95 个文字标签 / 30 个卡片，密集网格版）</figcaption>
+            <img src="assets/flow-pipeline.svg" width="1240" height="860" loading="lazy" decoding="async"
+                 alt="完整设计管线：输入与结构选择 → 文献层（PubMed 检索、相关性筛选、证据抽取、证据表、方向分层 Tier A–D、A1 dossier）→ 评测层（25 篇金标准、depth100 召回 20%、depth500 60%、引用锚定 100%）+ 设计参考 brief → 结构验证红对接 → A1 候选对接 → 耐药 panel（刚性失败、柔性恢复 +0.63）→ 风险 flag → MD/MM-GBSA 已跳过 → 突变株 IC50 待做">
+          </figure>
+          <figure class="evidence-figure">
+            <figcaption>Agent 编排全图（编排器 + 三路 Agent 并行 + 质量层）</figcaption>
+            <img src="assets/flow-agents.svg" width="1240" height="900" loading="lazy" decoding="async"
+                 alt="Agent 编排：用户输入 → 编排器 → 靶点解析；文献 Agent、结构 Agent、活性数据 Agent 三路并行；质量层做金标准召回与引用锚定；汇总成设计参考 brief 与候选短名单，再经人工复核与实验验证">
+          </figure>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ==================================================================
+       03 · 结果
+       ================================================================== -->
+  <section class="view" id="view-results" data-view="results" aria-labelledby="results-title" hidden>
+    <div class="shell">
+      <div class="page-head">
+        <a class="back-link" href="#/hiv1">← 案例：HIV-1 蛋白酶 × 达芦那韦</a>
+        <nav class="chapter-nav" aria-label="HIV-1 六章">
+          <a href="#/target" data-nav="target">01 靶点</a>
+          <a href="#/method" data-nav="method">02 方法</a>
+          <a href="#/results" data-nav="results">03 结果</a>
+          <a href="#/evidence" data-nav="evidence">04 证据</a>
+          <a href="#/progress" data-nav="progress">05 进度</a>
+          <a href="#/limits" data-nav="limits">06 边界</a>
+        </nav>
+        <p class="eyebrow"><span class="num">03</span> <span class="sep">/</span> 结果</p>
+        <h1 id="results-title">九个姿势里，只有一个回到晶体位置</h1>
+        <p class="page-lede">
+          重对接偏差 0.211 Å，判据 2.0 Å；分数从 −9.958 到 −7.810 kcal/mol。
+          先看姿势对不对，再看分数能不能排。
+        </p>
+      </div>
+    </div>
+
+    <div class="shell">
+      <div class="stat-grid">
+        <div class="stat">
+          <span class="stat-num">0.211 Å</span>
+          <span class="stat-label">重对接偏差</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">2.0 Å</span>
+          <span class="stat-label">判据线</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">9 个</span>
+          <span class="stat-label">生成的姿势</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">−9.958</span>
+          <span class="stat-label">最佳打分 · kcal/mol</span>
+        </div>
+      </div>
+
+      <div class="chart-grid">
+        <figure class="chart">
+          <figcaption class="figure-eyebrow"><span class="fig-no">图 2</span> · 每个姿势与共晶的偏差（竖线是 2.0 Å 判据）</figcaption>
+          <div class="rmsd-chart" id="rmsd-chart" role="img" aria-label="九个姿势的重对接偏差条形图，第 1、8、9 号在 2.0 Å 判据内"></div>
+          <p class="chart-note">只有第 1 号落在 0.211 Å；第 8、9 号擦着判据线过去；其余六个在 2.71 到 3.03 Å 之间。</p>
+        </figure>
+
+        <figure class="chart">
+          <figcaption class="figure-eyebrow"><span class="fig-no">图 3</span> · 九个姿势的打分（竖线是 −7.0 的门槛）</figcaption>
+          <div class="ladder" id="affinity-ladder" role="img" aria-label="9 个对接姿势的打分条形图"></div>
+          <p class="chart-note" id="affinity-ladder-note">—</p>
+        </figure>
+      </div>
+
+      <div class="prose">
+        <p>红对接的做法是把达芦那韦从口袋里取出来，让 Vina 自己重新放回去，再和共晶坐标逐原子比。这次重放偏差 0.211 Å，判据 2.0 Å，差了将近一个数量级。</p>
+        <p>九个姿势里只有第 1 号落在 0.211 Å；第 8、9 号擦着判据线过去，1.87 和 1.92 Å；其余六个在 2.71 到 3.03 Å 之间。引擎能摆对，但不是每个姿势都摆对。</p>
+        <p>姿势对只是第一关。九个分数的排序能不能用，是另一件事。我们给每个姿势算了几何：口袋重叠、催化残基接触、碰撞数、配体效率。重叠不够或碰撞太多的姿势，分再低也不选。</p>
+        <p>有个细节值得记一笔。重放偏差最小的第 1 号，恰好也是分数最好的 −9.958 kcal/mol；而 1.87 Å 的第 8 号，分数只有 −7.88。这个体系里分数和姿势质量大致同向，但同向不等于能排序，毕竟只有一个配体，谈不上统计。</p>
+      </div>
+
+      <details class="evidence">
+        <summary>可复查的证据 · 九个姿势的读数、引擎参数与门控阈值</summary>
+        <div class="evidence-body">
+          <table class="data-table">
+            <thead><tr><th>姿势</th><th>Vina affinity (kcal/mol)</th><th>重对接偏差 (Å)</th><th>判据 2.0 Å</th></tr></thead>
+            <tbody>
+              <tr><td>#1</td><td>−9.958</td><td>0.211</td><td>通过</td></tr>
+              <tr><td>#2</td><td>−9.148</td><td>2.733</td><td>未通过</td></tr>
+              <tr><td>#3</td><td>−8.877</td><td>2.707</td><td>未通过</td></tr>
+              <tr><td>#4</td><td>−8.782</td><td>3.005</td><td>未通过</td></tr>
+              <tr><td>#5</td><td>−8.366</td><td>3.028</td><td>未通过</td></tr>
+              <tr><td>#6</td><td>−8.233</td><td>2.945</td><td>未通过</td></tr>
+              <tr><td>#7</td><td>−7.946</td><td>2.924</td><td>未通过</td></tr>
+              <tr><td>#8</td><td>−7.880</td><td>1.870</td><td>通过</td></tr>
+              <tr><td>#9</td><td>−7.810</td><td>1.923</td><td>通过</td></tr>
+            </tbody>
+          </table>
+          <p>偏差算法：Meeko <code>mk_export</code> 把 pdbqt 转回 sdf，再用 RDKit <code>rdMolAlign.GetBestRMS</code> 做对称感知的最优叠合。产物 <code>docking/redock_rmsd.json</code>，与 <code>data/poses_meta.json</code> 里的数字逐条一致。</p>
+          <p>对接参数：<code>--scoring vina --exhaustiveness 8 --num_modes 9 --seed 42 --cpu 4</code>；盒子以共晶配体重原子 AABB 外扩 5.0 Å，center (19.459, 29.766, 14.159)、size (20.361, 20.806, 18.122)、grid spacing 0.375 Å。本 run 的 Vina 用时 33.93 s，七步管线 34.35 s；另一次触发实测 35.0 s，未做修正。</p>
+          <p>门控阈值（stage3 配置原文）：<code>max_affinity_kcal_mol −7.0</code>、<code>min_ligand_efficiency 0.18</code>、<code>max_clashes 0</code>、<code>min_site_overlap 0.7</code>、<code>require_reference_pass false</code>、<code>allow_af3_only_advance false</code>。参考对照不通过或 <code>impact=blocks_advance</code> 的项一律 <code>needs_review</code>，硬失败退回上一步，引擎或数据源缺失记 <code>NOT_RUN</code>。</p>
+          <pre class="evidence-pre">envs\py3119-science\Scripts\mk_prepare_receptor.exe --read_pdb receptor\1T3R_receptor_input.pdb -o receptor\1T3R --default_altloc A --compute_charges -p
+
+tools\vina_1.2.5_win.exe --receptor receptor\1T3R.pdbqt --ligand ligand\darunavir.pdbqt --scoring vina --center_x 19.4590 --center_y 29.7660 --center_z 14.1590 --size_x 20.3610 --size_y 20.8060 --size_z 18.1220 --exhaustiveness 8 --num_modes 9 --seed 42 --cpu 4 --out docking\poses.pdbqt
+
+envs\py3119-stage3\Scripts\python.exe stage3.py run --config stage3_case\stage3_config_hiv1_1t3r_darunavir.json</pre>
+          <p>受体准备：1,811 原子、315 个极性氢；去掉 HOH 261 个、PO4 25 个与共晶配体 017。产物 <code>receptor/1T3R.pdbqt</code>。配体准备：<code>--rigid_macrocycles</code> 加 RDKit AddHs，75 原子（含氢）压成 42 个 PDBQT 原子，TORSDOF 14。</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ==================================================================
+       04 · 证据与可复现
+       ================================================================== -->
+  <section class="view" id="view-evidence" data-view="evidence" aria-labelledby="evidence-title" hidden>
+    <div class="shell">
+      <div class="page-head">
+        <a class="back-link" href="#/hiv1">← 案例：HIV-1 蛋白酶 × 达芦那韦</a>
+        <nav class="chapter-nav" aria-label="HIV-1 六章">
+          <a href="#/target" data-nav="target">01 靶点</a>
+          <a href="#/method" data-nav="method">02 方法</a>
+          <a href="#/results" data-nav="results">03 结果</a>
+          <a href="#/evidence" data-nav="evidence">04 证据</a>
+          <a href="#/progress" data-nav="progress">05 进度</a>
+          <a href="#/limits" data-nav="limits">06 边界</a>
+        </nav>
+        <p class="eyebrow"><span class="num">04</span> <span class="sep">/</span> 证据与可复现</p>
+        <h1 id="evidence-title">重跑一遍，结论应该一样</h1>
+        <p class="page-lede">
+          输入哈希先钉死，参数写进配置，七份产物逐列校验。做不到的、没跑的，标未执行，不写通过。
+        </p>
+      </div>
+    </div>
+
+    <div class="shell">
+      <div class="stat-grid stat-grid-3">
+        <div class="stat">
+          <span class="stat-num">33 / 33</span>
+          <span class="stat-label">交付自检项通过</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">10 个</span>
+          <span class="stat-label">产物校验列序、类型、枚举与行数</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">3 套</span>
+          <span class="stat-label">RMSD 算法交叉一致</span>
+        </div>
+      </div>
+
+      <div class="prose">
+        <p>能说的就两件。引擎在这个体系上复现了晶体姿势，0.211 Å 是可查的数字，不是自我评价。整条链也可复现：输入哈希固定，参数写进配置，七步管线的七份产物逐列逐行验过，同一份输入重跑会得到同一个结论。</p>
+        <p>产物复核有两道：管线自己的校验检查 10 个产物的列序、类型、枚举、行数与哈希，再过 JSON Schema；交付自检脚本再走一遍文件与数据源的一致性，当前 33/33 通过。</p>
+        <p>结果是可下载的。下面的按钮给出本轮汇总结果文件原样，36,815 B，哈希写在折叠的技术证据里，下载后可以自己核。</p>
+      </div>
+
+      <div class="download-row">
+        <a class="pill-btn" href="data/result.json" download="result.json">下载结果文件</a>
+        <span class="download-note">本机产物原样复制，未做任何改写。</span>
+      </div>
+
+      <figure class="notrun" aria-label="本轮未执行项">
+        <figcaption class="figure-eyebrow"><span class="fig-no">图 4</span> · 本轮标记为未执行的环节，一个数字都不给</figcaption>
+        <ul class="notrun-list">
+          <li><span>JAK2 真实候选体系</span><em>未执行</em></li>
+          <li><span>MSA 对齐</span><em>未执行</em></li>
+          <li><span>柔性侧链</span><em>未执行</em></li>
+          <li><span>分子动力学</span><em>未执行</em></li>
+          <li><span>AF3 复合物</span><em>未执行</em></li>
+          <li><span>MM-GBSA 自由能</span><em>未执行</em></li>
+          <li><span>结果交付到平台 sandbox</span><em>未执行</em></li>
+        </ul>
+      </figure>
+
+      <details class="evidence">
+        <summary>可复查的证据 · 校验记录与结果文件原文</summary>
+        <div class="evidence-body">
+          <p>产物复核：<code>stage3.py validate</code> 检查 10 个产物的列序、类型、枚举、行数与哈希，再过 JSON Schema；<code>scripts/verify.py</code> 做交付自检，当前 33/33 PASS。汇总脚本 <code>scripts/build_result.py</code> 写出 <code>result.json</code>，36,815 B，sha256 <code>2ee98089d7d7d6f60c40ca64c700bd309813dfeab9217a3900ec05c6f00fc2ab</code>，verdict OK。</p>
+          <p>结果文件里的 limits 原文：</p>
+          <ul class="evidence-list">
+            <li>对接分（Vina affinity）不是实测亲和力，也不能换算成 Kd/IC50；本例 darunavir 的 ITC Kd=4.5 pM 只是背景事实，与本轮分数没有定量关系。</li>
+            <li>单一刚性受体 + 单一 Vina 协议（无柔性侧链、无 MD、无 MM-GBSA、无 AF3 复合物）；分数对随机种子与盒子大小敏感。</li>
+            <li>重对接 RMSD 只说明「引擎能在该晶体结构里复现共晶姿势」，不代表打分排序能力。</li>
+            <li>1T3R 的 5 个 Lys 侧链（A7/A41/A43、B41/B43）在晶体中仅建模到 CB，制备时按 ALA 处理（保留 N/CA/C/O/CB），因此这 5 个侧链不参与打分。</li>
+            <li>配体 PDBQT 由共晶坐标构建，Vina 输出的 rmsd l.b./u.b. 是相对「起始构象（=共晶姿势）」的量，不能当作重对接 RMSD；重对接 RMSD 见 redock 段落（RDKit GetBestRMS）。</li>
+          </ul>
+          <p>本页结构副本与源文件逐字节一致，sha256 见靶点页折叠区。对应文件：<code>runs\t_664138d8_hiv1_darunavir_20261030-224808\result.json</code>、<code>docking\redock_rmsd.json</code>、<code>evidence\verify.json</code>、<code>stage3_runs\hiv1_1t3r_darunavir-20261030-225324\manifest.json</code>。</p>
+          <p>运行记录：<code>hiv1_1t3r_darunavir-20261101-135146</code>，状态 <code>completed</code>，七步管线 32.0 s。结果文件在页面里的副本为 <code>data/result.json</code>（sha256 与源一致）。</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ==================================================================
+       05 · 实时进度
+       ================================================================== -->
+  <section class="view" id="view-progress" data-view="progress" aria-labelledby="progress-title" hidden>
+    <div class="shell">
+      <div class="page-head">
+        <a class="back-link" href="#/hiv1">← 案例：HIV-1 蛋白酶 × 达芦那韦</a>
+        <nav class="chapter-nav" aria-label="HIV-1 六章">
+          <a href="#/target" data-nav="target">01 靶点</a>
+          <a href="#/method" data-nav="method">02 方法</a>
+          <a href="#/results" data-nav="results">03 结果</a>
+          <a href="#/evidence" data-nav="evidence">04 证据</a>
+          <a href="#/progress" data-nav="progress">05 进度</a>
+          <a href="#/limits" data-nav="limits">06 边界</a>
+        </nav>
+        <p class="eyebrow"><span class="num">05</span> <span class="sep">/</span> 实时进度</p>
+        <h1 id="progress-title">这台机器上的七步管线，现在跑到哪一步</h1>
+        <p class="page-lede">
+          下面每个数字都由本地服务从磁盘上的状态文件读出，页面不存第二份。每 1.2 秒读一次，切到任意一次历史运行都能回放。
+        </p>
+      </div>
+    </div>
+
+    <div class="shell">
+      <div class="monitor">
+        <div class="monitor-bar">
+          <label class="run-picker">
+            <span>看哪一次</span>
+            <select id="run-select" aria-label="选择一次运行"></select>
+          </label>
+          <div class="monitor-meta">
+            <span class="status-pill" id="run-status-pill" data-state="idle">
+              <span class="light" aria-hidden="true"></span><span id="run-status-text">—</span>
+            </span>
+            <span class="meta-item">阶段 <b id="meta-stage">—</b></span>
+            <span class="meta-item">耗时 <b id="meta-elapsed">—</b></span>
+            <span class="meta-item">刷新 <b id="meta-poll">—</b></span>
+          </div>
+        </div>
+
+        <div class="progress-hero">
+          <div class="progress-track"><div class="progress-fill" id="overall-fill"></div></div>
+          <div class="progress-label">
+            <span id="overall-text">7 步</span>
+            <span id="overall-note" class="progress-note"></span>
+          </div>
+        </div>
+
+        <div class="stage-table" role="table" aria-label="七个环节的进度">
+          <div class="stage-row stage-head" role="row">
+            <span role="columnheader">#</span>
+            <span role="columnheader">环节</span>
+            <span role="columnheader">状态</span>
+            <span role="columnheader">进度</span>
+            <span role="columnheader">耗时</span>
+            <span role="columnheader">说明</span>
+          </div>
+          <div id="stage-rows"></div>
+        </div>
+
+        <details class="evidence evidence-inline">
+          <summary>技术证据 · 计数器、事件与日志尾部</summary>
+          <div class="evidence-body">
+            <p class="evidence-hint">这一区保留原始读数，含运行标识、文件路径与英文状态。只用于复查，不参与主视图。</p>
+            <div class="monitor-grid">
+              <div class="panel">
+                <p class="panel-title">计数器</p>
+                <dl class="counters" id="counters"></dl>
+              </div>
+
+              <div class="panel">
+                <p class="panel-title">最近事件 <span class="panel-sub" id="events-source"></span></p>
+                <ol class="events" id="events"></ol>
+              </div>
+
+              <div class="panel panel-wide">
+                <p class="panel-title">日志尾部 <span class="panel-sub" id="log-source">—</span></p>
+                <pre class="log" id="log"></pre>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <div class="trigger-bar">
+          <div class="trigger-copy">
+            <p class="panel-title">重跑一次同样的七步管线</p>
+            <p class="aside-foot">
+              在你自己的机器上真跑一遍，约 35 秒（Vina 九个姿势，四核）。会新增一个运行目录，不动已有产物。
+            </p>
+          </div>
+          <button type="button" class="pill-btn" id="btn-trigger">运行一次</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================================
+       06 · 边界与下一步
+       ================================================================== -->
+  <section class="view" id="view-limits" data-view="limits" aria-labelledby="limits-title" hidden>
+    <div class="shell">
+      <div class="page-head">
+        <a class="back-link" href="#/hiv1">← 案例：HIV-1 蛋白酶 × 达芦那韦</a>
+        <nav class="chapter-nav" aria-label="HIV-1 六章">
+          <a href="#/target" data-nav="target">01 靶点</a>
+          <a href="#/method" data-nav="method">02 方法</a>
+          <a href="#/results" data-nav="results">03 结果</a>
+          <a href="#/evidence" data-nav="evidence">04 证据</a>
+          <a href="#/progress" data-nav="progress">05 进度</a>
+          <a href="#/limits" data-nav="limits">06 边界</a>
+        </nav>
+        <p class="eyebrow"><span class="num">06</span> <span class="sep">/</span> 边界与下一步</p>
+        <h1 id="limits-title">能说明姿势和流程可复现，不能说明亲和力</h1>
+        <p class="page-lede">
+          这一页把能说的和不能说的分开写，再交代下一个体系换过去要补什么。
+        </p>
+      </div>
+    </div>
+
+    <div class="shell">
+      <div class="prose">
+        <p>能说的就两件。引擎在这个体系上复现了晶体姿势，0.211 Å 是可查的数字，不是自我评价。整条链也可复现：输入哈希固定，参数写进配置，七步管线的七份产物逐列逐行验过，同一份输入重跑会得到同一个结论。</p>
+        <p>不能说的也写清楚。对接分不是实测亲和力，−9.958 kcal/mol 换算不成 Kd 或 IC50，更不能和那个 4.5 pM 比大小。九个姿势的排序没有实验对照，我们只知道它在流程内部自洽，不知道它预测得准。</p>
+        <p>AF3 在这条链里只提供结构和置信度，不产生亲和力。只靠 AF3 推进的候选会被强制退回人工复核，这个开关在配置里默认关着。</p>
+        <p>还有两条来自结果文件的限制，照抄不改。受体是单一刚性结构，打分对随机种子和盒子大小都敏感；1T3R 有五个赖氨酸侧链在晶体里只建模到 CB，制备时按丙氨酸处理，这几个侧链没有参与打分。</p>
+      </div>
+
+      <div class="claim-grid">
+        <div class="claim">
+          <p class="claim-head">这边能说明</p>
+          <p>引擎能在 1T3R 里复现共晶姿势，重放偏差 0.211 Å，判据 2.0 Å。</p>
+          <p>同一份输入重跑得到同一结论：七份产物的列序、类型、枚举、行数和哈希逐项校验通过，三套 RMSD 算法交叉一致。</p>
+        </div>
+        <div class="claim claim-muted">
+          <p class="claim-head">这边不能说明</p>
+          <p>亲和力。分数是打分函数的输出，不是结合自由能。</p>
+          <p>排序能力。九个姿势的次序没有实验对照，只有一个配体，谈不上统计。</p>
+          <p>柔性侧链、熵效应与溶剂效应。这些要分子动力学和 MM-GBSA，本轮都没跑。AF3 给的是置信度，不是结合强度。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="shell">
+      <p class="case-pointer">JAK2 的完整读数（九个姿势、决策与缺口原文）搬到了它自己的案例页：<a href="#/jak2">打开 JAK2 案例 →</a></p>
+
+
+
+      <div class="split next-split">
+        <div class="prose">
+          <p>下一个体系是 JAK2，一个有突变数据和上市药背景的激酶。红对接对照已经跑完，但设计候选这一层还没开始。换过去要补三样东西：MSA 对齐、柔性侧链、分子动力学。它们现在都标着未执行。</p>
+          <p>同一次运行里还挂着 AF3 复合物、MM-GBSA 自由能和实验亲和力测定，同样没跑。把结果交付到平台 sandbox 的那条链路单独测通过，但这次的结果还没上传，所以也记作未执行。</p>
+          <p>这些项在页面上不给数字，也不写「通过」。等它们真的跑出来，再改这一页。七项未执行的完整清单在证据页。</p>
+        </div>
+
+        <aside class="next-list" aria-label="下一步要补的东西">
+          <p class="aside-title">换到 JAK2 要补</p>
+          <ul>
+            <li>MSA 对齐</li>
+            <li>柔性侧链</li>
+            <li>分子动力学</li>
+          </ul>
+          <p class="aside-foot">补完这三样，才谈得上候选排序。</p>
+        </aside>
+      </div>
+
+      <details class="evidence">
+        <summary>可复查的证据 · JAK2 读数、运行目录与未执行字段</summary>
+        <div class="evidence-body">
+          <p>运行：<code>jak2_6vgl_rxt_dock-20261030-001201</code>，状态 completed，七步管线 4.7 s。目标：JAK2 kinase domain（6VGL auth A 840–1132，UniProt O60674）。引擎 Vina，刚性受体，种子 42，exhaustiveness 8，9 个姿势。</p>
+          <table class="data-table">
+            <thead><tr><th>姿势</th><th>Vina affinity (kcal/mol)</th><th>配体效率</th><th>质心偏差 (Å)</th><th>位点重叠</th></tr></thead>
+            <tbody>
+              <tr><td>#1</td><td>−8.833</td><td>0.384</td><td>0.24</td><td>1.000</td></tr>
+              <tr><td>#2</td><td>−8.529</td><td>0.371</td><td>0.85</td><td>0.957</td></tr>
+              <tr><td>#3</td><td>−8.529</td><td>0.371</td><td>3.71</td><td>0.739</td></tr>
+              <tr><td>#4</td><td>−8.505</td><td>0.370</td><td>1.12</td><td>0.826</td></tr>
+              <tr><td>#5</td><td>−8.038</td><td>0.349</td><td>1.46</td><td>1.000</td></tr>
+              <tr><td>#6</td><td>−8.000</td><td>0.348</td><td>1.64</td><td>0.826</td></tr>
+              <tr><td>#7</td><td>−7.991</td><td>0.347</td><td>5.81</td><td>0.522</td></tr>
+              <tr><td>#8</td><td>−7.940</td><td>0.345</td><td>1.90</td><td>0.696</td></tr>
+              <tr><td>#9</td><td>−7.896</td><td>0.343</td><td>1.67</td><td>0.913</td></tr>
+            </tbody>
+          </table>
+          <p>第 1 号姿势：<code>geometry_gate_passed; lowest_affinity</code>，碰撞 0，位点重叠 1.00。综合分 0.472（姿势 0.60 / 亲和力 0.708 / 一致性 0.00 / 成药性 0.50 / 耐药 0.50），决策 <code>control_only</code>：“对照/参考条目，不参与候选决策”。</p>
+          <p>缺口原文（applicability）：<code>reference_absent</code>，checks_declared 0.00，status gap，“config 未声明任何参考对照；本轮排序只能当作相对比较”。另有 5 条 uncertainty，包括缺突变 panel、缺参考配体重对接、成药性未评估、无方法对照、panel 不足。</p>
+          <p>3D 文件：<code>data/jak2/receptor.pdb</code>（sha256 18f31e42…，源 <code>src\A4S-02-MODULE-001\module02-module001\runs\jak2_acceptance_001\outputs\receptor_prepared.pdb</code>）、<code>data/jak2/rxt_reference.sdf</code>（d8eb3ae7…，源 <code>reference.sdf</code>）、<code>data/jak2/poses.pdbqt</code>（558599d9…，源 <code>runs\jak2_6vgl_rxt_dock-20261030-001201\poses\RXT\JAK2_6VGL\poses.pdbqt</code>）。</p>
+          <p>结果文件 <code>not_run</code> 字段原文：<code>molecular_dynamics</code>、<code>af3_complex</code>、<code>mutant_panel_flexible_sidechains</code>、<code>free_energy_mm_gbsa</code>、<code>experimental_affinity_measurement</code>、<code>sciencepal_orchestration</code>、<code>stage02_module</code>，全部为 <code>NOT_RUN</code>。</p>
+          <p>交付链路：SciencePal SDK 的 <code>POST /api/sandboxes/{sid}/files</code>（multipart：path + file）已实测，上传后读回 sha256 与本地一致；本 case 的 <code>result.json</code> 尚未上传，因此仍记 <code>NOT_RUN</code>。</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ==================================================================
+       案例 B · JAK2 × RXT：它自己的六章
+       ================================================================== -->
+  <section class="view" id="view-jak2" data-view="jak2" aria-labelledby="jak2-title" hidden>
+    <div class="shell">
+      <div class="page-head">
+        <a class="back-link" href="#/">← 返回靶点列表</a>
+        <p class="eyebrow"><span class="num">B</span> <span class="sep">/</span> JAK2 × RXT</p>
+        <h1 id="jak2-title">只做过一次红对接对照</h1>
+        <p class="page-lede">
+          这一例跑的是刚性红对接：把 6VGL 的共晶配体 RXT 重新放回口袋，看它还落不落在原位。
+          它是本轮的对照组，不参与候选排名，也不代表活性。
+        </p>
+        <p class="case-state">
+          <span class="status-pill" data-state="warn"><span class="light" aria-hidden="true"></span>仅对照</span>
+          <span>−8.833 kcal/mol · 位点重叠 1.00 · 参考对照缺失</span>
+        </p>
+        <nav class="chapter-nav" aria-label="JAK2 六章">
+          <a href="#/target" data-nav="target">01 靶点</a>
+          <a href="#/method" data-nav="method">02 方法</a>
+          <a href="#/results" data-nav="results">03 结果</a>
+          <a href="#/evidence" data-nav="evidence">04 证据</a>
+          <a href="#/progress" data-nav="progress">05 进度</a>
+          <a href="#/limits" data-nav="limits">06 边界</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="shell">
+      <div class="card-grid card-grid-3">
+        <article class="card card-static">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-visual">
+            <svg class="card-graphic" viewBox="0 0 320 180" role="presentation" aria-hidden="true">
+              <circle cx="160" cy="90" r="30" fill="rgba(17,17,17,.045)"/><path d="M148 91l9 9 16-18" fill="none" stroke="#3f7d5a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="card-visual-tag"><span class="status-pill" data-state="ok"><span class="light" aria-hidden="true"></span>已就位</span></span>
+          </span>
+          <span class="card-body">
+            <span class="card-kicker">01 / 靶点与分子</span>
+            <span class="card-title">6VGL 的 A 链，RXT 回到原位</span>
+            <span class="card-desc">结构取自 6VGL（JAK2 kinase domain，auth A 840–1132，UniProt O60674），配体是共晶里的 RXT。</span>
+            <span class="card-metrics"><span><b>4,824</b><i>受体原子</i></span><span><b>23</b><i>配体重原子</i></span></span>
+          </span>
+        </article>
+        <article class="card card-static">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-visual">
+            <svg class="card-graphic" viewBox="0 0 320 180" role="presentation" aria-hidden="true">
+              <circle cx="160" cy="90" r="30" fill="rgba(17,17,17,.045)"/><path d="M148 91l9 9 16-18" fill="none" stroke="#3f7d5a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="card-visual-tag"><span class="status-pill" data-state="ok"><span class="light" aria-hidden="true"></span>已跑</span></span>
+          </span>
+          <span class="card-body">
+            <span class="card-kicker">02 / 方法</span>
+            <span class="card-title">只有一套刚性红对接协议</span>
+            <span class="card-desc">刚性受体，Vina，seed 42，exhaustiveness 8，出 9 个姿势；没有柔性侧链，也没有 MD。</span>
+            <span class="card-metrics"><span><b>9 个</b><i>姿势</i></span><span><b>seed 42</b><i>固定</i></span></span>
+          </span>
+        </article>
+        <article class="card card-static">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-visual">
+            <svg class="card-graphic" viewBox="0 0 320 180" role="presentation" aria-hidden="true">
+              <circle cx="160" cy="90" r="30" fill="rgba(17,17,17,.045)"/><path d="M148 91l9 9 16-18" fill="none" stroke="#3f7d5a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="card-visual-tag"><span class="status-pill" data-state="ok"><span class="light" aria-hidden="true"></span>已出数</span></span>
+          </span>
+          <span class="card-body">
+            <span class="card-kicker">03 / 结果</span>
+            <span class="card-title">第 1 号被选中，位点重叠 1.00</span>
+            <span class="card-desc">九个姿势里第 1 号打分最低，也最贴回共晶位置。这只说明引擎在这个体系上能摆对。</span>
+            <span class="card-metrics"><span><b>−8.833</b><i>最佳分 kcal/mol</i></span><span><b>0.24 Å</b><i>质心偏差</i></span></span>
+          </span>
+        </article>
+        <article class="card card-static">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-visual">
+            <svg class="card-graphic" viewBox="0 0 320 180" role="presentation" aria-hidden="true">
+              <circle cx="160" cy="90" r="30" fill="rgba(17,17,17,.045)"/><path d="M148 91l9 9 16-18" fill="none" stroke="#3f7d5a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="card-visual-tag"><span class="status-pill" data-state="ok"><span class="light" aria-hidden="true"></span>可复查</span></span>
+          </span>
+          <span class="card-body">
+            <span class="card-kicker">04 / 证据</span>
+            <span class="card-title">一次可复查的运行</span>
+            <span class="card-desc">运行记录、三份结构文件的哈希与九姿势表都在下方读数区，可以逐条核。</span>
+            <span class="card-metrics"><span><b>4.7 s</b><i>七步管线</i></span><span><b>3 份</b><i>文件哈希</i></span></span>
+          </span>
+        </article>
+        <article class="card card-static">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-visual">
+            <svg class="card-graphic" viewBox="0 0 320 180" role="presentation" aria-hidden="true">
+              <circle cx="160" cy="90" r="30" fill="rgba(17,17,17,.045)"/><path d="M150 91h20" stroke="rgba(17,17,17,.32)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="3 4"/>
+            </svg>
+            <span class="card-visual-tag"><span class="status-pill" data-state="idle"><span class="light" aria-hidden="true"></span>未执行</span></span>
+          </span>
+          <span class="card-body">
+            <span class="card-kicker">05 / 进度</span>
+            <span class="card-title">设计候选这一层还没开始</span>
+            <span class="card-desc">分子动力学、AF3 复合物、突变 panel、MM-GBSA、实验亲和力、平台交付，六项全记 NOT_RUN。</span>
+            <span class="card-metrics"><span><b>0 / 6</b><i>项</i></span><span><b>未执行</b><i>NOT_RUN</i></span></span>
+          </span>
+        </article>
+        <article class="card card-static">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-visual">
+            <svg class="card-graphic" viewBox="0 0 320 180" role="presentation" aria-hidden="true">
+              <circle cx="160" cy="90" r="30" fill="rgba(17,17,17,.045)"/><path d="M148 91h24" stroke="rgba(232,85,28,.85)" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <span class="card-visual-tag"><span class="status-pill" data-state="warn"><span class="light" aria-hidden="true"></span>仅对照</span></span>
+          </span>
+          <span class="card-body">
+            <span class="card-kicker">06 / 边界</span>
+            <span class="card-title">只作对照，不可排名</span>
+            <span class="card-desc">决策是 control_only：参考对照缺失，排序只能当相对比较，不能当活性预测。</span>
+            <span class="card-metrics"><span><b>5 条</b><i>uncertainty</i></span><span><b>缺失</b><i>参考对照</i></span></span>
+          </span>
+        </article>
+      </div>
+      <p class="card-footnote">五章有真实读数，只有「进度」里的设计候选层是空的。下面这一块是它的完整读数与缺口原文。</p>
+    </div>
+
+    <div class="shell">
+      <div class="case-block" id="case-jak2" data-case="jak2_6vgl_rxt"
+           data-case-title="JAK2 × RXT（红对接对照）"
+           data-case-keywords="jak2|6vgl|rxt|激酶"
+           data-case-route="jak2"
+           data-case-summary="对接分 −8.833 kcal/mol · 配体效率 0.384 · 质心偏差 0.24 Å · 9 个姿势">
+        <div class="case-head">
+          <p class="eyebrow">读数 · 九个姿势与决策</p>
+          <h2 id="case-jak2-title">九个姿势的完整读数</h2>
+          <dl class="case-facts">
+            <div><dt>对接分</dt><dd>−8.833 <small>kcal/mol</small></dd></div>
+            <div><dt>配体效率</dt><dd>0.384</dd></div>
+            <div><dt>质心偏差</dt><dd>0.24 Å</dd></div>
+            <div><dt>位点重叠</dt><dd>1.00</dd></div>
+          </dl>
+          <p class="case-note">
+            这一例是 6VGL 共晶配体 RXT 的刚性红对接对照，九个姿势，只作对照，不参与候选排名。
+            参考对照缺口照实记，排序只能作相对参考；它不是新抑制剂，也不代表活性。
+          </p>
+        </div>
+
+        <div class="viewer-shell">
+          <div class="viewer-frame jak2-frame" id="jak2-frame">
+            <div class="jak2-toolbar">
+              <div class="jak2-toggle" role="group" aria-label="JAK2 配体显示">
+                <button type="button" class="seg-btn is-active" data-jak2-view="reference">共晶姿势</button>
+                <button type="button" class="seg-btn" data-jak2-view="pose">对接姿势 #1</button>
+              </div>
+              <div class="toolbar-actions">
+                <button type="button" class="ghost-btn" id="jak2-spin" aria-pressed="false">自转</button>
+                <button type="button" class="ghost-btn" id="jak2-reset">复位</button>
+              </div>
+            </div>
+            <div class="jak2-stage">
+              <div id="jak2-viewer" class="viewer-canvas" role="application" aria-label="JAK2 6VGL 结构视图" tabindex="0"></div>
+              <div class="viewer-badge" id="jak2-badge">进入这一页时加载结构…</div>
+              <div class="viewer-hint">拖拽旋转 · 滚轮缩放</div>
+            </div>
+            <div class="jak2-note" id="jak2-note">
+              6VGL A 链（840–1132）制备受体，4,824 个原子；配体 RXT 23 个重原子。结构文件拷贝自第二段模块的产物，未改动。
+            </div>
+          </div>
+
+          <aside class="viewer-aside">
+            <div class="aside-block">
+              <p class="aside-title">这一例是什么</p>
+              <p class="aside-body">一次刚性红对接对照：把 6VGL 的共晶配体 RXT 重新对回去，检查它是否还落在原来的口袋。结果是九个姿势里第 1 号被选中，位点重叠 1.00，质心偏差 0.24 Å。</p>
+            </div>
+            <div class="aside-block">
+              <p class="aside-title">决策与缺口</p>
+              <dl class="kv">
+                <div><dt>决策</dt><dd>仅作对照</dd></div>
+                <div><dt>综合分</dt><dd>0.472</dd></div>
+                <div><dt>参考对照</dt><dd class="warn">缺失</dd></div>
+                <div><dt>不可排名</dt><dd>是</dd></div>
+              </dl>
+              <p class="aside-foot">这次配置没声明参考对照；这里没有重对接偏差，只有质心距离与位点重叠。</p>
+            </div>
+            <div class="aside-block">
+              <p class="aside-title">九个姿势的打分</p>
+              <div class="ladder" id="jak2-ladder" role="img" aria-label="JAK2 9 个对接姿势的打分条形图"></div>
+              <p class="aside-foot">#1 −8.833 到 #9 −7.896 kcal/mol，全部为 Vina 打分，不是实测亲和力。</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================================
+       案例 C · EGFR：它自己的六章（全部未执行）
+       ================================================================== -->
+  <section class="view" id="view-egfr" data-view="egfr" aria-labelledby="egfr-title" hidden>
+    <div class="shell">
+      <div class="page-head">
+        <a class="back-link" href="#/">← 返回靶点列表</a>
+        <p class="eyebrow"><span class="num">C</span> <span class="sep">/</span> EGFR</p>
+        <h1 id="egfr-title">这一例还没开始跑</h1>
+        <p class="page-lede">
+          没有可用的结构，没有定下来的配体，也没有配好盒子与判据。所以这六章里没有数字——
+          空着就是空着，不用占位值填。
+        </p>
+        <p class="case-state">
+          <span class="status-pill" data-state="idle"><span class="light" aria-hidden="true"></span>未执行</span>
+          <span>0 / 6 章 · 3 项前置缺口</span>
+        </p>
+        <nav class="chapter-nav" aria-label="EGFR 六章">
+          <a href="#/" aria-disabled="true">01 靶点</a><a href="#/" aria-disabled="true">02 方法</a><a href="#/" aria-disabled="true">03 结果</a><a href="#/" aria-disabled="true">04 证据</a><a href="#/" aria-disabled="true">05 进度</a><a href="#/" aria-disabled="true">06 边界</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="shell">
+      <div class="card-grid card-grid-3">
+        <article class="card card-static">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-visual">
+            <svg class="card-graphic" viewBox="0 0 320 180" role="presentation" aria-hidden="true">
+              <circle cx="160" cy="90" r="30" fill="rgba(17,17,17,.045)"/><path d="M150 91h20" stroke="rgba(17,17,17,.32)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="3 4"/>
+            </svg>
+            <span class="card-visual-tag"><span class="status-pill" data-state="idle"><span class="light" aria-hidden="true"></span>未执行</span></span>
+          </span>
+          <span class="card-body">
+            <span class="card-kicker">01 / 靶点与分子</span>
+            <span class="card-title">结构还没定</span>
+            <span class="card-desc">没有可用的共晶，也还没选 apo 或预测模型；EGFR 这一例停在起点。</span>
+            <span class="card-metrics"><span><b>—</b><i>结构</i></span><span><b>未定</b><i>分辨率</i></span></span>
+          </span>
+        </article>
+        <article class="card card-static">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-visual">
+            <svg class="card-graphic" viewBox="0 0 320 180" role="presentation" aria-hidden="true">
+              <circle cx="160" cy="90" r="30" fill="rgba(17,17,17,.045)"/><path d="M150 91h20" stroke="rgba(17,17,17,.32)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="3 4"/>
+            </svg>
+            <span class="card-visual-tag"><span class="status-pill" data-state="idle"><span class="light" aria-hidden="true"></span>未执行</span></span>
+          </span>
+          <span class="card-body">
+            <span class="card-kicker">02 / 方法</span>
+            <span class="card-title">管线还没配</span>
+            <span class="card-desc">盒子、判据、门控阈值都要先定，否则跑出来的分数没法判断能不能用。</span>
+            <span class="card-metrics"><span><b>—</b><i>配方</i></span><span><b>未配</b><i>门控</i></span></span>
+          </span>
+        </article>
+        <article class="card card-static">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-visual">
+            <svg class="card-graphic" viewBox="0 0 320 180" role="presentation" aria-hidden="true">
+              <circle cx="160" cy="90" r="30" fill="rgba(17,17,17,.045)"/><path d="M150 91h20" stroke="rgba(17,17,17,.32)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="3 4"/>
+            </svg>
+            <span class="card-visual-tag"><span class="status-pill" data-state="idle"><span class="light" aria-hidden="true"></span>未执行</span></span>
+          </span>
+          <span class="card-body">
+            <span class="card-kicker">03 / 结果</span>
+            <span class="card-title">没有数字</span>
+            <span class="card-desc">没跑过就没有分数。这一格空着，不用占位数字填。</span>
+            <span class="card-metrics"><span><b>0</b><i>结果</i></span><span><b>0</b><i>姿势</i></span></span>
+          </span>
+        </article>
+        <article class="card card-static">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-visual">
+            <svg class="card-graphic" viewBox="0 0 320 180" role="presentation" aria-hidden="true">
+              <circle cx="160" cy="90" r="30" fill="rgba(17,17,17,.045)"/><path d="M150 91h20" stroke="rgba(17,17,17,.32)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="3 4"/>
+            </svg>
+            <span class="card-visual-tag"><span class="status-pill" data-state="idle"><span class="light" aria-hidden="true"></span>未执行</span></span>
+          </span>
+          <span class="card-body">
+            <span class="card-kicker">04 / 证据</span>
+            <span class="card-title">没有运行可查</span>
+            <span class="card-desc">没有运行目录、没有哈希、也没有可下载的结果文件。</span>
+            <span class="card-metrics"><span><b>0</b><i>运行</i></span><span><b>0</b><i>哈希</i></span></span>
+          </span>
+        </article>
+        <article class="card card-static">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-visual">
+            <svg class="card-graphic" viewBox="0 0 320 180" role="presentation" aria-hidden="true">
+              <circle cx="160" cy="90" r="30" fill="rgba(17,17,17,.045)"/><path d="M150 91h20" stroke="rgba(17,17,17,.32)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="3 4"/>
+            </svg>
+            <span class="card-visual-tag"><span class="status-pill" data-state="idle"><span class="light" aria-hidden="true"></span>未执行</span></span>
+          </span>
+          <span class="card-body">
+            <span class="card-kicker">05 / 进度</span>
+            <span class="card-title">0 / 7 步</span>
+            <span class="card-desc">七步管线一步都没跑；实时进度的表在这一例里是空的。</span>
+            <span class="card-metrics"><span><b>0 / 7</b><i>步</i></span><span><b>—</b><i>最近一次</i></span></span>
+          </span>
+        </article>
+        <article class="card card-static">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-visual">
+            <svg class="card-graphic" viewBox="0 0 320 180" role="presentation" aria-hidden="true">
+              <circle cx="160" cy="90" r="30" fill="rgba(17,17,17,.045)"/><path d="M150 91h20" stroke="rgba(17,17,17,.32)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="3 4"/>
+            </svg>
+            <span class="card-visual-tag"><span class="status-pill" data-state="idle"><span class="light" aria-hidden="true"></span>未执行</span></span>
+          </span>
+          <span class="card-body">
+            <span class="card-kicker">06 / 边界</span>
+            <span class="card-title">还没到能讨论边界的阶段</span>
+            <span class="card-desc">没有结果就谈不上能说明什么；这一页等真正跑过一次再写。</span>
+            <span class="card-metrics"><span><b>—</b><i>能说明</i></span><span><b>—</b><i>不能说明</i></span></span>
+          </span>
+        </article>
+      </div>
+    </div>
+
+    <div class="shell">
+      <div class="split next-split">
+        <div class="prose">
+          <h2>新靶点要先补的三样</h2>
+          <p>这三样缺一个，管线就跑不起来；跑不起来就不该出现在结果里。</p>
+        </div>
+        <div class="next-list">
+          <ul>
+            <li><b>结构</b>：高分辨率共晶，或可用的 apo / 预测模型。</li>
+            <li><b>配体</b>：已知活性配体，加可制备的 3D 构象。</li>
+            <li><b>配方</b>：盒子、判据、门控阈值都要先定。</li>
+          </ul>
+        </div>
+      </div>
+      <p class="card-footnote">补齐之后重跑七步管线，这一页的六张卡才会有数字；在那之前它们一直是未执行。</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="shell footer-inner">
+    <span>A4S 科研工作台 · 本地运行</span>
+    <nav class="footer-nav" aria-label="案例导航">
+      <a href="#/">靶点列表</a>
+      <a href="#/hiv1">HIV-1</a>
+      <a href="#/jak2">JAK2</a>
+      <a href="#/egfr">EGFR</a>
+    </nav>
+    <span id="footer-provenance">结构在本地渲染 · 数据只读本机产物</span>
+  </div>
+</footer>
+
+<!-- 触发确认 -->
+<div class="modal" id="modal" hidden>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <h2 id="modal-title">确认重跑一次？</h2>
+    <p>
+      会在本机对 HIV-1 蛋白酶和达芦那韦重跑七步管线，约 35 秒，含四核 Vina。
+      产物落到一个新的运行目录，已有产物不会被改动。
+    </p>
+    <div class="modal-actions">
+      <button type="button" class="ghost-btn" id="modal-cancel">取消</button>
+      <button type="button" class="pill-btn" id="modal-confirm">确认运行</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<noscript>
+  <div class="shell noscript-note">这个页面的卡片切换与 3D 视图需要 JavaScript。开启后刷新即可。</div>
+</noscript>
+
+<script src="vendor/3Dmol-min.js"></script>
+<script src="assets/scene3d.js?v=6"></script>
+<script src="assets/jak2-view.js?v=6"></script>
+<script src="assets/app.js?v=6"></script>
+</body>
+</html>
